@@ -1,0 +1,55 @@
+<!-- Geogebra 容器 -->
+<div id="geogebra-container-{{ .Get 0 }}"></div>
+
+<!-- 引入 Geogebra 脚本 -->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+
+<script>
+  // 等待页面加载完成后插入 Geogebra
+  window.addEventListener("load", function () {
+    // 动态创建 Geogebra 容器的 ID
+    var containerId = "geogebra-container-{{ .Get 0 }}";
+
+    // 初始化 Geogebra Applet
+    var ggbApp = new GGBApplet({
+      "filename": "/geogebra/{{ .Get 0 }}.ggb", // 文件路径
+      "showToolbar": false,
+      "showMenuBar": false,
+      "showAlgebraInput": false,
+      "transparentGraphics": true, // 启用透明背景
+      "backgroundColor": "transparent" // 设置背景色为透明
+    }, true);
+
+    // 将 Geogebra Applet 注入到指定的容器中
+    ggbApp.inject(containerId);
+  });
+</script>
+
+<style>
+  /* 限制 Geogebra 容器在文章区域内 */
+  [id^="geogebra-container-"] {
+    width: 100%;
+    max-width: 800px; /* 限制最大宽度 */
+    height: auto; /* 高度自适应 */
+    aspect-ratio: 16 / 10; /* 保持宽高比 */
+    margin: 0 auto; /* 居中对齐 */
+    box-sizing: border-box; /* 包含内边距和边框 */
+    background-color: transparent !important; /* 强制设置背景透明 */
+  }
+
+  /* 确保容器只在文章区域内 */
+  .post-content [id^="geogebra-container-"] {
+    position: relative;
+    background-color: transparent !important; /* 强制设置背景透明 */
+  }
+
+  /* 针对 Geogebra 画布设置透明背景 */
+  .geogebraweb {
+    background-color: transparent !important;
+  }
+  
+  /* 针对 Geogebra 应用容器设置透明背景 */
+  .GGBApplet {
+    background-color: transparent !important;
+  }
+</style>
