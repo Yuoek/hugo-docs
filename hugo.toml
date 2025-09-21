@@ -1,6 +1,5 @@
 # hugo server --minify --themesDir ../..
 
-baseURL = 'http://0.0.0.0:1313/'
 title = 'Yuoek'
 theme = 'hugo-book'
 
@@ -75,7 +74,7 @@ theme = 'hugo-book'
   # (Optional, default true) Controls table of contents visibility on right side of pages.
   # Start and end levels can be controlled with markup.tableOfContents setting.
   # You can also specify this parameter per page in front matter.
-  BookToC = true
+  BookToC = false
 
   # (Optional, default favicon.png) Set the path to a favicon file.
   # If the favicon is /static/favicon.png then the path would be favicon.png
@@ -91,7 +90,7 @@ theme = 'hugo-book'
   # BookSection = 'docs'
 
   # Here for backwar compatibility, not required.
-  BookRepo = 'https://github.com/alex-shpak/hugo-book/'
+  BookRepo = 'https://github.com/yuoek/hugo-docs/'
 
   # (Optional, default none) Set template for commit link for the page. Requires enableGitInfo.
   # When set enabled 'Last Modified' and a link to the commit in the footer of the page.
