@@ -1,0 +1,12 @@
+{{- $width := .Get "width" | default "100%" -}}
+{{- $height := .Get "height" | default "300px" -}}
+{{- $tikzContent := .Inner -}}
+
+<div style="width: {{ $width }}; height: {{ $height }}; overflow: auto; display: flex; justify-content: center; align-items: center;">
+  <link rel="stylesheet" type="text/css" href="/tikzjax/dist/fonts.css">
+  <script src="/tikzjax/dist/tikzjax.js"></script>
+<script type="text/tikz" data-tex-packages='{ "amsmath": "", "amssymb": "", "array": "", "pgfplots": "", "tikz-cd": "" }'>
+  {{ $tikzContent | safeHTML }}
+  </script>
+</div>
+

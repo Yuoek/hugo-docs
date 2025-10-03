@@ -1,0 +1,13 @@
+{{- $code := .Inner | htmlEscape -}}
+{{- $width := .Get "width" | default "100%" -}}
+{{- $height := .Get "height" | default "600" -}}
+{{- $codeDivHeight := .Get "codeDivHeight" | default "500" -}}
+{{- $codeDivWidth := .Get "codeDivWidth" | default "400" -}}
+{{- $language := .Get "language" | default "python" -}}
+
+<iframe 
+    width="{{ $width }}" 
+    height="{{ $height }}" 
+    frameborder="0" 
+    src="https://pythontutor.com/iframe-embed.html#code={{ $code | replaceRE "&#34;" "\"" | replaceRE "&#39;" "'" | replaceRE "&lt;" "<" | replaceRE "&gt;" ">" | replaceRE "&amp;" "&" }}&codeDivHeight={{ $codeDivHeight }}&codeDivWidth={{ $codeDivWidth }}&cumulative=false&curInstr=1&heapPrimitives=nevernest&origin=opt-frontend.js&py={{ if eq $language "python" }}311{{ else if eq $language "java" }}java{{ else if eq $language "javascript" }}js{{ else if eq $language "typescript" }}ts{{ else if eq $language "c" }}c{{ else if eq $language "cpp" }}cpp{{ else }}311{{ end }}&rawInputLstJSON=%5B%5D&textReferences=false">
+</iframe>

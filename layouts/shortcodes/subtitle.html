@@ -1,0 +1,436 @@
+<div class="subtitle-player" id="subtitle-{{ .Get "id" }}" style="background-image: url('/logo.png'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative;">
+    <!-- 毛玻璃层 - 放在最上层 -->
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); z-index: 1;"></div>
+    
+    <!-- 内容层 - 放在毛玻璃层上面 -->
+    <div style="position: relative; z-index: 2;">
+        <div class="subtitle-display">
+            <p class="current-subtitle-top"></p>
+            <p class="current-subtitle-bottom"></p>
+        </div>
+        
+        <div class="subtitle-controls">
+            <div class="time-controls">
+                <span class="current-time">00:00:00.000</span>
+                <span class="total-time">00:00:00.000</span>
+                <span class="remaining-time">00:00:00.000</span>
+            </div>
+            
+            <!-- 添加进度条 -->
+            <div class="progress-container">
+                <input type="range" class="progress-bar" min="0" max="1000" value="0" step="1">
+                <span class="progress-time">00:00:00.000</span>
+            </div>
+            
+            <div class="button-controls">
+                <button class="play-btn">播放</button>
+                <button class="pause-btn">暂停</button>
+                <button class="stop-btn">停止</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // 解析 SRT 字幕
+        function parseSRT(srtText) {
+            const subtitles = [];
+            const blocks = srtText.trim().split('\n\n');
+            
+            blocks.forEach(block => {
+                const lines = block.split('\n');
+                if (lines.length >= 3) {
+                    const timeLine = lines[1];
+                    const timeMatch = timeLine.match(/(\d{2}):(\d{2}):(\d{2}),(\d{3}) --> (\d{2}):(\d{2}):(\d{2}),(\d{3})/);
+                    
+                    if (timeMatch) {
+                        const startTime = parseTime(timeMatch[1], timeMatch[2], timeMatch[3], timeMatch[4]);
+                        const endTime = parseTime(timeMatch[5], timeMatch[6], timeMatch[7], timeMatch[8]);
+                        const text = lines.slice(2).join('\n');
+                        
+                        // 分离双语字幕
+                        const linesArray = text.split('\n');
+                        const topText = linesArray[0] || '';
+                        const bottomText = linesArray[1] || '';
+                        
+                        subtitles.push({
+                            start: startTime,
+                            end: endTime,
+                            text: text,
+                            topText: topText,
+                            bottomText: bottomText
+                        });
+                    }
+                }
+            });
+            
+            return subtitles;
+        }
+        
+        function parseTime(hours, minutes, seconds, milliseconds) {
+            return parseInt(hours) * 3600 + parseInt(minutes) * 60 + parseInt(seconds) + parseInt(milliseconds) / 1000;
+        }
+        
+        // 格式化时间显示（包含毫秒）
+        function formatTimeWithMilliseconds(time) {
+            const hours = Math.floor(time / 3600);
+            const minutes = Math.floor((time % 3600) / 60);
+            const seconds = Math.floor(time % 60);
+            const milliseconds = Math.floor((time % 1) * 1000);
+            
+            return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}.${milliseconds.toString().padStart(3, '0')}`;
+        }
+        
+        // 字幕播放器功能
+        function SubtitlePlayer(containerId, srtContent) {
+            this.container = document.getElementById(containerId);
+            this.subtitles = parseSRT(srtContent);
+            this.currentIndex = 0;
+            this.timer = null;
+            this.startTime = 0;
+            this.isPlaying = false;
+            this.pausedTime = 0;
+            
+            // 获取进度条元素
+            this.progressBar = this.container.querySelector('.progress-bar');
+            this.progressTime = this.container.querySelector('.progress-time');
+            
+            // 计算总时长
+            this.calculateTotalDuration = function() {
+                if (this.subtitles.length === 0) return 0;
+                return this.subtitles[this.subtitles.length - 1].end;
+            };
+            
+            this.totalDuration = this.calculateTotalDuration();
+            
+            // 设置进度条最大值
+            this.progressBar.max = Math.floor(this.totalDuration * 1000);
+            
+            this.play = function(fromTime = null) {
+                if (this.isPlaying) return;
+                
+                this.isPlaying = true;
+                
+                if (fromTime !== null) {
+                    // 从指定时间开始播放
+                    this.startTime = Date.now() / 1000 - fromTime;
+                    this.pausedTime = 0;
+                    this.currentIndex = this.findSubtitleIndex(fromTime);
+                } else {
+                    // 正常播放
+                    const currentTime = this.pausedTime || 0;
+                    this.startTime = Date.now() / 1000 - currentTime;
+                    this.pausedTime = 0;
+                }
+                
+                this.timer = setInterval(() => {
+                    this.updateSubtitle();
+                }, 50);
+            };
+            
+            this.pause = function() {
+                this.isPlaying = false;
+                if (this.timer) {
+                    clearInterval(this.timer);
+                    this.pausedTime = (Date.now() / 1000) - this.startTime;
+                }
+            };
+            
+            this.stop = function() {
+                this.isPlaying = false;
+                if (this.timer) {
+                    clearInterval(this.timer);
+                }
+                this.currentIndex = 0;
+                this.pausedTime = 0;
+                this.updateTimeDisplay(0);
+                this.showSubtitle('', '');
+                this.updateProgressBar(0);
+            };
+            
+            // 根据时间查找字幕索引
+            this.findSubtitleIndex = function(time) {
+                for (let i = 0; i < this.subtitles.length; i++) {
+                    if (time >= this.subtitles[i].start && time <= this.subtitles[i].end) {
+                        return i;
+                    } else if (time < this.subtitles[i].start) {
+                        return Math.max(0, i - 1);
+                    }
+                }
+                return this.subtitles.length - 1;
+            };
+            
+            // 跳转到指定时间
+            this.seekTo = function(time) {
+                this.pause();
+                this.currentIndex = this.findSubtitleIndex(time);
+                this.updateTimeDisplay(time);
+                this.updateProgressBar(time);
+                
+                // 显示当前时间的字幕
+                let found = false;
+                for (let i = 0; i < this.subtitles.length; i++) {
+                    const subtitle = this.subtitles[i];
+                    if (time >= subtitle.start && time <= subtitle.end) {
+                        this.showSubtitle(subtitle.topText, subtitle.bottomText);
+                        found = true;
+                        break;
+                    }
+                }
+                
+                if (!found) {
+                    this.showSubtitle('', '');
+                }
+            };
+            
+            this.updateSubtitle = function() {
+                const currentTime = (Date.now() / 1000) - this.startTime;
+                this.updateTimeDisplay(currentTime);
+                this.updateProgressBar(currentTime);
+                
+                // 查找当前应该显示的字幕
+                let found = false;
+                for (let i = this.currentIndex; i < this.subtitles.length; i++) {
+                    const subtitle = this.subtitles[i];
+                    if (currentTime >= subtitle.start && currentTime <= subtitle.end) {
+                        this.showSubtitle(subtitle.topText, subtitle.bottomText);
+                        this.currentIndex = i;
+                        found = true;
+                        break;
+                    } else if (currentTime < subtitle.start) {
+                        break;
+                    }
+                }
+                
+                if (!found) {
+                    this.showSubtitle('', '');
+                    // 如果超过最后一个字幕，停止播放
+                    if (currentTime > this.subtitles[this.subtitles.length - 1].end) {
+                        this.stop();
+                    }
+                }
+            };
+            
+            this.showSubtitle = function(topText, bottomText) {
+                const topDisplay = this.container.querySelector('.current-subtitle-top');
+                const bottomDisplay = this.container.querySelector('.current-subtitle-bottom');
+                topDisplay.textContent = topText;
+                bottomDisplay.textContent = bottomText;
+            };
+            
+            this.updateTimeDisplay = function(currentTime) {
+                const currentTimeDisplay = this.container.querySelector('.current-time');
+                const totalTimeDisplay = this.container.querySelector('.total-time');
+                const remainingTimeDisplay = this.container.querySelector('.remaining-time');
+                
+                currentTimeDisplay.textContent = formatTimeWithMilliseconds(currentTime);
+                totalTimeDisplay.textContent = formatTimeWithMilliseconds(this.totalDuration);
+                
+                // 计算剩余时间
+                const remainingTime = Math.max(0, this.totalDuration - currentTime);
+                remainingTimeDisplay.textContent = formatTimeWithMilliseconds(remainingTime);
+            };
+            
+            // 更新进度条
+            this.updateProgressBar = function(currentTime) {
+                const progressValue = Math.floor(currentTime * 1000);
+                this.progressBar.value = progressValue;
+                this.progressTime.textContent = formatTimeWithMilliseconds(currentTime);
+            };
+            
+            // 初始化进度条事件
+            this.initProgressBar = function() {
+                this.progressBar.addEventListener('input', (e) => {
+                    const seekTime = parseInt(e.target.value) / 1000;
+                    this.seekTo(seekTime);
+                });
+                
+                this.progressBar.addEventListener('change', (e) => {
+                    const seekTime = parseInt(e.target.value) / 1000;
+                    this.play(seekTime);
+                });
+            };
+            
+            // 初始化进度条
+            this.initProgressBar();
+        }
+        
+        // 初始化播放器实例
+        function initSubtitlePlayer() {
+            const containerId = 'subtitle-{{ .Get "id" }}';
+            const srtContent = `{{ .Inner }}`;
+            
+            // 创建播放器实例
+            window.subtitlePlayers = window.subtitlePlayers || {};
+            window.subtitlePlayers[containerId] = new SubtitlePlayer(containerId, srtContent);
+            
+            // 绑定按钮事件
+            const container = document.getElementById(containerId);
+            container.querySelector('.play-btn').addEventListener('click', () => {
+                window.subtitlePlayers[containerId].play();
+            });
+            
+            container.querySelector('.pause-btn').addEventListener('click', () => {
+                window.subtitlePlayers[containerId].pause();
+            });
+            
+            container.querySelector('.stop-btn').addEventListener('click', () => {
+                window.subtitlePlayers[containerId].stop();
+            });
+        }
+        
+        // 页面加载完成后初始化
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initSubtitlePlayer);
+        } else {
+            initSubtitlePlayer();
+        }
+    </script>
+</div>
+
+<style>
+.subtitle-player {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 20px 0;
+    position: relative;
+    min-height: 120px;
+    overflow: hidden; /* 防止毛玻璃效果溢出 */
+}
+
+.subtitle-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.time-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.button-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.subtitle-controls button {
+    padding: 5px 15px;
+    border: 1px solid #7cc0e7;
+    background: #7cc0e7;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.subtitle-controls button:hover {
+  background: #7cc0e7"";
+}
+
+.subtitle-display {
+    min-height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.85); /* 增加透明度，与毛玻璃效果协调 */
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+    backdrop-filter: blur(5px); /* 为字幕显示区域也添加轻微毛玻璃效果 */
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.current-subtitle-top,
+.current-subtitle-bottom {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    margin: 5px 0;
+    min-height: 1.5em;
+}
+
+.current-subtitle-top {
+    font-weight: bold;
+    color: #333;
+}
+
+.current-subtitle-bottom {
+    color: #666;
+    font-style: italic;
+}
+
+.current-time,
+.total-time,
+.remaining-time {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+    background: rgba(240, 240, 240, 0.9); /* 添加透明度 */
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    backdrop-filter: blur(2px); /* 轻微毛玻璃效果 */
+    -webkit-backdrop-filter: blur(2px);
+}
+
+.total-time {
+    background: rgba(230, 247, 255, 0.9);
+    border-color: #91d5ff;
+}
+
+.remaining-time {
+    background: rgba(246, 255, 237, 0.9);
+    border-color: #b7eb8f;
+}
+
+/* 进度条样式 */
+.progress-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 100px;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 3px;
+    border-radius: 3px;
+    outline:none;
+    cursor: pointer;
+    color:#ee98e3de;
+}
+
+.progress-bar::-webkit-slider-thumb {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.progress-bar::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #007cba;
+    cursor: pointer;
+    border: none;
+}
+
+.progress-time {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    font-size: 12px;
+    color: #666;
+    min-width: 80px;
+}
+</style>

@@ -1,0 +1,203 @@
+{{ $type := .Get "type" }}
+{{ $title := .Get "title" }}
+{{ $image := .Get "image" }}
+{{ $backimage := .Get "backimage" }}
+{{ $description := .Get "description" }}
+{{ $rating := .Get "rating" }}
+{{ $link := .Get "link" }}
+{{ $author := .Get "author" }}
+{{ $countries := .Get "countries" }}
+{{ $date := .Get "date" }}
+{{ $stars := .Get "stars" }}
+{{ $languages := .Get "languages" }}
+{{ $director := .Get "director" }}
+{{ $types := .Get "types" }}
+
+<div class="media-card {{ $type }}-card">
+  <div class="media-card-header">
+    {{ if $backimage }}
+    <div class="media-card-background">
+      <img src="{{ $backimage }}" alt="{{ $title }}" loading="lazy">
+      <div class="media-card-blur-overlay"></div>
+    </div>
+    {{ end }}
+    
+    <div class="media-card-content-wrapper">
+      {{ if $image }}
+      <div class="media-card-image">
+        <img src="{{ $image }}" alt="{{ $title }}" loading="lazy">
+      </div>
+      {{ end }}
+      
+      <div class="media-card-info">
+        <h3 class="media-card-title">
+          {{ if $link }}<a href="{{ $link }}" target="_blank">{{ end }}
+          {{ $title }}
+          {{ if $link }}</a>{{ end }}
+        </h3>
+        
+        <div class="media-card-meta">
+          {{ if $director }}
+          <span class="media-card-director">导演: {{ $director }}</span>
+          {{ end }}
+          {{ if $author }}
+          <span class="media-card-author">作者: {{ $author }}</span>
+          {{ end }}
+          {{ if $stars }}
+          <span class="media-card-stars">演员: {{ $stars }}</span>
+          {{ end }}
+          {{ if $date }}
+          <span class="media-card-date">时间: {{ $date }}</span>
+          {{ end }}
+          {{ if $countries }}
+          <span class="media-card-countries">国家: {{ $countries }}</span>
+          {{ end }}
+          {{ if $types }}
+          <span class="media-card-types">类型: {{ $types }}</span>
+          {{ end }}
+          {{ if $languages }}
+          <span class="media-card-languages">语言: {{ $languages }}</span>
+          {{ end }}
+        </div>
+        
+        {{ if $rating }}
+        <div class="media-card-rating">
+          <span class="rating-stars">{{ $rating }}</span>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+  
+  {{ if $description }}
+  <div class="media-card-description">
+    <p>{{ $description }}</p>
+  </div>
+  {{ end }}
+  
+  <div class="media-card-content">
+    {{ .Inner | markdownify }}
+  </div>
+</div>
+
+<style>
+.media-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 20px;
+}
+
+.media-card-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.media-card-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.media-card-blur-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  background: rgba(3, 3, 3, 0.2);
+}
+
+.media-card-content-wrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+}
+
+.media-card-image {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.media-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.media-card-info {
+  flex: 1;
+}
+
+.media-card-title {
+  margin: 0 0 8px 0;
+  color: #ee98e3de;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 1.2em;
+}
+
+.media-card-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.media-card-title a:hover {
+  text-decoration: underline;
+}
+
+.media-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 8px;
+  font-size: 12px;
+  color: #7cc0e7;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.media-card-meta span {
+  padding: 2px 8px;
+  background: rgba(3, 3, 3, 0.2);
+  border-radius: 2px;
+}
+
+.media-card-rating {
+  color: #ffd700;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+}
+
+.media-card-description,
+.media-card-content {
+  position: relative;
+  color: #7cc0e7;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  margin: 0;
+  z-index: 1;
+}
+
+.media-card-description p {
+  margin: 0;
+  color: #ee98e3de;
+  line-height: 1.5;
+  border-bottom: 2px solid #ee98e3de;
+  padding-bottom: 10px;
+}
+
+.media-card-content {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+</style>

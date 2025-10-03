@@ -1,0 +1,135 @@
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
+</head>
+
+<body>
+
+  <div id="waline"></div>
+  <script type="module">
+    import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+
+    init({
+      el: '#waline',
+      serverURL: 'https://comment.yuoek.icu/',
+      lang: 'zh-CN',
+      locale: { placeholder: '请留下你的评论吧:)' },
+      wordLimit: 500,
+      search: false,
+      pageview: true,
+      emoji: [ // 表情包，不需要的直接注释或者删除
+        '//unpkg.com/@waline/emojis@1.2.0/bmoji',
+        '//unpkg.com/@waline/emojis@1.2.0/tieba',
+        '//unpkg.com/@waline/emojis@1.2.0/qq',
+        '//unpkg.com/@waline/emojis@1.2.0/alus',
+        '//unpkg.com/@waline/emojis@1.1.0/bilibili',
+        'https://cdn.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs',
+      ],
+      dark: 'html[class="scroll-smooth dark"]',
+    });
+  </script>
+
+<style>
+  /* 日间模式 */
+  :root {
+    /* 字体大小 */
+    --waline-font-size: 16px;
+
+    /* 颜色定义 */
+    --waline-white: #ffff;
+    --waline-light-grey: #7cc0e7;
+    --waline-dark-grey: #7cc0e7;
+    --waline-theme-color: #ee98e3de;
+    --waline-active-color: #7cc0e7;
+    --waline-color: #222;
+    
+    /* 毛玻璃效果背景 */
+    --waline-bgcolor: rgba(255, 255, 255, 0.5);
+    --waline-bgcolor-light: rgba(248, 248, 248, 0.2);
+    --waline-bgcolor-hover: rgba(46, 204, 113, 0.2);
+    
+    /* 边框和禁用状态 */
+    --waline-border-color:  #7cc0e7;
+    --waline-disable-bgcolor: rgba(248, 248, 248, 0.0);
+    --waline-disable-color: #7cc0e7;
+    
+    /* 其他样式 */
+    --waline-code-bgcolor: #282c34;
+    --waline-bq-color: rgba(240, 240, 240, 0.2);
+    --waline-avatar-size: 3.25rem;
+    --waline-m-avatar-size: calc(var(--waline-avatar-size) * 9 / 13);
+    --waline-badge-color: #ee98e3de;
+    --waline-badge-font-size: 12px;
+    --waline-info-border: 1px solid rgba(153, 153, 153, 0.2);
+    --waline-info-color: #7cc0e7;
+    --waline-info-font-size: 16px;
+    --waline-info-bgcolor: rgba(235, 235, 235, 0.0);
+    
+    /* 视觉效果 */
+    --waline-border: 1px solid var(--waline-border-color);
+    --waline-avatar-radius: 50%;
+    --waline-box-shadow: none;
+    
+    /* 添加毛玻璃模糊效果 */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  /* 暗黑模式 */
+  html[class="scroll-smooth dark"] {
+    --waline-white: #000;
+    --waline-light-grey: #999;
+    --waline-dark-grey: #999;
+    --waline-color: #c2c2c2;
+    
+    /* 暗黑模式毛玻璃效果 */
+    --waline-bgcolor: rgba(30, 41, 59, 0.3);
+    --waline-bgcolor-light: rgba(42, 53, 79, 0.6);
+    
+    /* 其他暗黑模式样式 */
+    --waline-border-color: rgba(102, 102, 102, 0.2);
+    --waline-disable-bgcolor: rgba(68, 68, 68, 0.2);
+    --waline-disable-color: #888;
+    --waline-bq-color: rgba(31, 45, 75, 0.2);
+    --waline-info-bgcolor: rgba(31, 45, 75, 0.2);
+    --waline-info-color: #888;
+    --waline-info-border: 1px solid rgba(211, 211, 211, 0.2);
+    
+    /* 保持毛玻璃效果 */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  /* 确保编辑器也应用毛玻璃效果 */
+  .wl-editor {
+    box-sizing: border-box;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  input:focus {  /* 去掉点击昵称等输入框时出现的蓝色边框*/
+    outline: none;  
+    border: 0;  
+    box-shadow: none;  
+  }  
+  textarea:focus {  /* 去掉点击评论正文输入框时出现的蓝色边框*/
+    outline: none;  
+    border: 0;  
+    box-shadow: none;  
+  }
+
+  .wl-editor {
+      background-image: url(/amuro.png);
+      background-size: 10%;
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      background-color: rgba(255, 255, 255, 0);
+      resize: vertical
+  }
+  .wl-editor:focus{
+      background-color: rgba(255, 255, 255, 0);
+      background-position-x: 800px;
+      background-position-y: 1000px;
+      transition: all 0.2s ease-in-out 0s;
+  }
+</style>
+
+</body>

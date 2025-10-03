@@ -1,0 +1,148 @@
+<style>
+iframe {
+    width:{{with .Get "width"}}{{.}}{{else}}100%{{end}};
+    height:{{with .Get "height"}}{{.}}{{else}}30em{{end}}; 
+    border:0px
+}
+</style>
+
+<iframe id="slideFrame"></iframe>
+
+<div id="slideContent" style="display:none;">
+	<link rel="stylesheet" href="{{"revealjs/css/reveal.css"|relURL}}">
+	<link rel="stylesheet" href="{{"revealjs/css/theme/"|relURL}}{{with .Get "theme"}}{{.|safeHTML}}{{else}}league{{end}}.css" id="theme">
+	<link rel="stylesheet" href="{{"revealjs/lib/css/zenburn.css"|relURL}}">
+
+	<div class="reveal">
+	<div class="slides">
+	<section data-markdown
+	         data-separator="^---"
+			 data-separator-vertical="^___"
+			 data-separator-notes="^Note:"
+			 data-charset="utf8">
+		<script type="text/template">
+			{{ .Inner | safeHTML}}
+		</script>
+	</section>
+	</div>
+	</div>
+
+	<script src="{{"/revealjs/lib/js/head.min.js"|relURL}}"></script>
+	<script src="{{"/revealjs/js/reveal.js"|relURL}}"></script>
+	<script>
+	function initSlides() {
+		Reveal.initialize({
+			embedded: true,
+			controls: {{with .Get "controls"}}{{.|safeHTML}}{{else}}false{{end}}, 
+			center: {{with .Get "center"}}{{.|safeHTML}}{{else}}true{{end}},		
+			history: {{with .Get "history"}}{{.|safeHTML}}{{else}}false{{end}},
+			progress: {{with .Get "progress"}}{{.|safeHTML}}{{else}}false{{end}},
+			transition: {{with .Get "transition"}}{{.}}{{else}}"concave"{{end}},
+
+			// 数学公式配置 - 自动渲染
+			math: {
+				mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+				config: 'TeX-AMS_HTML-full',
+				tex2jax: {
+					inlineMath: [['$','$'], ['\\(','\\)']],
+					displayMath: [['$$','$$'], ['\\[','\\]']],
+					processEscapes: true,
+					processEnvironments: true,
+					skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+				}
+			},
+
+			// 高亮配置 - 自动检测代码块
+			highlight: {
+				highlightOnLoad: true
+			},
+
+			// 依赖项配置
+			dependencies: [
+				{ src: '{{"revealjs/lib/js/classList.js"|relURL}}', condition: function() { return !document.body.classList; } },
+				{ src: '{{"revealjs/plugin/markdown/marked.js"|relURL}}', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '{{"revealjs/plugin/markdown/markdown.js"|relURL}}', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '{{"revealjs/plugin/highlight/highlight.js"|relURL}}', async: true, callback: function() { 
+					// 自动高亮所有代码块
+					var codeBlocks = document.querySelectorAll('pre code');
+					codeBlocks.forEach(function(block) {
+						hljs.highlightBlock(block);
+					});
+				} },
+				{ src: '{{"revealjs/plugin/zoom-js/zoom.js"|relURL}}', async: true, condition: function() { return !!document.body.classList; } },
+				{ src: '{{"revealjs/plugin/notes/notes.js"|relURL}}', async: true, condition: function() { return !!document.body.classList; } },
+				{ src: '{{"revealjs/plugin/math/math.js"|relURL}}', async: true }
+			]
+		});
+
+		// 确保数学公式在初始化后立即渲染
+		Reveal.addEventListener('ready', function() {
+			if (window.MathJax) {
+				MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+			}
+			
+			// 幻灯片切换时重新高亮代码
+			Reveal.addEventListener('slidechanged', function() {
+				setTimeout(function() {
+					var codeBlocks = Reveal.getCurrentSlide().querySelectorAll('pre code');
+					codeBlocks.forEach(function(block) {
+						hljs.highlightBlock(block);
+					});
+				}, 100);
+			});
+		});
+	}
+	</script>
+</div>
+
+<p style="text-align: right;"><a href="#" onclick="slideFullScreen();">全屏查看</a></p>
+
+<script type="text/javascript">
+// 将幻灯片内容写入iframe
+var slideContent = document.getElementById('slideContent').innerHTML;
+var slideFrame = document.getElementById('slideFrame');
+
+// 等待iframe加载完成后写入内容
+slideFrame.onload = function() {
+	slideFrame.contentWindow.document.open();
+	slideFrame.contentWindow.document.write(slideContent);
+	slideFrame.contentWindow.document.close();
+	
+	// 初始化幻灯片
+	setTimeout(function() {
+		if (slideFrame.contentWindow.initSlides) {
+			slideFrame.contentWindow.initSlides();
+		}
+	}, 1000);
+};
+
+// 移除原始内容
+document.getElementById('slideContent').remove();
+
+// 全屏功能
+function slideFullScreen() {
+	var newWindow = window.open('', '_blank');
+	newWindow.document.open();
+	newWindow.document.write(`
+		<!DOCTYPE html>
+		<html>
+		<head>
+			<link rel="stylesheet" href="{{"revealjs/css/reveal.css"|relURL}}">
+			<link rel="stylesheet" href="{{"revealjs/css/theme/"|relURL}}{{with .Get "theme"}}{{.|safeHTML}}{{else}}league{{end}}.css">
+			<link rel="stylesheet" href="{{"revealjs/lib/css/zenburn.css"|relURL}}">
+		</head>
+		<body>
+			${slideContent.replace('embedded: true,', 'embedded: false,')}
+		</body>
+		</html>
+	`);
+	newWindow.document.close();
+	
+	// 初始化全屏幻灯片
+	setTimeout(function() {
+		if (newWindow.initSlides) {
+			newWindow.initSlides();
+		}
+	}, 1000);
+}
+</script>

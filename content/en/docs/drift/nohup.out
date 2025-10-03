@@ -1,0 +1,8 @@
+Loading the library from the following files:
+	/data/data/com.termux/files/home/Yu/KiwiZim/kiwix.xml
+The library was successfully loaded.
+The Kiwix server is running and can be accessed in the local network at: http://192.168.126.3:8084
+Loading the library from the following files:
+	/data/data/com.termux/files/home/Yu/KiwiZim/kiwix.xml
+The library was successfully loaded.
+Unable to instantiate the HTTP daemon. The port 8084 is maybe already occupied or need more permissions to be open. Please try as root or with a port number higher or equal to 1024.

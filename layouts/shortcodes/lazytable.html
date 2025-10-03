@@ -1,0 +1,26 @@
+
+<div class="lazy-table" data-src="{{ .Get "src" }}">
+    <div class="loading">加载中...</div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const lazyTables = document.querySelectorAll('.lazy-table');
+    
+    const loadTable = (element) => {
+        const tableContent = `{{ .Inner }}`;
+        element.innerHTML = tableContent;
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                loadTable(entry.target);
+                observer.unobserve(entry.target);
+            }
+        });
+    });
+    
+    lazyTables.forEach(table => observer.observe(table));
+});
+</script>
