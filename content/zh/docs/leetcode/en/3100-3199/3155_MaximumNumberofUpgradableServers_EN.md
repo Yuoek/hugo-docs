@@ -1,0 +1,233 @@
+---
+title: "3155_MaximumNumberofUpgradableServers"
+date: 2025-10-06T00:42:37+08:00
+weight: 3155
+tags: [Array, Math, Binary Search]
+---
+
+
+{{< katex />}}
+
+{{< badge title="Difficulty" value="Medium" >}}
+
+<!-- problem:start -->
+
+# [3155. Maximum Number of Upgradable Servers 🔒](https://leetcode.com/problems/maximum-number-of-upgradable-servers)
+
+[中文文档](/solution/3100-3199/3155.Maximum%20Number%20of%20Upgradable%20Servers/README.md)
+
+## Description
+
+<!-- description:start -->
+
+<p>You have <code>n</code> data centers and need to upgrade their servers.</p>
+
+<p>You are given four arrays <code>count</code>, <code>upgrade</code>, <code>sell</code>, and <code>money</code> of length <code>n</code>, which show:</p>
+
+<ul>
+	<li>The number of servers</li>
+	<li>The cost of upgrading a single server</li>
+	<li>The money you get by selling a server</li>
+	<li>The money you initially have</li>
+</ul>
+
+<p>for each data center respectively.</p>
+
+<p>Return an array <code>answer</code>, where for each data center, the corresponding element in <code>answer</code> represents the <strong>maximum</strong> number of servers that can be upgraded.</p>
+
+<p>Note that the money from one data center <strong>cannot</strong> be used for another data center.</p>
+
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+
+<div class="example-block">
+<p><strong>Input:</strong> <span class="example-io">count = [4,3], upgrade = [3,5], sell = [4,2], money = [8,9]</span></p>
+
+<p><strong>Output:</strong> <span class="example-io">[3,2]</span></p>
+
+<p><strong>Explanation:</strong></p>
+
+<p>For the first data center, if we sell one server, we&#39;ll have <code>8 + 4 = 12</code> units of money and we can upgrade the remaining 3 servers.</p>
+
+<p>For the second data center, if we sell one server, we&#39;ll have <code>9 + 2 = 11</code> units of money and we can upgrade the remaining 2 servers.</p>
+</div>
+
+<p><strong class="example">Example 2:</strong></p>
+
+<div class="example-block">
+<p><strong>Input:</strong> <span class="example-io">count = [1], upgrade = [2], sell = [1], money = [1]</span></p>
+
+<p><strong>Output:</strong> <span class="example-io">[0]</span></p>
+</div>
+
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
+
+<ul>
+	<li><code>1 &lt;= count.length == upgrade.length == sell.length == money.length &lt;= 10<sup>5</sup></code></li>
+	<li><code>1 &lt;= count[i], upgrade[i], sell[i], money[i] &lt;= 10<sup>5</sup></code></li>
+</ul>
+
+<!-- description:end -->
+
+## Solutions
+
+<!-- solution:start -->
+
+### Solution 1: Mathematics
+
+For each data center, we assume that we can upgrade $x$ servers, then $x \times \textit{upgrade[i]} \leq \textit{count[i]} \times \textit{sell[i]} + \textit{money[i]}$. That is, $x \leq \frac{\textit{count[i]} \times \textit{sell[i]} + \textit{money[i]}}{\textit{upgrade[i]} + \textit{sell[i]}}$. Also, $x \leq \textit{count[i]}$, so we can take the minimum of the two.
+
+The time complexity is $O(n)$, where $n$ is the length of the array. Ignoring the space consumption of the answer array, the space complexity is $O(1)$.
+
+<!-- tabs:start -->
+
+#### Python3
+
+
+
+#### Java
+
+
+
+#### C++
+
+
+
+#### Go
+
+
+
+#### TypeScript
+
+
+
+<!-- tabs:end -->
+
+<!-- solution:end -->
+
+<!-- problem:end -->
+
+{{< tabs id >}}
+{{% tab "python" %}}
+```python
+class Solution:
+    def maxUpgrades(
+        self, count: List[int], upgrade: List[int], sell: List[int], money: List[int]
+    ) -> List[int]:
+        ans = []
+        for cnt, cost, income, cash in zip(count, upgrade, sell, money):
+            ans.append(min(cnt, (cnt * income + cash) // (cost + income)))
+        return ans
+```
+{{% /tab %}}
+{{% tab "java" %}}
+```java
+class Solution {
+    public int[] maxUpgrades(int[] count, int[] upgrade, int[] sell, int[] money) {
+        int n = count.length;
+        int[] ans = new int[n];
+        for (int i = 0; i < n; ++i) {
+            ans[i] = Math.min(
+                count[i], (int) ((1L * count[i] * sell[i] + money[i]) / (upgrade[i] + sell[i])));
+        }
+        return ans;
+    }
+}
+```
+{{% /tab %}}
+{{% tab "cpp" %}}
+```cpp
+class Solution {
+public:
+    vector<int> maxUpgrades(vector<int>& count, vector<int>& upgrade, vector<int>& sell, vector<int>& money) {
+        int n = count.size();
+        vector<int> ans;
+        for (int i = 0; i < n; ++i) {
+            ans.push_back(min(count[i], (int) ((1LL * count[i] * sell[i] + money[i]) / (upgrade[i] + sell[i]))));
+        }
+        return ans;
+    }
+};
+```
+{{% /tab %}}
+{{% tab "go" %}}
+```go
+func maxUpgrades(count []int, upgrade []int, sell []int, money []int) (ans []int) {
+	for i, cnt := range count {
+		ans = append(ans, min(cnt, (cnt*sell[i]+money[i])/(upgrade[i]+sell[i])))
+	}
+	return
+}
+```
+{{% /tab %}}
+{{% tab "ts" %}}
+```ts
+function maxUpgrades(
+    count: number[],
+    upgrade: number[],
+    sell: number[],
+    money: number[],
+): number[] {
+    const n = count.length;
+    const ans: number[] = [];
+    for (let i = 0; i < n; ++i) {
+        const x = ((count[i] * sell[i] + money[i]) / (upgrade[i] + sell[i])) | 0;
+        ans.push(Math.min(x, count[i]));
+    }
+    return ans;
+}
+```
+{{% /tab %}}
+{{< /tabs>}}
+
+{{% hint info %}}
+{{% details "python 可视化" %}}
+{{< pythontutor width="100%" height="800" language="python" >}}
+class Solution:
+    def maxUpgrades(
+        self, count: List[int], upgrade: List[int], sell: List[int], money: List[int]
+    ) -> List[int]:
+        ans = []
+        for cnt, cost, income, cash in zip(count, upgrade, sell, money):
+            ans.append(min(cnt, (cnt * income + cash) // (cost + income)))
+        return ans
+{{< /pythontutor >}}
+{{% /details %}}
+{{% /hint %}}
+
+{{% hint info %}}
+{{% details "java 可视化" %}}
+{{< pythontutor width="100%" height="800" language="java" >}}
+class Solution {
+    public int[] maxUpgrades(int[] count, int[] upgrade, int[] sell, int[] money) {
+        int n = count.length;
+        int[] ans = new int[n];
+        for (int i = 0; i < n; ++i) {
+            ans[i] = Math.min(
+                count[i], (int) ((1L * count[i] * sell[i] + money[i]) / (upgrade[i] + sell[i])));
+        }
+        return ans;
+    }
+}
+{{< /pythontutor >}}
+{{% /details %}}
+{{% /hint %}}
+
+{{% hint info %}}
+{{% details "cpp 可视化" %}}
+{{< pythontutor width="100%" height="800" language="cpp" >}}
+class Solution {
+public:
+    vector<int> maxUpgrades(vector<int>& count, vector<int>& upgrade, vector<int>& sell, vector<int>& money) {
+        int n = count.size();
+        vector<int> ans;
+        for (int i = 0; i < n; ++i) {
+            ans.push_back(min(count[i], (int) ((1LL * count[i] * sell[i] + money[i]) / (upgrade[i] + sell[i]))));
+        }
+        return ans;
+    }
+};
+{{< /pythontutor >}}
+{{% /details %}}
+{{% /hint %}}

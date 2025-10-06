@@ -1,0 +1,246 @@
+---
+title: "2964_NumberofDivisibleTripletSums"
+date: 2025-10-06T00:42:37+08:00
+weight: 2964
+tags: [数组, 哈希表]
+---
+
+
+{{< katex />}}
+
+{{< badge title="Difficulty" value="中等" >}}
+
+<!-- problem:start -->
+
+# [2964. 可被整除的三元组数量 🔒](https://leetcode.cn/problems/number-of-divisible-triplet-sums)
+
+[English Version](../en/2964-64/2964_NumberofDivisibleTripletSums)
+
+## 题目描述
+
+<!-- description:start -->
+
+给定一个 <b>下标从 0 开始</b>&nbsp;的整数数组&nbsp;<code>nums</code>&nbsp;和一个整数&nbsp;<code>d</code>，请返回满足 <code>i &lt; j &lt; k</code> 且 <code>(nums[i] + nums[j] + nums[k]) % d == 0</code> 的三元组 <code>(i, j, k)</code> 的数量。
+
+<p>&nbsp;</p>
+
+<p><b>示例 1:</b></p>
+
+<pre>
+<strong>输入：</strong>nums = [3,3,4,7,8], d = 5
+<strong>输出：</strong>3
+<strong>解释：</strong>可以被5整除的三元组有：(0, 1, 2),(0, 2, 4),(1, 2, 4)。其他没有其他能被5整除的三元组。因此，答案是3。
+</pre>
+
+<p><b>示例 2：</b></p>
+
+<pre>
+<strong>输入：</strong>nums = [3,3,3,3], d = 3
+<strong>输出：</strong>4
+<strong>解释：</strong>这里选择的任何三元组的和都是9，可以被3整除。因此，答案是所有三元组的总数，即4。
+</pre>
+
+<p><b>示例 3:</b></p>
+
+<pre>
+<strong>输入：</strong>nums = [3,3,3,3], d = 6
+<strong>输出：</strong>0
+<strong>解释：</strong>这里选择的任何三元组的和都是9，不能被6整除。因此，答案是0。
+</pre>
+
+<p>&nbsp;</p>
+
+<p><b>提示：</b></p>
+
+<ul>
+	<li><code>1 &lt;= nums.length &lt;= 1000</code></li>
+	<li><code>1 &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>
+	<li><code>1 &lt;= d &lt;= 10<sup>9</sup></code></li>
+</ul>
+
+<!-- description:end -->
+
+## 解法
+
+<!-- solution:start -->
+
+### 方法一：哈希表 + 枚举
+
+我们可以用哈希表 $cnt$ 记录 $nums[i] \bmod d$ 出现的次数，然后枚举 $j$ 和 $k$，计算使得等式 $(nums[i] + nums[j] + nums[k]) \bmod d = 0$ 成立的 $nums[i] \bmod d$ 的值，即 $(d - (nums[j] + nums[k]) \bmod d) \bmod d$，并将其出现次数累加到答案中。然后我们将 $nums[j] \bmod d$ 的出现次数加一。继续枚举 $j$ 和 $k$，直到 $j$ 到达数组末尾。
+
+时间复杂度 $O(n^2)$，空间复杂度 $O(n)$。其中 $n$ 是数组 $nums$ 的长度。
+
+<!-- tabs:start -->
+
+#### Python3
+
+
+
+#### Java
+
+
+
+#### C++
+
+
+
+#### Go
+
+
+
+#### TypeScript
+
+
+
+<!-- tabs:end -->
+
+<!-- solution:end -->
+
+<!-- problem:end -->
+
+{{< tabs id >}}
+{{% tab "python" %}}
+```python
+class Solution:
+    def divisibleTripletCount(self, nums: List[int], d: int) -> int:
+        cnt = defaultdict(int)
+        ans, n = 0, len(nums)
+        for j in range(n):
+            for k in range(j + 1, n):
+                x = (d - (nums[j] + nums[k]) % d) % d
+                ans += cnt[x]
+            cnt[nums[j] % d] += 1
+        return ans
+```
+{{% /tab %}}
+{{% tab "java" %}}
+```java
+class Solution {
+    public int divisibleTripletCount(int[] nums, int d) {
+        Map<Integer, Integer> cnt = new HashMap<>();
+        int ans = 0, n = nums.length;
+        for (int j = 0; j < n; ++j) {
+            for (int k = j + 1; k < n; ++k) {
+                int x = (d - (nums[j] + nums[k]) % d) % d;
+                ans += cnt.getOrDefault(x, 0);
+            }
+            cnt.merge(nums[j] % d, 1, Integer::sum);
+        }
+        return ans;
+    }
+}
+```
+{{% /tab %}}
+{{% tab "cpp" %}}
+```cpp
+class Solution {
+public:
+    int divisibleTripletCount(vector<int>& nums, int d) {
+        unordered_map<int, int> cnt;
+        int ans = 0, n = nums.size();
+        for (int j = 0; j < n; ++j) {
+            for (int k = j + 1; k < n; ++k) {
+                int x = (d - (nums[j] + nums[k]) % d) % d;
+                ans += cnt[x];
+            }
+            cnt[nums[j] % d]++;
+        }
+        return ans;
+    }
+};
+```
+{{% /tab %}}
+{{% tab "go" %}}
+```go
+func divisibleTripletCount(nums []int, d int) (ans int) {
+	n := len(nums)
+	cnt := map[int]int{}
+	for j := 0; j < n; j++ {
+		for k := j + 1; k < n; k++ {
+			x := (d - (nums[j]+nums[k])%d) % d
+			ans += cnt[x]
+		}
+		cnt[nums[j]%d]++
+	}
+	return
+}
+```
+{{% /tab %}}
+{{% tab "ts" %}}
+```ts
+function divisibleTripletCount(nums: number[], d: number): number {
+    const n = nums.length;
+    const cnt: Map<number, number> = new Map();
+    let ans = 0;
+    for (let j = 0; j < n; ++j) {
+        for (let k = j + 1; k < n; ++k) {
+            const x = (d - ((nums[j] + nums[k]) % d)) % d;
+            ans += cnt.get(x) || 0;
+        }
+        cnt.set(nums[j] % d, (cnt.get(nums[j] % d) || 0) + 1);
+    }
+    return ans;
+}
+```
+{{% /tab %}}
+{{< /tabs>}}
+
+{{% hint info %}}
+{{% details "python 可视化" %}}
+{{< pythontutor width="100%" height="800" language="python" >}}
+class Solution:
+    def divisibleTripletCount(self, nums: List[int], d: int) -> int:
+        cnt = defaultdict(int)
+        ans, n = 0, len(nums)
+        for j in range(n):
+            for k in range(j + 1, n):
+                x = (d - (nums[j] + nums[k]) % d) % d
+                ans += cnt[x]
+            cnt[nums[j] % d] += 1
+        return ans
+{{< /pythontutor >}}
+{{% /details %}}
+{{% /hint %}}
+
+{{% hint info %}}
+{{% details "java 可视化" %}}
+{{< pythontutor width="100%" height="800" language="java" >}}
+class Solution {
+    public int divisibleTripletCount(int[] nums, int d) {
+        Map<Integer, Integer> cnt = new HashMap<>();
+        int ans = 0, n = nums.length;
+        for (int j = 0; j < n; ++j) {
+            for (int k = j + 1; k < n; ++k) {
+                int x = (d - (nums[j] + nums[k]) % d) % d;
+                ans += cnt.getOrDefault(x, 0);
+            }
+            cnt.merge(nums[j] % d, 1, Integer::sum);
+        }
+        return ans;
+    }
+}
+{{< /pythontutor >}}
+{{% /details %}}
+{{% /hint %}}
+
+{{% hint info %}}
+{{% details "cpp 可视化" %}}
+{{< pythontutor width="100%" height="800" language="cpp" >}}
+class Solution {
+public:
+    int divisibleTripletCount(vector<int>& nums, int d) {
+        unordered_map<int, int> cnt;
+        int ans = 0, n = nums.size();
+        for (int j = 0; j < n; ++j) {
+            for (int k = j + 1; k < n; ++k) {
+                int x = (d - (nums[j] + nums[k]) % d) % d;
+                ans += cnt[x];
+            }
+            cnt[nums[j] % d]++;
+        }
+        return ans;
+    }
+};
+{{< /pythontutor >}}
+{{% /details %}}
+{{% /hint %}}

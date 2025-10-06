@@ -1,0 +1,204 @@
+---
+title: "0717_1-bitand2-bitCharacters"
+date: 2025-10-06T00:42:37+08:00
+weight: 0717
+tags: [数组]
+---
+
+
+{{< katex />}}
+
+{{< badge title="Difficulty" value="简单" >}}
+
+<!-- problem:start -->
+
+# [717. 1 比特与 2 比特字符](https://leetcode.cn/problems/1-bit-and-2-bit-characters)
+
+[English Version](../en/0717-17/0717_1-bitand2-bitCharacters)
+
+## 题目描述
+
+<!-- description:start -->
+
+<p>有两种特殊字符：</p>
+
+<ul>
+	<li>第一种字符可以用一比特&nbsp;<code>0</code> 表示</li>
+	<li>第二种字符可以用两比特（<code>10</code>&nbsp;或&nbsp;<code>11</code>）表示</li>
+</ul>
+
+<p>给你一个以 <code>0</code> 结尾的二进制数组&nbsp;<code>bits</code>&nbsp;，如果最后一个字符必须是一个一比特字符，则返回 <code>true</code> 。</p>
+
+<p>&nbsp;</p>
+
+<p><strong>示例&nbsp;1:</strong></p>
+
+<pre>
+<strong>输入:</strong> bits = [1, 0, 0]
+<strong>输出:</strong> true
+<strong>解释:</strong> 唯一的解码方式是将其解析为一个两比特字符和一个一比特字符。
+所以最后一个字符是一比特字符。
+</pre>
+
+<p><strong>示例&nbsp;2:</strong></p>
+
+<pre>
+<strong>输入：</strong>bits = [1,1,1,0]
+<strong>输出：</strong>false
+<strong>解释：</strong>唯一的解码方式是将其解析为两比特字符和两比特字符。
+所以最后一个字符不是一比特字符。
+</pre>
+
+<p>&nbsp;</p>
+
+<p><strong>提示:</strong></p>
+
+<ul>
+	<li><code>1 &lt;= bits.length &lt;= 1000</code></li>
+	<li><code>bits[i]</code> 为 <code>0</code> 或 <code>1</code></li>
+</ul>
+
+<!-- description:end -->
+
+## 解法
+
+<!-- solution:start -->
+
+### 方法一
+
+<!-- tabs:start -->
+
+#### Python3
+
+
+
+#### Java
+
+
+
+#### C++
+
+
+
+#### Go
+
+
+
+#### JavaScript
+
+
+
+<!-- tabs:end -->
+
+<!-- solution:end -->
+
+<!-- problem:end -->
+
+{{< tabs id >}}
+{{% tab "python" %}}
+```python
+class Solution:
+    def isOneBitCharacter(self, bits: List[int]) -> bool:
+        i, n = 0, len(bits)
+        while i < n - 1:
+            i += bits[i] + 1
+        return i == n - 1
+```
+{{% /tab %}}
+{{% tab "java" %}}
+```java
+class Solution {
+    public boolean isOneBitCharacter(int[] bits) {
+        int i = 0, n = bits.length;
+        while (i < n - 1) {
+            i += bits[i] + 1;
+        }
+        return i == n - 1;
+    }
+}
+```
+{{% /tab %}}
+{{% tab "cpp" %}}
+```cpp
+class Solution {
+public:
+    bool isOneBitCharacter(vector<int>& bits) {
+        int i = 0, n = bits.size();
+        while (i < n - 1) i += bits[i] + 1;
+        return i == n - 1;
+    }
+};
+```
+{{% /tab %}}
+{{% tab "go" %}}
+```go
+func isOneBitCharacter(bits []int) bool {
+	i, n := 0, len(bits)
+	for i < n-1 {
+		i += bits[i] + 1
+	}
+	return i == n-1
+}
+```
+{{% /tab %}}
+{{% tab "js" %}}
+```js
+/**
+ * @param {number[]} bits
+ * @return {boolean}
+ */
+var isOneBitCharacter = function (bits) {
+    let i = 0;
+    const n = bits.length;
+    while (i < n - 1) {
+        i += bits[i] + 1;
+    }
+    return i == n - 1;
+};
+```
+{{% /tab %}}
+{{< /tabs>}}
+
+{{% hint info %}}
+{{% details "python 可视化" %}}
+{{< pythontutor width="100%" height="800" language="python" >}}
+class Solution:
+    def isOneBitCharacter(self, bits: List[int]) -> bool:
+        i, n = 0, len(bits)
+        while i < n - 1:
+            i += bits[i] + 1
+        return i == n - 1
+{{< /pythontutor >}}
+{{% /details %}}
+{{% /hint %}}
+
+{{% hint info %}}
+{{% details "java 可视化" %}}
+{{< pythontutor width="100%" height="800" language="java" >}}
+class Solution {
+    public boolean isOneBitCharacter(int[] bits) {
+        int i = 0, n = bits.length;
+        while (i < n - 1) {
+            i += bits[i] + 1;
+        }
+        return i == n - 1;
+    }
+}
+{{< /pythontutor >}}
+{{% /details %}}
+{{% /hint %}}
+
+{{% hint info %}}
+{{% details "cpp 可视化" %}}
+{{< pythontutor width="100%" height="800" language="cpp" >}}
+class Solution {
+public:
+    bool isOneBitCharacter(vector<int>& bits) {
+        int i = 0, n = bits.size();
+        while (i < n - 1) i += bits[i] + 1;
+        return i == n - 1;
+    }
+};
+{{< /pythontutor >}}
+{{% /details %}}
+{{% /hint %}}

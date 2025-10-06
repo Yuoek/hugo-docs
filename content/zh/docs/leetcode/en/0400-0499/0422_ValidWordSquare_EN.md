@@ -1,0 +1,260 @@
+---
+title: "0422_ValidWordSquare"
+date: 2025-10-06T00:42:37+08:00
+weight: 0422
+tags: [Array, Matrix]
+---
+
+
+{{< katex />}}
+
+{{< badge title="Difficulty" value="Easy" >}}
+
+<!-- problem:start -->
+
+# [422. Valid Word Square 🔒](https://leetcode.com/problems/valid-word-square)
+
+[中文文档](/solution/0400-0499/0422.Valid%20Word%20Square/README.md)
+
+## Description
+
+<!-- description:start -->
+
+<p>Given an array of strings <code>words</code>, return <code>true</code> <em>if it forms a valid <strong>word square</strong></em>.</p>
+
+<p>A sequence of strings forms a valid <strong>word square</strong> if the <code>k<sup>th</sup></code> row and column read the same string, where <code>0 &lt;= k &lt; max(numRows, numColumns)</code>.</p>
+
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+<img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0400-0499/0422.Valid%20Word%20Square/images/validsq1-grid.jpg" style="width: 333px; height: 333px;" />
+<pre>
+<strong>Input:</strong> words = [&quot;abcd&quot;,&quot;bnrt&quot;,&quot;crmy&quot;,&quot;dtye&quot;]
+<strong>Output:</strong> true
+<strong>Explanation:</strong>
+The 1<sup>st</sup> row and 1<sup>st</sup> column both read &quot;abcd&quot;.
+The 2<sup>nd</sup> row and 2<sup>nd</sup> column both read &quot;bnrt&quot;.
+The 3<sup>rd</sup> row and 3<sup>rd</sup> column both read &quot;crmy&quot;.
+The 4<sup>th</sup> row and 4<sup>th</sup> column both read &quot;dtye&quot;.
+Therefore, it is a valid word square.
+</pre>
+
+<p><strong class="example">Example 2:</strong></p>
+<img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0400-0499/0422.Valid%20Word%20Square/images/validsq2-grid.jpg" style="width: 333px; height: 333px;" />
+<pre>
+<strong>Input:</strong> words = [&quot;abcd&quot;,&quot;bnrt&quot;,&quot;crm&quot;,&quot;dt&quot;]
+<strong>Output:</strong> true
+<strong>Explanation:</strong>
+The 1<sup>st</sup> row and 1<sup>st</sup> column both read &quot;abcd&quot;.
+The 2<sup>nd</sup> row and 2<sup>nd</sup> column both read &quot;bnrt&quot;.
+The 3<sup>rd</sup> row and 3<sup>rd</sup> column both read &quot;crm&quot;.
+The 4<sup>th</sup> row and 4<sup>th</sup> column both read &quot;dt&quot;.
+Therefore, it is a valid word square.
+</pre>
+
+<p><strong class="example">Example 3:</strong></p>
+<img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0400-0499/0422.Valid%20Word%20Square/images/validsq3-grid.jpg" style="width: 333px; height: 333px;" />
+<pre>
+<strong>Input:</strong> words = [&quot;ball&quot;,&quot;area&quot;,&quot;read&quot;,&quot;lady&quot;]
+<strong>Output:</strong> false
+<strong>Explanation:</strong>
+The 3<sup>rd</sup> row reads &quot;read&quot; while the 3<sup>rd</sup> column reads &quot;lead&quot;.
+Therefore, it is NOT a valid word square.
+</pre>
+
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
+
+<ul>
+	<li><code>1 &lt;= words.length &lt;= 500</code></li>
+	<li><code>1 &lt;= words[i].length &lt;= 500</code></li>
+	<li><code>words[i]</code> consists of only lowercase English letters.</li>
+</ul>
+
+<!-- description:end -->
+
+## Solutions
+
+<!-- solution:start -->
+
+### Solution 1: Iterative Check
+
+We observe that if $words[i][j] \neq words[j][i]$, we can directly return `false`.
+
+Therefore, we only need to iterate through each row, and then check whether each row satisfies $words[i][j] = words[j][i]$. Note that if the index is out of bounds, we also directly return `false`.
+
+The time complexity is $O(n^2)$, where $n$ is the length of `words`. The space complexity is $O(1)`.
+
+<!-- tabs:start -->
+
+#### Python3
+
+
+
+#### Java
+
+
+
+#### C++
+
+
+
+#### Go
+
+
+
+#### TypeScript
+
+
+
+<!-- tabs:end -->
+
+<!-- solution:end -->
+
+<!-- problem:end -->
+
+{{< tabs id >}}
+{{% tab "python" %}}
+```python
+class Solution:
+    def validWordSquare(self, words: List[str]) -> bool:
+        m = len(words)
+        for i, w in enumerate(words):
+            for j, c in enumerate(w):
+                if j >= m or i >= len(words[j]) or c != words[j][i]:
+                    return False
+        return True
+```
+{{% /tab %}}
+{{% tab "java" %}}
+```java
+class Solution {
+    public boolean validWordSquare(List<String> words) {
+        int m = words.size();
+        for (int i = 0; i < m; ++i) {
+            int n = words.get(i).length();
+            for (int j = 0; j < n; ++j) {
+                if (j >= m || i >= words.get(j).length()) {
+                    return false;
+                }
+                if (words.get(i).charAt(j) != words.get(j).charAt(i)) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+}
+```
+{{% /tab %}}
+{{% tab "cpp" %}}
+```cpp
+class Solution {
+public:
+    bool validWordSquare(vector<string>& words) {
+        int m = words.size();
+        for (int i = 0; i < m; ++i) {
+            int n = words[i].size();
+            for (int j = 0; j < n; ++j) {
+                if (j >= m || i >= words[j].size() || words[i][j] != words[j][i]) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+};
+```
+{{% /tab %}}
+{{% tab "go" %}}
+```go
+func validWordSquare(words []string) bool {
+	m := len(words)
+	for i, w := range words {
+		for j := range w {
+			if j >= m || i >= len(words[j]) || w[j] != words[j][i] {
+				return false
+			}
+		}
+	}
+	return true
+}
+```
+{{% /tab %}}
+{{% tab "ts" %}}
+```ts
+function validWordSquare(words: string[]): boolean {
+    const m = words.length;
+    for (let i = 0; i < m; ++i) {
+        const n = words[i].length;
+        for (let j = 0; j < n; ++j) {
+            if (j >= m || i >= words[j].length || words[i][j] !== words[j][i]) {
+                return false;
+            }
+        }
+    }
+    return true;
+}
+```
+{{% /tab %}}
+{{< /tabs>}}
+
+{{% hint info %}}
+{{% details "python 可视化" %}}
+{{< pythontutor width="100%" height="800" language="python" >}}
+class Solution:
+    def validWordSquare(self, words: List[str]) -> bool:
+        m = len(words)
+        for i, w in enumerate(words):
+            for j, c in enumerate(w):
+                if j >= m or i >= len(words[j]) or c != words[j][i]:
+                    return False
+        return True
+{{< /pythontutor >}}
+{{% /details %}}
+{{% /hint %}}
+
+{{% hint info %}}
+{{% details "java 可视化" %}}
+{{< pythontutor width="100%" height="800" language="java" >}}
+class Solution {
+    public boolean validWordSquare(List<String> words) {
+        int m = words.size();
+        for (int i = 0; i < m; ++i) {
+            int n = words.get(i).length();
+            for (int j = 0; j < n; ++j) {
+                if (j >= m || i >= words.get(j).length()) {
+                    return false;
+                }
+                if (words.get(i).charAt(j) != words.get(j).charAt(i)) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+}
+{{< /pythontutor >}}
+{{% /details %}}
+{{% /hint %}}
+
+{{% hint info %}}
+{{% details "cpp 可视化" %}}
+{{< pythontutor width="100%" height="800" language="cpp" >}}
+class Solution {
+public:
+    bool validWordSquare(vector<string>& words) {
+        int m = words.size();
+        for (int i = 0; i < m; ++i) {
+            int n = words[i].size();
+            for (int j = 0; j < n; ++j) {
+                if (j >= m || i >= words[j].size() || words[i][j] != words[j][i]) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+};
+{{< /pythontutor >}}
+{{% /details %}}
+{{% /hint %}}

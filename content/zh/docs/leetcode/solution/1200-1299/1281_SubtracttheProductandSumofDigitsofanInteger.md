@@ -1,0 +1,289 @@
+---
+title: "1281_SubtracttheProductandSumofDigitsofanInteger"
+date: 2025-10-06T00:42:37+08:00
+weight: 1281
+tags: [数学]
+---
+
+
+{{< katex />}}
+
+{{< badge title="Difficulty" value="简单" >}}
+
+<!-- problem:start -->
+
+# [1281. 整数的各位积和之差](https://leetcode.cn/problems/subtract-the-product-and-sum-of-digits-of-an-integer)
+
+[English Version](../en/1281-81/1281_SubtracttheProductandSumofDigitsofanInteger)
+
+## 题目描述
+
+<!-- description:start -->
+
+<p>给你一个整数&nbsp;<code>n</code>，请你帮忙计算并返回该整数「各位数字之积」与「各位数字之和」的差。</p>
+
+<p>&nbsp;</p>
+
+<p><strong>示例 1：</strong></p>
+
+<pre><strong>输入：</strong>n = 234
+<strong>输出：</strong>15 
+<strong>解释：</strong>
+各位数之积 = 2 * 3 * 4 = 24 
+各位数之和 = 2 + 3 + 4 = 9 
+结果 = 24 - 9 = 15
+</pre>
+
+<p><strong>示例 2：</strong></p>
+
+<pre><strong>输入：</strong>n = 4421
+<strong>输出：</strong>21
+<strong>解释： 
+</strong>各位数之积 = 4 * 4 * 2 * 1 = 32 
+各位数之和 = 4 + 4 + 2 + 1 = 11 
+结果 = 32 - 11 = 21
+</pre>
+
+<p>&nbsp;</p>
+
+<p><strong>提示：</strong></p>
+
+<ul>
+	<li><code>1 &lt;= n &lt;= 10^5</code></li>
+</ul>
+
+<!-- description:end -->
+
+## 解法
+
+<!-- solution:start -->
+
+### 方法一：模拟
+
+我们用两个变量 $x$ 和 $y$ 分别记录各位数之积、各位数之和，初始时 $x=1,y=0$。
+
+当 $n \gt 0$ 时，每次将 $n$ 对 $10$ 取模得到当前位的数字 $v$，并将 $n$ 除以 $10$ 后继续进行下一次循环。在每次循环中，我们更新 $x = x \times v$, $y = y + v$。
+
+最终，我们返回 $x - y$ 即可。
+
+时间复杂度 $O(\log n)$，其中 $n$ 是题目给定的整数。空间复杂度 $O(1)$。
+
+<!-- tabs:start -->
+
+#### Python3
+
+
+
+#### Java
+
+
+
+#### C++
+
+
+
+#### Go
+
+
+
+#### TypeScript
+
+
+
+#### Rust
+
+
+
+#### C#
+
+
+
+#### C
+
+
+
+<!-- tabs:end -->
+
+<!-- solution:end -->
+
+<!-- problem:end -->
+
+{{< tabs id >}}
+{{% tab "python" %}}
+```python
+class Solution:
+    def subtractProductAndSum(self, n: int) -> int:
+        nums = list(map(int, str(n)))
+        return prod(nums) - sum(nums)
+```
+{{% /tab %}}
+{{% tab "java" %}}
+```java
+class Solution {
+    public int subtractProductAndSum(int n) {
+        int x = 1, y = 0;
+        for (; n > 0; n /= 10) {
+            int v = n % 10;
+            x *= v;
+            y += v;
+        }
+        return x - y;
+    }
+}
+```
+{{% /tab %}}
+{{% tab "cpp" %}}
+```cpp
+class Solution {
+public:
+    int subtractProductAndSum(int n) {
+        int x = 1, y = 0;
+        for (; n; n /= 10) {
+            int v = n % 10;
+            x *= v;
+            y += v;
+        }
+        return x - y;
+    }
+};
+```
+{{% /tab %}}
+{{% tab "go" %}}
+```go
+func subtractProductAndSum(n int) int {
+	x, y := 1, 0
+	for ; n > 0; n /= 10 {
+		v := n % 10
+		x *= v
+		y += v
+	}
+	return x - y
+}
+```
+{{% /tab %}}
+{{% tab "ts" %}}
+```ts
+function subtractProductAndSum(n: number): number {
+    let [x, y] = [1, 0];
+    for (; n > 0; n = Math.floor(n / 10)) {
+        const v = n % 10;
+        x *= v;
+        y += v;
+    }
+    return x - y;
+}
+```
+{{% /tab %}}
+{{% tab "rust" %}}
+```rust
+impl Solution {
+    pub fn subtract_product_and_sum(mut n: i32) -> i32 {
+        let mut x = 1;
+        let mut y = 0;
+        while n != 0 {
+            let v = n % 10;
+            n /= 10;
+            x *= v;
+            y += v;
+        }
+        x - y
+    }
+}
+```
+{{% /tab %}}
+{{% tab "cs" %}}
+```cs
+public class Solution {
+    public int SubtractProductAndSum(int n) {
+        int x = 1;
+        int y = 0;
+        for (; n > 0; n /= 10) {
+            int v = n % 10;
+            x *= v;
+            y += v;
+        }
+        return x - y;
+    }
+}
+```
+{{% /tab %}}
+{{% tab "c" %}}
+```c
+int subtractProductAndSum(int n) {
+    int x = 1;
+    int y = 0;
+    for (; n > 0; n /= 10) {
+        int v = n % 10;
+        x *= v;
+        y += v;
+    }
+    return x - y;
+}
+```
+{{% /tab %}}
+{{< /tabs>}}
+
+{{% hint info %}}
+{{% details "python 可视化" %}}
+{{< pythontutor width="100%" height="800" language="python" >}}
+class Solution:
+    def subtractProductAndSum(self, n: int) -> int:
+        nums = list(map(int, str(n)))
+        return prod(nums) - sum(nums)
+{{< /pythontutor >}}
+{{% /details %}}
+{{% /hint %}}
+
+{{% hint info %}}
+{{% details "java 可视化" %}}
+{{< pythontutor width="100%" height="800" language="java" >}}
+class Solution {
+    public int subtractProductAndSum(int n) {
+        int x = 1, y = 0;
+        for (; n > 0; n /= 10) {
+            int v = n % 10;
+            x *= v;
+            y += v;
+        }
+        return x - y;
+    }
+}
+{{< /pythontutor >}}
+{{% /details %}}
+{{% /hint %}}
+
+{{% hint info %}}
+{{% details "c 可视化" %}}
+{{< pythontutor width="100%" height="800" language="c" >}}
+int subtractProductAndSum(int n) {
+    int x = 1;
+    int y = 0;
+    for (; n > 0; n /= 10) {
+        int v = n % 10;
+        x *= v;
+        y += v;
+    }
+    return x - y;
+}
+{{< /pythontutor >}}
+{{% /details %}}
+{{% /hint %}}
+
+{{% hint info %}}
+{{% details "cpp 可视化" %}}
+{{< pythontutor width="100%" height="800" language="cpp" >}}
+class Solution {
+public:
+    int subtractProductAndSum(int n) {
+        int x = 1, y = 0;
+        for (; n; n /= 10) {
+            int v = n % 10;
+            x *= v;
+            y += v;
+        }
+        return x - y;
+    }
+};
+{{< /pythontutor >}}
+{{% /details %}}
+{{% /hint %}}

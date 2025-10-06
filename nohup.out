@@ -47433,3 +47433,1529 @@ github.com/gohugoio/hugo/commands.(*hugoBuilder).newWatcher.func2()
 	/home/builder/.termux-build/hugo/src/commands/hugobuilder.go:368 +0x208
 created by github.com/gohugoio/hugo/commands.(*hugoBuilder).newWatcher in goroutine 1
 	/home/builder/.termux-build/hugo/src/commands/hugobuilder.go:339 +0x400
+Loading the library from the following files:
+	/data/data/com.termux/files/home/Yu/KiwiZim/kiwix.xml
+The library was successfully loaded.
+The Kiwix server is running and can be accessed in the local network at: http://10.120.50.218:8084
+Watching for changes in /data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs/{archetypes,assets,content,data,i18n,layouts,static,themes}
+Watching for config changes in /data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs/hugo.toml
+Start building sites … 
+hugo v0.148.2+extended android/arm64 BuildDate=unknown
+
+rst2html / rst2html.py not found in $PATH: Please install.
+                  Leaving reStructuredText content unrendered.
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+rst2html / rst2html.py not found in $PATH: Please install.
+                  Leaving reStructuredText content unrendered.
+
+                 │  EN  │  ZH  │  HE  
+─────────────────┼──────┼──────┼──────
+ Pages           │  915 │  914 │    8 
+ Paginator pages │    0 │    0 │    0 
+ Non-page files  │ 3877 │ 3877 │    0 
+ Static files    │ 1041 │ 1041 │ 1041 
+ Processed       │    0 │    0 │    0 
+ images          │      │      │      
+ Aliases         │    1 │    0 │    0 
+ Cleaned         │    0 │    0 │    0 
+
+Built in 144447 ms
+Environment: "development"
+Serving pages from disk
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1) 
+Press Ctrl+C to stop
+Watching for changes in /data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs/{archetypes,assets,content,data,i18n,layouts,static,themes}
+Watching for config changes in /data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs/hugo.toml
+Start building sites … 
+hugo v0.148.2+extended android/arm64 BuildDate=unknown
+
+rst2html / rst2html.py not found in $PATH: Please install.
+                  Leaving reStructuredText content unrendered.
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+rst2html / rst2html.py not found in $PATH: Please install.
+                  Leaving reStructuredText content unrendered.
+
+                 │  EN  │  ZH  │  HE  
+─────────────────┼──────┼──────┼──────
+ Pages           │  915 │  916 │    8 
+ Paginator pages │    0 │    0 │    0 
+ Non-page files  │ 3877 │ 3876 │    0 
+ Static files    │ 1041 │ 1041 │ 1041 
+ Processed       │    0 │    0 │    0 
+ images          │      │      │      
+ Aliases         │    1 │    0 │    0 
+ Cleaned         │    0 │    0 │    0 
+
+Built in 44542 ms
+Environment: "development"
+Serving pages from disk
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1) 
+Press Ctrl+C to stop
+
+Change detected, rebuilding site (#1).
+2025-10-05 07:11:44.354 +0000
+Source changed /_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 3002 ms
+
+Change detected, rebuilding site (#2).
+2025-10-05 07:13:01.792 +0000
+Source changed /_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 14620 ms
+
+Change detected, rebuilding site (#3).
+2025-10-05 07:13:38.803 +0000
+Source changed /_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 5184 ms
+
+Change detected, rebuilding site (#4).
+2025-10-05 07:13:45.283 +0000
+Source changed /_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 11418 ms
+
+Change detected, rebuilding site (#5).
+2025-10-05 07:14:26.284 +0000
+Source changed /_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 8209 ms
+
+Change detected, rebuilding site (#6).
+2025-10-05 07:15:28.792 +0000
+Source changed /_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 2980 ms
+
+Change detected, rebuilding site (#7).
+2025-10-05 07:15:31.785 +0000
+Source changed /_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 10667 ms
+
+Change detected, rebuilding site (#8).
+2025-10-05 07:15:43.282 +0000
+Source changed /_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 11482 ms
+
+Change detected, rebuilding site (#9).
+2025-10-05 07:19:05.287 +0000
+Source changed /_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 12710 ms
+
+Change detected, rebuilding site (#10).
+2025-10-05 07:19:32.292 +0000
+Source changed /_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 10911 ms
+
+Change detected, rebuilding site (#11).
+2025-10-05 07:23:02.302 +0000
+Source changed /_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 11368 ms
+
+Change detected, rebuilding site (#12).
+2025-10-05 07:23:36.285 +0000
+Source changed /_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 11473 ms
+
+Change detected, rebuilding site (#13).
+2025-10-05 07:24:16.288 +0000
+Source changed /_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 10814 ms
+
+Change detected, rebuilding site (#14).
+2025-10-05 07:25:19.287 +0000
+Source changed /_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 11110 ms
+
+Change detected, rebuilding site (#15).
+2025-10-05 07:26:20.794 +0000
+Source changed /_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 11740 ms
+
+Change detected, rebuilding site (#16).
+2025-10-05 07:26:56.793 +0000
+Source changed /_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 8484 ms
+
+Change detected, rebuilding site (#17).
+2025-10-05 07:27:19.794 +0000
+Source changed /_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 8044 ms
+
+Change detected, rebuilding site (#18).
+2025-10-05 07:27:33.284 +0000
+Source changed /_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 7296 ms
+
+Change detected, rebuilding site (#19).
+2025-10-05 07:27:48.785 +0000
+Source changed /_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 8744 ms
+
+Change detected, rebuilding site (#20).
+2025-10-05 07:28:12.797 +0000
+Source changed /_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 7770 ms
+
+Change detected, rebuilding site (#21).
+2025-10-05 07:28:44.790 +0000
+Source changed /_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 2836 ms
+
+Change detected, rebuilding site (#22).
+2025-10-05 07:28:52.810 +0000
+Source changed /_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 2799 ms
+
+Change detected, rebuilding site (#23).
+2025-10-05 07:29:01.295 +0000
+Source changed /_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 9253 ms
+
+Change detected, rebuilding site (#24).
+2025-10-05 07:29:46.284 +0000
+Source changed /_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 3023 ms
+
+Change detected, rebuilding site (#25).
+2025-10-05 07:30:37.789 +0000
+Source changed /_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 12011 ms
+
+Change detected, rebuilding site (#26).
+2025-10-05 07:32:36.808 +0000
+Source changed /_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 10593 ms
+
+Change detected, rebuilding site (#27).
+2025-10-05 07:32:49.782 +0000
+Source changed /_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 8940 ms
+
+Change detected, rebuilding site (#28).
+2025-10-05 07:33:26.790 +0000
+Source changed /_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 10822 ms
+
+Change detected, rebuilding site (#29).
+2025-10-05 07:33:40.284 +0000
+Source changed /_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 12223 ms
+
+Change detected, rebuilding site (#30).
+2025-10-05 07:34:27.787 +0000
+Source changed /_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 10781 ms
+
+Change detected, rebuilding site (#31).
+2025-10-05 07:34:46.784 +0000
+Source changed /_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 6327 ms
+
+Change detected, rebuilding site (#32).
+2025-10-05 07:35:14.785 +0000
+Source changed /_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 12556 ms
+
+Change detected, rebuilding site (#33).
+2025-10-05 07:36:09.284 +0000
+Source changed /_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 10832 ms
+
+Change detected, rebuilding site (#34).
+2025-10-05 07:36:56.283 +0000
+Source changed /_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 2984 ms
+
+Change detected, rebuilding site (#35).
+2025-10-05 07:37:08.283 +0000
+Source changed /_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 6764 ms
+
+Change detected, rebuilding site (#36).
+2025-10-05 07:38:13.787 +0000
+Source changed /_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 11795 ms
+
+Change detected, rebuilding site (#37).
+2025-10-05 07:38:47.299 +0000
+Source changed /_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 10342 ms
+adding created directory to watchlist /data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs/content/zh/docs/class/college/computerOrganization
+
+Change detected, rebuilding site (#38).
+2025-10-05 07:42:07.883 +0000
+Source changed /docs/class/college/computerorganization
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1317 ms
+
+Change detected, rebuilding site (#39).
+2025-10-05 07:43:09.808 +0000
+Source changed /docs/class/college/computerorganization/_index.md
+rst2html / rst2html.py not found in $PATH: Please install.
+                  Leaving reStructuredText content unrendered.
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+rst2html / rst2html.py not found in $PATH: Please install.
+                  Leaving reStructuredText content unrendered.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 16721 ms
+
+Change detected, rebuilding site (#40).
+2025-10-05 07:43:55.791 +0000
+Source changed /docs/class/college/computerorganization/_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 15172 ms
+
+Change detected, rebuilding site (#41).
+2025-10-05 07:44:16.290 +0000
+Source changed /docs/class/college/computerorganization/_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1109 ms
+
+Change detected, rebuilding site (#42).
+2025-10-05 07:46:49.796 +0000
+Source changed /docs/class/cs/cs61-a/lecture-01/readme.md
+rst2html / rst2html.py not found in $PATH: Please install.
+                  Leaving reStructuredText content unrendered.
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+rst2html / rst2html.py not found in $PATH: Please install.
+                  Leaving reStructuredText content unrendered.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 16468 ms
+
+Change detected, rebuilding site (#43).
+2025-10-05 07:47:21.288 +0000
+Source changed /docs/class/cs/cs61-a/lecture-01/readme.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1337 ms
+
+Change detected, rebuilding site (#44).
+2025-10-05 07:47:24.782 +0000
+Source changed /docs/class/cs/cs61-a/lecture-01/readme.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 4390 ms
+
+Change detected, rebuilding site (#45).
+2025-10-05 07:48:21.792 +0000
+Source changed /docs/class/cs/cs61-a/lecture-lab-proj/_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 5434 ms
+
+Change detected, rebuilding site (#46).
+2025-10-05 07:48:53.289 +0000
+Source changed /docs/class/cs/cs61-a/lecture-01/index.md
+Source changed /docs/class/cs/cs61-a/lecture-01/_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 6263 ms
+
+Change detected, rebuilding site (#47).
+2025-10-05 07:49:14.794 +0000
+Source changed /docs/class/cs/cs61-a/lecture-01/_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1698 ms
+
+Change detected, rebuilding site (#48).
+2025-10-05 07:50:02.291 +0000
+Source changed /docs/class/cs/cs61-a/lecture-01/_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1234 ms
+
+Change detected, rebuilding site (#49).
+2025-10-05 07:50:05.284 +0000
+Source changed /docs/class/cs/cs61-a/lecture-01/readme.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1290 ms
+
+Change detected, rebuilding site (#50).
+2025-10-05 07:51:46.792 +0000
+Source changed /docs/class/cs/cs61-a/lecture-01/readme.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 2136 ms
+
+Change detected, rebuilding site (#51).
+2025-10-05 07:52:02.798 +0000
+Source changed /docs/class/cs/cs61-a/lecture-01/_index.md
+Source changed /docs/class/cs/cs61-a/lecture-01/lecture-01.md
+rst2html / rst2html.py not found in $PATH: Please install.
+                  Leaving reStructuredText content unrendered.
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+rst2html / rst2html.py not found in $PATH: Please install.
+                  Leaving reStructuredText content unrendered.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 17655 ms
+
+Change detected, rebuilding site (#52).
+2025-10-05 07:52:20.661 +0000
+Source changed /docs/class/cs/cs61-a/lecture-01/lecture-01.md
+Source changed /docs/class/cs/cs61-a/lecture-01.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 6140 ms
+
+Change detected, rebuilding site (#53).
+2025-10-05 07:52:43.289 +0000
+Source changed /docs/class/cs/cs61-a/lecture-01.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 889 ms
+
+Change detected, rebuilding site (#54).
+2025-10-05 07:55:35.787 +0000
+Source changed /docs/class/cs/cs61-a/lecture-01.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 2447 ms
+
+Change detected, rebuilding site (#55).
+2025-10-05 07:56:27.311 +0000
+Source changed /docs/class/cs/cs61-a/lecture-01.md
+ERROR Rebuild failed: process: "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs/content/zh/docs/class/cs/cs61-a/lecture-01.md:17:1": failed to extract shortcode: shortcode "hint" must be closed or self-closed
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 459 ms
+
+Change detected, rebuilding site (#56).
+2025-10-05 07:56:44.297 +0000
+Source changed /docs/class/cs/cs61-a/lecture-01.md
+ERROR Rebuild failed: process: "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs/content/zh/docs/class/cs/cs61-a/lecture-01.md:17:1": failed to extract shortcode: shortcode "hint" must be closed or self-closed
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 482 ms
+
+Change detected, rebuilding site (#57).
+2025-10-05 07:57:03.794 +0000
+Source changed /docs/class/cs/cs61-a/lecture-01.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1201 ms
+
+Change detected, rebuilding site (#58).
+2025-10-05 07:57:51.798 +0000
+Source changed /docs/class/cs/cs61-a/lecture-01.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1661 ms
+
+Change detected, rebuilding site (#59).
+2025-10-05 08:02:02.821 +0000
+Source changed /docs/class/class.py
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 2164 ms
+
+Change detected, rebuilding site (#60).
+2025-10-05 08:10:26.336 +0000
+Source changed /docs/class/cs/cs143/lecture-01/index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1344 ms
+
+Change detected, rebuilding site (#61).
+2025-10-05 08:11:22.354 +0000
+Source changed /docs/class/cs/cs61-a/lecture-15/index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1314 ms
+
+Change detected, rebuilding site (#62).
+2025-10-05 08:12:07.299 +0000
+Source changed /docs/class/cs/cs61-a/lecture-15/index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1124 ms
+
+Change detected, rebuilding site (#63).
+2025-10-05 08:13:03.289 +0000
+Source changed /docs/class/class.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1769 ms
+
+Change detected, rebuilding site (#64).
+2025-10-05 08:22:07.845 +0000
+Source changed /docs/class/class.py
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1168 ms
+adding created directory to watchlist /data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs/content/zh/docs/class/computer
+
+Change detected, rebuilding site (#65).
+2025-10-05 08:25:02.357 +0000
+Source changed /docs/class/computer/lecture-001.md
+Source changed /docs/class/computer/lecture-002.md
+Source changed /docs/class/computer/lecture-003.md
+Source changed /docs/class/computer/lecture-004.md
+Source changed /docs/class/computer/lecture-005.md
+Source changed /docs/class/computer/lecture-006.md
+Source changed /docs/class/computer/lecture-007.md
+Source changed /docs/class/computer/lecture-008.md
+Source changed /docs/class/computer/lecture-009.md
+Source changed /docs/class/computer/lecture-010.md
+Source changed /docs/class/computer/lecture-011.md
+Source changed /docs/class/computer/lecture-012.md
+Source changed /docs/class/computer/lecture-013.md
+Source changed /docs/class/computer/lecture-014.md
+Source changed /docs/class/computer/lecture-015.md
+Source changed /docs/class/computer/lecture-016.md
+Source changed /docs/class/computer/lecture-017.md
+Source changed /docs/class/computer/lecture-018.md
+Source changed /docs/class/computer/lecture-019.md
+Source changed /docs/class/computer/lecture-020.md
+Source changed /docs/class/computer/lecture-021.md
+Source changed /docs/class/computer/lecture-022.md
+Source changed /docs/class/computer/lecture-023.md
+Source changed /docs/class/computer/lecture-024.md
+Source changed /docs/class/computer/lecture-025.md
+Source changed /docs/class/computer/lecture-026.md
+Source changed /docs/class/computer/lecture-027.md
+Source changed /docs/class/computer/lecture-028.md
+Source changed /docs/class/computer/lecture-029.md
+Source changed /docs/class/computer/lecture-030.md
+Source changed /docs/class/computer/lecture-031.md
+Source changed /docs/class/computer/lecture-032.md
+ERROR Rebuild failed: process: "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs/content/zh/docs/class/computer/lecture-001.md:9:1": failed to unmarshal YAML: yaml: line 9: could not find expected ':'
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 2775 ms
+
+Change detected, rebuilding site (#66).
+2025-10-05 08:26:02.364 +0000
+Source changed /docs/class/computer/_index.md
+Source changed /docs/class/computer/lecture-001.md
+Source changed /docs/class/computer/lecture-002.md
+Source changed /docs/class/computer/lecture-003.md
+Source changed /docs/class/computer/lecture-004.md
+Source changed /docs/class/computer/lecture-005.md
+Source changed /docs/class/computer/lecture-006.md
+Source changed /docs/class/computer/lecture-007.md
+Source changed /docs/class/computer/lecture-008.md
+Source changed /docs/class/computer/lecture-009.md
+Source changed /docs/class/computer/lecture-010.md
+Source changed /docs/class/computer/lecture-011.md
+Source changed /docs/class/computer/lecture-012.md
+Source changed /docs/class/computer/lecture-013.md
+Source changed /docs/class/computer/lecture-014.md
+Source changed /docs/class/computer/lecture-015.md
+Source changed /docs/class/computer/lecture-016.md
+Source changed /docs/class/computer/lecture-017.md
+Source changed /docs/class/computer/lecture-018.md
+Source changed /docs/class/computer/lecture-019.md
+Source changed /docs/class/computer/lecture-020.md
+Source changed /docs/class/computer/lecture-021.md
+Source changed /docs/class/computer/lecture-022.md
+Source changed /docs/class/computer/lecture-023.md
+Source changed /docs/class/computer/lecture-024.md
+Source changed /docs/class/computer/lecture-025.md
+Source changed /docs/class/computer/lecture-026.md
+Source changed /docs/class/computer/lecture-027.md
+Source changed /docs/class/computer/lecture-028.md
+Source changed /docs/class/computer/lecture-029.md
+Source changed /docs/class/computer/lecture-030.md
+Source changed /docs/class/computer/lecture-031.md
+Source changed /docs/class/computer/lecture-032.md
+Source changed /docs/class/computer/lecture-001.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 2649 ms
+
+Change detected, rebuilding site (#67).
+2025-10-05 08:26:13.289 +0000
+Source changed /docs/class/class.py
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 982 ms
+adding created directory to watchlist /data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs/content/zh/docs/class/computer
+
+Change detected, rebuilding site (#68).
+2025-10-05 08:26:20.797 +0000
+Source changed /docs/class/computer/lecture-001.md
+Source changed /docs/class/computer/lecture-002.md
+Source changed /docs/class/computer/lecture-003.md
+Source changed /docs/class/computer/lecture-004.md
+Source changed /docs/class/computer/lecture-005.md
+Source changed /docs/class/computer/lecture-006.md
+Source changed /docs/class/computer/lecture-007.md
+Source changed /docs/class/computer/lecture-008.md
+Source changed /docs/class/computer/lecture-009.md
+Source changed /docs/class/computer/lecture-010.md
+Source changed /docs/class/computer/lecture-011.md
+Source changed /docs/class/computer/lecture-012.md
+Source changed /docs/class/computer/lecture-013.md
+Source changed /docs/class/computer/lecture-014.md
+Source changed /docs/class/computer/lecture-015.md
+Source changed /docs/class/computer/lecture-016.md
+Source changed /docs/class/computer/lecture-017.md
+Source changed /docs/class/computer/lecture-018.md
+Source changed /docs/class/computer/lecture-019.md
+Source changed /docs/class/computer/lecture-020.md
+Source changed /docs/class/computer/lecture-021.md
+Source changed /docs/class/computer/lecture-022.md
+Source changed /docs/class/computer/lecture-023.md
+Source changed /docs/class/computer/lecture-024.md
+Source changed /docs/class/computer/lecture-025.md
+Source changed /docs/class/computer/lecture-026.md
+Source changed /docs/class/computer/lecture-027.md
+Source changed /docs/class/computer/lecture-028.md
+Source changed /docs/class/computer/lecture-029.md
+Source changed /docs/class/computer/lecture-030.md
+Source changed /docs/class/computer/lecture-031.md
+Source changed /docs/class/computer/lecture-032.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 8604 ms
+
+Change detected, rebuilding site (#69).
+2025-10-05 08:27:08.804 +0000
+Source changed /docs/class/computer/_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 2174 ms
+
+Change detected, rebuilding site (#70).
+2025-10-05 08:33:20.957 +0000
+Source changed /docs/class/class.py
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 2144 ms
+
+Change detected, rebuilding site (#71).
+2025-10-05 08:33:30.808 +0000
+Source changed /docs/class/computer/_index.md
+Source changed /docs/class/computer/lecture-001.md
+Source changed /docs/class/computer/lecture-002.md
+Source changed /docs/class/computer/lecture-003.md
+Source changed /docs/class/computer/lecture-004.md
+Source changed /docs/class/computer/lecture-005.md
+Source changed /docs/class/computer/lecture-006.md
+Source changed /docs/class/computer/lecture-007.md
+Source changed /docs/class/computer/lecture-008.md
+Source changed /docs/class/computer/lecture-009.md
+Source changed /docs/class/computer/lecture-010.md
+Source changed /docs/class/computer/lecture-011.md
+Source changed /docs/class/computer/lecture-012.md
+Source changed /docs/class/computer/lecture-013.md
+Source changed /docs/class/computer/lecture-014.md
+Source changed /docs/class/computer/lecture-015.md
+Source changed /docs/class/computer/lecture-016.md
+Source changed /docs/class/computer/lecture-017.md
+Source changed /docs/class/computer/lecture-018.md
+Source changed /docs/class/computer/lecture-019.md
+Source changed /docs/class/computer/lecture-020.md
+Source changed /docs/class/computer/lecture-021.md
+Source changed /docs/class/computer/lecture-022.md
+Source changed /docs/class/computer/lecture-023.md
+Source changed /docs/class/computer/lecture-024.md
+Source changed /docs/class/computer/lecture-025.md
+Source changed /docs/class/computer/lecture-026.md
+Source changed /docs/class/computer/lecture-027.md
+Source changed /docs/class/computer/lecture-028.md
+Source changed /docs/class/computer/lecture-029.md
+Source changed /docs/class/computer/lecture-030.md
+Source changed /docs/class/computer/lecture-031.md
+Source changed /docs/class/computer/lecture-032.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 4158 ms
+adding created directory to watchlist /data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs/content/zh/docs/class/computer
+
+Change detected, rebuilding site (#72).
+2025-10-05 08:33:58.299 +0000
+Source changed /docs/class/computer/_index.md
+Source changed /docs/class/computer/lecture-001.md
+Source changed /docs/class/computer/lecture-002.md
+Source changed /docs/class/computer/lecture-003.md
+Source changed /docs/class/computer/lecture-004.md
+Source changed /docs/class/computer/lecture-005.md
+Source changed /docs/class/computer/lecture-006.md
+Source changed /docs/class/computer/lecture-007.md
+Source changed /docs/class/computer/lecture-008.md
+Source changed /docs/class/computer/lecture-009.md
+Source changed /docs/class/computer/lecture-010.md
+Source changed /docs/class/computer/lecture-011.md
+Source changed /docs/class/computer/lecture-012.md
+Source changed /docs/class/computer/lecture-013.md
+Source changed /docs/class/computer/lecture-014.md
+Source changed /docs/class/computer/lecture-015.md
+Source changed /docs/class/computer/lecture-016.md
+Source changed /docs/class/computer/lecture-017.md
+Source changed /docs/class/computer/lecture-018.md
+Source changed /docs/class/computer/lecture-019.md
+Source changed /docs/class/computer/lecture-020.md
+Source changed /docs/class/computer/lecture-021.md
+Source changed /docs/class/computer/lecture-022.md
+Source changed /docs/class/computer/lecture-023.md
+Source changed /docs/class/computer/lecture-024.md
+Source changed /docs/class/computer/lecture-025.md
+Source changed /docs/class/computer/lecture-026.md
+Source changed /docs/class/computer/lecture-027.md
+Source changed /docs/class/computer/lecture-028.md
+Source changed /docs/class/computer/lecture-029.md
+Source changed /docs/class/computer/lecture-030.md
+Source changed /docs/class/computer/lecture-031.md
+Source changed /docs/class/computer/lecture-032.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 4030 ms
+
+Change detected, rebuilding site (#73).
+2025-10-05 08:34:34.333 +0000
+Source changed /docs/class/computer/_index.md
+Source changed /docs/class/computer/lecture-001.md
+Source changed /docs/class/computer/lecture-002.md
+Source changed /docs/class/computer/lecture-003.md
+Source changed /docs/class/computer/lecture-004.md
+Source changed /docs/class/computer/lecture-005.md
+Source changed /docs/class/computer/lecture-006.md
+Source changed /docs/class/computer/lecture-007.md
+Source changed /docs/class/computer/lecture-008.md
+Source changed /docs/class/computer/lecture-009.md
+Source changed /docs/class/computer/lecture-010.md
+Source changed /docs/class/computer/lecture-011.md
+Source changed /docs/class/computer/lecture-012.md
+Source changed /docs/class/computer/lecture-013.md
+Source changed /docs/class/computer/lecture-014.md
+Source changed /docs/class/computer/lecture-015.md
+Source changed /docs/class/computer/lecture-016.md
+Source changed /docs/class/computer/lecture-017.md
+Source changed /docs/class/computer/lecture-018.md
+Source changed /docs/class/computer/lecture-019.md
+Source changed /docs/class/computer/lecture-020.md
+Source changed /docs/class/computer/lecture-021.md
+Source changed /docs/class/computer/lecture-022.md
+Source changed /docs/class/computer/lecture-023.md
+Source changed /docs/class/computer/lecture-024.md
+Source changed /docs/class/computer/lecture-025.md
+Source changed /docs/class/computer/lecture-026.md
+Source changed /docs/class/computer/lecture-027.md
+Source changed /docs/class/computer/lecture-028.md
+Source changed /docs/class/computer/lecture-029.md
+Source changed /docs/class/computer/lecture-030.md
+Source changed /docs/class/computer/lecture-031.md
+Source changed /docs/class/computer/lecture-032.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 3233 ms
+
+Change detected, rebuilding site (#74).
+2025-10-05 08:35:56.287 +0000
+Source changed /docs/class/class.md
+ERROR Rebuild failed: process: "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs/content/zh/docs/class/class.md:41:154": unrecognized character in shortcode action: U+007D '}'. Note: Parameters with non-alphanumeric args must be quoted
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 845 ms
+
+Change detected, rebuilding site (#75).
+2025-10-05 08:36:40.823 +0000
+Source changed /docs/class/class.py
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1184 ms
+
+Change detected, rebuilding site (#76).
+2025-10-05 08:37:02.795 +0000
+Source changed /docs/class/class.py
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1000 ms
+
+Change detected, rebuilding site (#77).
+2025-10-05 08:37:13.793 +0000
+Source changed /docs/class/class.py
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1167 ms
+adding created directory to watchlist /data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs/content/zh/docs/class/computer
+
+Change detected, rebuilding site (#78).
+2025-10-05 08:37:17.303 +0000
+Source changed /docs/class/computer/_index.md
+Source changed /docs/class/computer/lecture-001.md
+Source changed /docs/class/computer/lecture-002.md
+Source changed /docs/class/computer/lecture-003.md
+Source changed /docs/class/computer/lecture-004.md
+Source changed /docs/class/computer/lecture-005.md
+Source changed /docs/class/computer/lecture-006.md
+Source changed /docs/class/computer/lecture-007.md
+Source changed /docs/class/computer/lecture-008.md
+Source changed /docs/class/computer/lecture-009.md
+Source changed /docs/class/computer/lecture-010.md
+Source changed /docs/class/computer/lecture-011.md
+Source changed /docs/class/computer/lecture-012.md
+Source changed /docs/class/computer/lecture-013.md
+Source changed /docs/class/computer/lecture-014.md
+Source changed /docs/class/computer/lecture-015.md
+Source changed /docs/class/computer/lecture-016.md
+Source changed /docs/class/computer/lecture-017.md
+Source changed /docs/class/computer/lecture-018.md
+Source changed /docs/class/computer/lecture-019.md
+Source changed /docs/class/computer/lecture-020.md
+Source changed /docs/class/computer/lecture-021.md
+Source changed /docs/class/computer/lecture-022.md
+Source changed /docs/class/computer/lecture-023.md
+Source changed /docs/class/computer/lecture-024.md
+Source changed /docs/class/computer/lecture-025.md
+Source changed /docs/class/computer/lecture-026.md
+Source changed /docs/class/computer/lecture-027.md
+Source changed /docs/class/computer/lecture-028.md
+Source changed /docs/class/computer/lecture-029.md
+Source changed /docs/class/computer/lecture-030.md
+Source changed /docs/class/computer/lecture-031.md
+Source changed /docs/class/computer/lecture-032.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 12464 ms
+
+Change detected, rebuilding site (#79).
+2025-10-05 08:39:19.883 +0000
+Source changed /docs/class/computer/_index.md
+Source changed /docs/class/computer/lecture-001.md
+Source changed /docs/class/computer/lecture-002.md
+Source changed /docs/class/computer/lecture-003.md
+Source changed /docs/class/computer/lecture-004.md
+Source changed /docs/class/computer/lecture-005.md
+Source changed /docs/class/computer/lecture-006.md
+Source changed /docs/class/computer/lecture-007.md
+Source changed /docs/class/computer/lecture-008.md
+Source changed /docs/class/computer/lecture-009.md
+Source changed /docs/class/computer/lecture-010.md
+Source changed /docs/class/computer/lecture-011.md
+Source changed /docs/class/computer/lecture-012.md
+Source changed /docs/class/computer/lecture-013.md
+Source changed /docs/class/computer/lecture-014.md
+Source changed /docs/class/computer/lecture-015.md
+Source changed /docs/class/computer/lecture-016.md
+Source changed /docs/class/computer/lecture-017.md
+Source changed /docs/class/computer/lecture-018.md
+Source changed /docs/class/computer/lecture-019.md
+Source changed /docs/class/computer/lecture-020.md
+Source changed /docs/class/computer/lecture-021.md
+Source changed /docs/class/computer/lecture-022.md
+Source changed /docs/class/computer/lecture-023.md
+Source changed /docs/class/computer/lecture-024.md
+Source changed /docs/class/computer/lecture-025.md
+Source changed /docs/class/computer/lecture-026.md
+Source changed /docs/class/computer/lecture-027.md
+Source changed /docs/class/computer/lecture-028.md
+Source changed /docs/class/computer/lecture-029.md
+Source changed /docs/class/computer/lecture-030.md
+Source changed /docs/class/computer/lecture-031.md
+Source changed /docs/class/computer/lecture-032.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 4091 ms
+adding created directory to watchlist /data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs/content/zh/docs/class/college/computer
+
+Change detected, rebuilding site (#80).
+2025-10-05 08:40:15.863 +0000
+Source changed /docs/class/college/computer/_index.md
+Source changed /docs/class/college/computer/lecture-001.md
+Source changed /docs/class/college/computer/lecture-002.md
+Source changed /docs/class/college/computer/lecture-003.md
+Source changed /docs/class/college/computer/lecture-004.md
+Source changed /docs/class/college/computer/lecture-005.md
+Source changed /docs/class/college/computer/lecture-006.md
+Source changed /docs/class/college/computer/lecture-007.md
+Source changed /docs/class/college/computer/lecture-008.md
+Source changed /docs/class/college/computer/lecture-009.md
+Source changed /docs/class/college/computer/lecture-010.md
+Source changed /docs/class/college/computer/lecture-011.md
+Source changed /docs/class/college/computer/lecture-012.md
+Source changed /docs/class/college/computer/lecture-013.md
+Source changed /docs/class/college/computer/lecture-014.md
+Source changed /docs/class/college/computer/lecture-015.md
+Source changed /docs/class/college/computer/lecture-016.md
+Source changed /docs/class/college/computer/lecture-017.md
+Source changed /docs/class/college/computer/lecture-018.md
+Source changed /docs/class/college/computer/lecture-019.md
+Source changed /docs/class/college/computer/lecture-020.md
+Source changed /docs/class/college/computer/lecture-021.md
+Source changed /docs/class/college/computer/lecture-022.md
+Source changed /docs/class/college/computer/lecture-023.md
+Source changed /docs/class/college/computer/lecture-024.md
+Source changed /docs/class/college/computer/lecture-025.md
+Source changed /docs/class/college/computer/lecture-026.md
+Source changed /docs/class/college/computer/lecture-027.md
+Source changed /docs/class/college/computer/lecture-028.md
+Source changed /docs/class/college/computer/lecture-029.md
+Source changed /docs/class/college/computer/lecture-030.md
+Source changed /docs/class/college/computer/lecture-031.md
+Source changed /docs/class/college/computer/lecture-032.md
+Source changed /docs/class/college/computer/lecture-033.md
+Source changed /docs/class/college/computer/lecture-034.md
+Source changed /docs/class/college/computer/lecture-035.md
+Source changed /docs/class/college/computer/lecture-036.md
+Source changed /docs/class/college/computer/lecture-037.md
+Source changed /docs/class/college/computer/lecture-038.md
+Source changed /docs/class/college/computer/lecture-039.md
+Source changed /docs/class/college/computer/lecture-040.md
+Source changed /docs/class/college/computer/lecture-041.md
+Source changed /docs/class/college/computer/lecture-042.md
+Source changed /docs/class/college/computer/lecture-043.md
+Source changed /docs/class/college/computer/lecture-044.md
+Source changed /docs/class/college/computer/lecture-045.md
+Source changed /docs/class/college/computer/lecture-046.md
+Source changed /docs/class/college/computer/lecture-047.md
+Source changed /docs/class/college/computer/lecture-048.md
+Source changed /docs/class/college/computer/lecture-049.md
+Source changed /docs/class/college/computer/lecture-050.md
+Source changed /docs/class/college/computer/lecture-051.md
+Source changed /docs/class/college/computer/lecture-052.md
+Source changed /docs/class/college/computer/lecture-053.md
+Source changed /docs/class/college/computer/lecture-054.md
+Source changed /docs/class/college/computer/lecture-055.md
+Source changed /docs/class/college/computer/lecture-056.md
+Source changed /docs/class/college/computer/lecture-057.md
+Source changed /docs/class/college/computer/lecture-058.md
+Source changed /docs/class/college/computer/lecture-059.md
+Source changed /docs/class/college/computer/lecture-060.md
+Source changed /docs/class/college/computer/lecture-061.md
+Source changed /docs/class/college/computer/lecture-062.md
+Source changed /docs/class/college/computer/lecture-063.md
+Source changed /docs/class/college/computer/lecture-064.md
+Source changed /docs/class/college/computer/lecture-065.md
+Source changed /docs/class/college/computer/lecture-066.md
+Source changed /docs/class/college/computer/lecture-067.md
+Source changed /docs/class/college/computer/lecture-068.md
+Source changed /docs/class/college/computer/lecture-069.md
+Source changed /docs/class/college/computer/lecture-070.md
+Source changed /docs/class/college/computer/lecture-071.md
+Source changed /docs/class/college/computer/lecture-072.md
+Source changed /docs/class/college/computer/lecture-073.md
+Source changed /docs/class/college/computer/lecture-074.md
+Source changed /docs/class/college/computer/lecture-075.md
+Source changed /docs/class/college/computer/lecture-076.md
+Source changed /docs/class/college/computer/lecture-077.md
+Source changed /docs/class/college/computer/lecture-078.md
+Source changed /docs/class/college/computer/lecture-079.md
+Source changed /docs/class/college/computer/lecture-080.md
+Source changed /docs/class/college/computer/lecture-081.md
+Source changed /docs/class/college/computer/lecture-082.md
+Source changed /docs/class/college/computer/lecture-083.md
+Source changed /docs/class/college/computer/lecture-084.md
+Source changed /docs/class/college/computer/lecture-085.md
+Source changed /docs/class/college/computer/lecture-086.md
+Source changed /docs/class/college/computer/lecture-087.md
+Source changed /docs/class/college/computer/lecture-088.md
+Source changed /docs/class/college/computer/lecture-089.md
+Source changed /docs/class/college/computer/lecture-090.md
+Source changed /docs/class/college/computer/lecture-091.md
+Source changed /docs/class/college/computer/lecture-092.md
+Source changed /docs/class/college/computer/lecture-093.md
+Source changed /docs/class/college/computer/lecture-094.md
+Source changed /docs/class/college/computer/lecture-095.md
+Source changed /docs/class/college/computer/lecture-096.md
+Source changed /docs/class/college/computer/lecture-097.md
+Source changed /docs/class/college/computer/lecture-098.md
+Source changed /docs/class/college/computer/lecture-099.md
+Source changed /docs/class/college/computer/lecture-100.md
+Source changed /docs/class/college/computer/lecture-101.md
+Source changed /docs/class/college/computer/lecture-102.md
+Source changed /docs/class/college/computer/lecture-103.md
+Source changed /docs/class/college/computer/lecture-104.md
+Source changed /docs/class/college/computer/lecture-105.md
+Source changed /docs/class/college/computer/lecture-106.md
+Source changed /docs/class/college/computer/lecture-107.md
+Source changed /docs/class/college/computer/lecture-108.md
+Source changed /docs/class/college/computer/lecture-109.md
+Source changed /docs/class/college/computer/lecture-110.md
+Source changed /docs/class/college/computer/lecture-111.md
+Source changed /docs/class/college/computer/lecture-112.md
+Source changed /docs/class/college/computer/lecture-113.md
+Source changed /docs/class/college/computer/lecture-114.md
+Source changed /docs/class/college/computer/lecture-115.md
+Source changed /docs/class/college/computer/lecture-116.md
+Source changed /docs/class/college/computer/lecture-117.md
+Source changed /docs/class/college/computer/lecture-118.md
+Source changed /docs/class/college/computer/lecture-119.md
+Source changed /docs/class/college/computer/lecture-120.md
+Source changed /docs/class/college/computer/lecture-121.md
+Source changed /docs/class/college/computer/lecture-122.md
+Source changed /docs/class/college/computer/lecture-123.md
+Source changed /docs/class/college/computer/lecture-124.md
+Source changed /docs/class/college/computer/lecture-125.md
+Source changed /docs/class/college/computer/lecture-126.md
+Source changed /docs/class/college/computer/lecture-127.md
+Source changed /docs/class/college/computer/lecture-128.md
+Source changed /docs/class/college/computer/lecture-129.md
+Source changed /docs/class/college/computer/lecture-130.md
+Source changed /docs/class/college/computer/lecture-131.md
+Source changed /docs/class/college/computer/lecture-132.md
+Source changed /docs/class/college/computer/lecture-133.md
+Source changed /docs/class/college/computer/lecture-134.md
+Source changed /docs/class/college/computer/lecture-135.md
+Source changed /docs/class/college/computer/lecture-136.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 5638 ms
+adding created directory to watchlist /data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs/content/zh/docs/class/college/computerOrganization_bak
+
+Change detected, rebuilding site (#81).
+2025-10-05 08:40:31.300 +0000
+Source changed /docs/class/college/computerorganization/_index.md
+Source changed /docs/class/college/computerorganization_bak/_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 5452 ms
+
+Change detected, rebuilding site (#82).
+2025-10-05 08:41:53.297 +0000
+Source changed /docs/class/class.py
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1191 ms
+
+Change detected, rebuilding site (#83).
+2025-10-05 08:42:12.789 +0000
+adding created directory to watchlist /data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs/content/zh/docs/class/college/computer
+
+Change detected, rebuilding site (#84).
+2025-10-05 08:42:14.299 +0000
+Source changed /docs/class/college/computer/_index.md
+Source changed /docs/class/college/computer/lecture-001.md
+Source changed /docs/class/college/computer/lecture-002.md
+Source changed /docs/class/college/computer/lecture-003.md
+Source changed /docs/class/college/computer/lecture-004.md
+Source changed /docs/class/college/computer/lecture-005.md
+Source changed /docs/class/college/computer/lecture-006.md
+Source changed /docs/class/college/computer/lecture-007.md
+Source changed /docs/class/college/computer/lecture-008.md
+Source changed /docs/class/college/computer/lecture-009.md
+Source changed /docs/class/college/computer/lecture-010.md
+Source changed /docs/class/college/computer/lecture-011.md
+Source changed /docs/class/college/computer/lecture-012.md
+Source changed /docs/class/college/computer/lecture-013.md
+Source changed /docs/class/college/computer/lecture-014.md
+Source changed /docs/class/college/computer/lecture-015.md
+Source changed /docs/class/college/computer/lecture-016.md
+Source changed /docs/class/college/computer/lecture-017.md
+Source changed /docs/class/college/computer/lecture-018.md
+Source changed /docs/class/college/computer/lecture-019.md
+Source changed /docs/class/college/computer/lecture-020.md
+Source changed /docs/class/college/computer/lecture-021.md
+Source changed /docs/class/college/computer/lecture-022.md
+Source changed /docs/class/college/computer/lecture-023.md
+Source changed /docs/class/college/computer/lecture-024.md
+Source changed /docs/class/college/computer/lecture-025.md
+Source changed /docs/class/college/computer/lecture-026.md
+Source changed /docs/class/college/computer/lecture-027.md
+Source changed /docs/class/college/computer/lecture-028.md
+Source changed /docs/class/college/computer/lecture-029.md
+Source changed /docs/class/college/computer/lecture-030.md
+Source changed /docs/class/college/computer/lecture-031.md
+Source changed /docs/class/college/computer/lecture-032.md
+Source changed /docs/class/college/computer/lecture-033.md
+Source changed /docs/class/college/computer/lecture-034.md
+Source changed /docs/class/college/computer/lecture-035.md
+Source changed /docs/class/college/computer/lecture-036.md
+Source changed /docs/class/college/computer/lecture-037.md
+Source changed /docs/class/college/computer/lecture-038.md
+Source changed /docs/class/college/computer/lecture-039.md
+Source changed /docs/class/college/computer/lecture-040.md
+Source changed /docs/class/college/computer/lecture-041.md
+Source changed /docs/class/college/computer/lecture-042.md
+Source changed /docs/class/college/computer/lecture-043.md
+Source changed /docs/class/college/computer/lecture-044.md
+Source changed /docs/class/college/computer/lecture-045.md
+Source changed /docs/class/college/computer/lecture-046.md
+Source changed /docs/class/college/computer/lecture-047.md
+Source changed /docs/class/college/computer/lecture-048.md
+Source changed /docs/class/college/computer/lecture-049.md
+Source changed /docs/class/college/computer/lecture-050.md
+Source changed /docs/class/college/computer/lecture-051.md
+Source changed /docs/class/college/computer/lecture-052.md
+Source changed /docs/class/college/computer/lecture-053.md
+Source changed /docs/class/college/computer/lecture-054.md
+Source changed /docs/class/college/computer/lecture-055.md
+Source changed /docs/class/college/computer/lecture-056.md
+Source changed /docs/class/college/computer/lecture-057.md
+Source changed /docs/class/college/computer/lecture-058.md
+Source changed /docs/class/college/computer/lecture-059.md
+Source changed /docs/class/college/computer/lecture-060.md
+Source changed /docs/class/college/computer/lecture-061.md
+Source changed /docs/class/college/computer/lecture-062.md
+Source changed /docs/class/college/computer/lecture-063.md
+Source changed /docs/class/college/computer/lecture-064.md
+Source changed /docs/class/college/computer/lecture-065.md
+Source changed /docs/class/college/computer/lecture-066.md
+Source changed /docs/class/college/computer/lecture-067.md
+Source changed /docs/class/college/computer/lecture-068.md
+Source changed /docs/class/college/computer/lecture-069.md
+Source changed /docs/class/college/computer/lecture-070.md
+Source changed /docs/class/college/computer/lecture-071.md
+Source changed /docs/class/college/computer/lecture-072.md
+Source changed /docs/class/college/computer/lecture-073.md
+Source changed /docs/class/college/computer/lecture-074.md
+Source changed /docs/class/college/computer/lecture-075.md
+Source changed /docs/class/college/computer/lecture-076.md
+Source changed /docs/class/college/computer/lecture-077.md
+Source changed /docs/class/college/computer/lecture-078.md
+Source changed /docs/class/college/computer/lecture-079.md
+Source changed /docs/class/college/computer/lecture-080.md
+Source changed /docs/class/college/computer/lecture-081.md
+Source changed /docs/class/college/computer/lecture-082.md
+Source changed /docs/class/college/computer/lecture-083.md
+Source changed /docs/class/college/computer/lecture-084.md
+Source changed /docs/class/college/computer/lecture-085.md
+Source changed /docs/class/college/computer/lecture-086.md
+Source changed /docs/class/college/computer/lecture-087.md
+Source changed /docs/class/college/computer/lecture-088.md
+Source changed /docs/class/college/computer/lecture-089.md
+Source changed /docs/class/college/computer/lecture-090.md
+Source changed /docs/class/college/computer/lecture-091.md
+Source changed /docs/class/college/computer/lecture-092.md
+Source changed /docs/class/college/computer/lecture-093.md
+Source changed /docs/class/college/computer/lecture-094.md
+Source changed /docs/class/college/computer/lecture-095.md
+Source changed /docs/class/college/computer/lecture-096.md
+Source changed /docs/class/college/computer/lecture-097.md
+Source changed /docs/class/college/computer/lecture-098.md
+Source changed /docs/class/college/computer/lecture-099.md
+Source changed /docs/class/college/computer/lecture-100.md
+Source changed /docs/class/college/computer/lecture-101.md
+Source changed /docs/class/college/computer/lecture-102.md
+Source changed /docs/class/college/computer/lecture-103.md
+Source changed /docs/class/college/computer/lecture-104.md
+Source changed /docs/class/college/computer/lecture-105.md
+Source changed /docs/class/college/computer/lecture-106.md
+Source changed /docs/class/college/computer/lecture-107.md
+Source changed /docs/class/college/computer/lecture-108.md
+Source changed /docs/class/college/computer/lecture-109.md
+Source changed /docs/class/college/computer/lecture-110.md
+Source changed /docs/class/college/computer/lecture-111.md
+Source changed /docs/class/college/computer/lecture-112.md
+Source changed /docs/class/college/computer/lecture-113.md
+Source changed /docs/class/college/computer/lecture-114.md
+Source changed /docs/class/college/computer/lecture-115.md
+Source changed /docs/class/college/computer/lecture-116.md
+Source changed /docs/class/college/computer/lecture-117.md
+Source changed /docs/class/college/computer/lecture-118.md
+Source changed /docs/class/college/computer/lecture-119.md
+Source changed /docs/class/college/computer/lecture-120.md
+Source changed /docs/class/college/computer/lecture-121.md
+Source changed /docs/class/college/computer/lecture-122.md
+Source changed /docs/class/college/computer/lecture-123.md
+Source changed /docs/class/college/computer/lecture-124.md
+Source changed /docs/class/college/computer/lecture-125.md
+Source changed /docs/class/college/computer/lecture-126.md
+Source changed /docs/class/college/computer/lecture-127.md
+Source changed /docs/class/college/computer/lecture-128.md
+Source changed /docs/class/college/computer/lecture-129.md
+Source changed /docs/class/college/computer/lecture-130.md
+Source changed /docs/class/college/computer/lecture-131.md
+Source changed /docs/class/college/computer/lecture-132.md
+Source changed /docs/class/college/computer/lecture-133.md
+Source changed /docs/class/college/computer/lecture-134.md
+Source changed /docs/class/college/computer/lecture-135.md
+Source changed /docs/class/college/computer/lecture-136.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 676 ms
+ERROR process: readAndProcessContent: "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs/content/zh/docs/class/class.md:41:154": unrecognized character in shortcode action: U+007D '}'. Note: Parameters with non-alphanumeric args must be quoted
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Rebuilt in 2832 ms
+adding created directory to watchlist /data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs/content/zh/docs/class/college/computerOrganization
+
+Change detected, rebuilding site (#85).
+2025-10-05 08:43:18.834 +0000
+Source changed /docs/class/college/computer/_index.md
+Source changed /docs/class/college/computerorganization/_index.md
+Source changed /docs/class/college/computerorganization/lecture-001.md
+Source changed /docs/class/college/computerorganization/lecture-002.md
+Source changed /docs/class/college/computerorganization/lecture-003.md
+Source changed /docs/class/college/computerorganization/lecture-004.md
+Source changed /docs/class/college/computerorganization/lecture-005.md
+Source changed /docs/class/college/computerorganization/lecture-006.md
+Source changed /docs/class/college/computerorganization/lecture-007.md
+Source changed /docs/class/college/computerorganization/lecture-008.md
+Source changed /docs/class/college/computerorganization/lecture-009.md
+Source changed /docs/class/college/computerorganization/lecture-010.md
+Source changed /docs/class/college/computerorganization/lecture-011.md
+Source changed /docs/class/college/computerorganization/lecture-012.md
+Source changed /docs/class/college/computerorganization/lecture-013.md
+Source changed /docs/class/college/computerorganization/lecture-014.md
+Source changed /docs/class/college/computerorganization/lecture-015.md
+Source changed /docs/class/college/computerorganization/lecture-016.md
+Source changed /docs/class/college/computerorganization/lecture-017.md
+Source changed /docs/class/college/computerorganization/lecture-018.md
+Source changed /docs/class/college/computerorganization/lecture-019.md
+Source changed /docs/class/college/computerorganization/lecture-020.md
+Source changed /docs/class/college/computerorganization/lecture-021.md
+Source changed /docs/class/college/computerorganization/lecture-022.md
+Source changed /docs/class/college/computerorganization/lecture-023.md
+Source changed /docs/class/college/computerorganization/lecture-024.md
+Source changed /docs/class/college/computerorganization/lecture-025.md
+Source changed /docs/class/college/computerorganization/lecture-026.md
+Source changed /docs/class/college/computerorganization/lecture-027.md
+Source changed /docs/class/college/computerorganization/lecture-028.md
+Source changed /docs/class/college/computerorganization/lecture-029.md
+Source changed /docs/class/college/computerorganization/lecture-030.md
+Source changed /docs/class/college/computerorganization/lecture-031.md
+Source changed /docs/class/college/computerorganization/lecture-032.md
+Source changed /docs/class/college/computerorganization/lecture-033.md
+Source changed /docs/class/college/computerorganization/lecture-034.md
+Source changed /docs/class/college/computerorganization/lecture-035.md
+Source changed /docs/class/college/computerorganization/lecture-036.md
+Source changed /docs/class/college/computerorganization/lecture-037.md
+Source changed /docs/class/college/computerorganization/lecture-038.md
+Source changed /docs/class/college/computerorganization/lecture-039.md
+Source changed /docs/class/college/computerorganization/lecture-040.md
+Source changed /docs/class/college/computerorganization/lecture-041.md
+Source changed /docs/class/college/computerorganization/lecture-042.md
+Source changed /docs/class/college/computerorganization/lecture-043.md
+Source changed /docs/class/college/computerorganization/lecture-044.md
+Source changed /docs/class/college/computerorganization/lecture-045.md
+Source changed /docs/class/college/computerorganization/lecture-046.md
+Source changed /docs/class/college/computerorganization/lecture-047.md
+Source changed /docs/class/college/computerorganization/lecture-048.md
+Source changed /docs/class/college/computerorganization/lecture-049.md
+Source changed /docs/class/college/computerorganization/lecture-050.md
+Source changed /docs/class/college/computerorganization/lecture-051.md
+Source changed /docs/class/college/computerorganization/lecture-052.md
+Source changed /docs/class/college/computerorganization/lecture-053.md
+Source changed /docs/class/college/computerorganization/lecture-054.md
+Source changed /docs/class/college/computerorganization/lecture-055.md
+Source changed /docs/class/college/computerorganization/lecture-056.md
+Source changed /docs/class/college/computerorganization/lecture-057.md
+Source changed /docs/class/college/computerorganization/lecture-058.md
+Source changed /docs/class/college/computerorganization/lecture-059.md
+Source changed /docs/class/college/computerorganization/lecture-060.md
+Source changed /docs/class/college/computerorganization/lecture-061.md
+Source changed /docs/class/college/computerorganization/lecture-062.md
+Source changed /docs/class/college/computerorganization/lecture-063.md
+Source changed /docs/class/college/computerorganization/lecture-064.md
+Source changed /docs/class/college/computerorganization/lecture-065.md
+Source changed /docs/class/college/computerorganization/lecture-066.md
+Source changed /docs/class/college/computerorganization/lecture-067.md
+Source changed /docs/class/college/computerorganization/lecture-068.md
+Source changed /docs/class/college/computerorganization/lecture-069.md
+Source changed /docs/class/college/computerorganization/lecture-070.md
+Source changed /docs/class/college/computerorganization/lecture-071.md
+Source changed /docs/class/college/computerorganization/lecture-072.md
+Source changed /docs/class/college/computerorganization/lecture-073.md
+Source changed /docs/class/college/computerorganization/lecture-074.md
+Source changed /docs/class/college/computerorganization/lecture-075.md
+Source changed /docs/class/college/computerorganization/lecture-076.md
+Source changed /docs/class/college/computerorganization/lecture-077.md
+Source changed /docs/class/college/computerorganization/lecture-078.md
+Source changed /docs/class/college/computerorganization/lecture-079.md
+Source changed /docs/class/college/computerorganization/lecture-080.md
+Source changed /docs/class/college/computerorganization/lecture-081.md
+Source changed /docs/class/college/computerorganization/lecture-082.md
+Source changed /docs/class/college/computerorganization/lecture-083.md
+Source changed /docs/class/college/computerorganization/lecture-084.md
+Source changed /docs/class/college/computerorganization/lecture-085.md
+Source changed /docs/class/college/computerorganization/lecture-086.md
+Source changed /docs/class/college/computerorganization/lecture-087.md
+Source changed /docs/class/college/computerorganization/lecture-088.md
+Source changed /docs/class/college/computerorganization/lecture-089.md
+Source changed /docs/class/college/computerorganization/lecture-090.md
+Source changed /docs/class/college/computerorganization/lecture-091.md
+Source changed /docs/class/college/computerorganization/lecture-092.md
+Source changed /docs/class/college/computerorganization/lecture-093.md
+Source changed /docs/class/college/computerorganization/lecture-094.md
+Source changed /docs/class/college/computerorganization/lecture-095.md
+Source changed /docs/class/college/computerorganization/lecture-096.md
+Source changed /docs/class/college/computerorganization/lecture-097.md
+Source changed /docs/class/college/computerorganization/lecture-098.md
+Source changed /docs/class/college/computerorganization/lecture-099.md
+Source changed /docs/class/college/computerorganization/lecture-100.md
+Source changed /docs/class/college/computerorganization/lecture-101.md
+Source changed /docs/class/college/computerorganization/lecture-102.md
+Source changed /docs/class/college/computerorganization/lecture-103.md
+Source changed /docs/class/college/computerorganization/lecture-104.md
+Source changed /docs/class/college/computerorganization/lecture-105.md
+Source changed /docs/class/college/computerorganization/lecture-106.md
+Source changed /docs/class/college/computerorganization/lecture-107.md
+Source changed /docs/class/college/computerorganization/lecture-108.md
+Source changed /docs/class/college/computerorganization/lecture-109.md
+Source changed /docs/class/college/computerorganization/lecture-110.md
+Source changed /docs/class/college/computerorganization/lecture-111.md
+Source changed /docs/class/college/computerorganization/lecture-112.md
+Source changed /docs/class/college/computerorganization/lecture-113.md
+Source changed /docs/class/college/computerorganization/lecture-114.md
+Source changed /docs/class/college/computerorganization/lecture-115.md
+Source changed /docs/class/college/computerorganization/lecture-116.md
+Source changed /docs/class/college/computerorganization/lecture-117.md
+Source changed /docs/class/college/computerorganization/lecture-118.md
+Source changed /docs/class/college/computerorganization/lecture-119.md
+Source changed /docs/class/college/computerorganization/lecture-120.md
+Source changed /docs/class/college/computerorganization/lecture-121.md
+Source changed /docs/class/college/computerorganization/lecture-122.md
+Source changed /docs/class/college/computerorganization/lecture-123.md
+Source changed /docs/class/college/computerorganization/lecture-124.md
+Source changed /docs/class/college/computerorganization/lecture-125.md
+Source changed /docs/class/college/computerorganization/lecture-126.md
+Source changed /docs/class/college/computerorganization/lecture-127.md
+Source changed /docs/class/college/computerorganization/lecture-128.md
+Source changed /docs/class/college/computerorganization/lecture-129.md
+Source changed /docs/class/college/computerorganization/lecture-130.md
+Source changed /docs/class/college/computerorganization/lecture-131.md
+Source changed /docs/class/college/computerorganization/lecture-132.md
+Source changed /docs/class/college/computerorganization/lecture-133.md
+Source changed /docs/class/college/computerorganization/lecture-134.md
+Source changed /docs/class/college/computerorganization/lecture-135.md
+Source changed /docs/class/college/computerorganization/lecture-136.md
+ERROR Rebuild failed: logged 1 error(s)
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 680 ms
+
+Change detected, rebuilding site (#86).
+2025-10-05 08:43:19.515 +0000
+Source changed /docs/class/college/computerorganization/lecture-002.md
+Source changed /docs/class/college/computerorganization/lecture-044.md
+ERROR Rebuild failed: logged 2 error(s)
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 132 ms
+
+Change detected, rebuilding site (#87).
+2025-10-05 08:43:23.283 +0000
+Source changed /docs/class/college/computerorganization_bak/_index.md
+ERROR Rebuild failed: logged 3 error(s)
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 76 ms
+
+Change detected, rebuilding site (#88).
+2025-10-05 08:43:55.800 +0000
+Source changed /docs/class/class.md
+ERROR Rebuild failed: logged 4 error(s)
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 329 ms
+Hugo provides its own webserver which builds and serves the site.
+While hugo server is high performance, it is a webserver with limited options.
+
+The `hugo server` command will by default write and serve files from disk, but
+you can render to memory by using the `--renderToMemory` flag. This can be
+faster in some cases, but it will consume more memory.
+
+By default hugo will also watch your files for any changes you make and
+automatically rebuild the site. It will then live reload any open browser pages
+and push the latest content to them. As most Hugo sites are built in a fraction
+of a second, you will be able to save and see your changes nearly instantly.
+
+Usage:
+  hugo server [command] [flags]
+  hugo server [command]
+
+Aliases:
+  server, serve
+
+Available Commands:
+  trust       Install the local CA in the system trust store
+
+Flags:
+      --appendPort               append port to baseURL (default true)
+  -b, --baseURL string           hostname (and path) to the root, e.g. https://spf13.com/
+      --bind string              interface to which the server will bind (default "127.0.0.1")
+  -D, --buildDrafts              include content marked as draft
+  -E, --buildExpired             include expired content
+  -F, --buildFuture              include content with publishdate in the future
+      --cacheDir string          filesystem path to cache directory
+      --cleanDestinationDir      remove files from destination not found in static directories
+  -c, --contentDir string        filesystem path to content directory
+      --disableBrowserError      do not show build errors in the browser
+      --disableFastRender        enables full re-renders on changes
+      --disableKinds strings     disable different kind of pages (home, RSS etc.)
+      --disableLiveReload        watch without enabling live browser reload on rebuild
+      --enableGitInfo            add Git revision, date, author, and CODEOWNERS info to the pages
+      --forceSyncStatic          copy all files when static is changed.
+      --gc                       enable to run some cleanup tasks (remove unused cache files) after the build
+  -h, --help                     help for server
+      --ignoreCache              ignores the cache directory
+  -l, --layoutDir string         filesystem path to layout directory
+      --liveReloadPort int       port for live reloading (i.e. 443 in HTTPS proxy situations) (default -1)
+      --minify                   minify any supported output format (HTML, XML etc.)
+  -N, --navigateToChanged        navigate to changed content file on live browser reload
+      --noChmod                  don't sync permission mode of files
+      --noHTTPCache              prevent HTTP caching
+      --noTimes                  don't sync modification time of files
+  -O, --openBrowser              open the site in a browser after server startup
+      --panicOnWarning           panic on first WARNING log
+      --poll string              set this to a poll interval, e.g --poll 700ms, to use a poll based approach to watch for file system changes
+  -p, --port int                 port on which the server will listen (default 1313)
+      --pprof                    enable the pprof server (port 8080)
+      --printI18nWarnings        print missing translations
+      --printMemoryUsage         print memory usage to screen at intervals
+      --printPathWarnings        print warnings on duplicate target paths etc.
+      --printUnusedTemplates     print warnings on unused templates.
+      --renderSegments strings   named segments to render (configured in the segments config)
+      --renderStaticToDisk       serve static files from disk and dynamic files from memory
+      --templateMetrics          display metrics about template executions
+      --templateMetricsHints     calculate some improvement hints when combined with --templateMetrics
+  -t, --theme strings            themes to use (located in /themes/THEMENAME/)
+      --tlsAuto                  generate and use locally-trusted certificates.
+      --tlsCertFile string       path to TLS certificate file
+      --tlsKeyFile string        path to TLS key file
+      --trace file               write trace to file (not useful in general)
+  -w, --watch                    watch filesystem for changes and recreate as needed (default true)
+
+Global Flags:
+      --clock string               set the clock used by Hugo, e.g. --clock 2021-11-06T22:30:00.00+09:00
+      --config string              config file (default is hugo.yaml|json|toml)
+      --configDir string           config dir (default "config")
+  -d, --destination string         filesystem path to write files to
+  -e, --environment string         build environment
+      --ignoreVendorPaths string   ignores any _vendor for module paths matching the given Glob pattern
+      --logLevel string            log level (debug|info|warn|error)
+      --noBuildLock                don't create .hugo_build.lock file
+      --quiet                      build in quiet mode
+  -M, --renderToMemory             render to memory (mostly useful when running the server)
+  -s, --source string              filesystem path to read files relative from
+      --themesDir string           filesystem path to themes directory
+
+Use "hugo server [command] --help" for more information about a command.
+
+Error: command error: server startup failed: listen tcp 127.0.0.1:8082: bind: address already in use
+Watching for changes in /data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs/{archetypes,assets,content,data,i18n,layouts,static,themes}
+Watching for config changes in /data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs/hugo.toml
+Start building sites … 
+hugo v0.148.2+extended android/arm64 BuildDate=unknown
+
+rst2html / rst2html.py not found in $PATH: Please install.
+                  Leaving reStructuredText content unrendered.
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+rst2html / rst2html.py not found in $PATH: Please install.
+                  Leaving reStructuredText content unrendered.
+
+                 │  EN  │  ZH  │  HE  
+─────────────────┼──────┼──────┼──────
+ Pages           │  915 │ 1056 │    8 
+ Paginator pages │    0 │    0 │    0 
+ Non-page files  │ 3069 │ 3876 │    0 
+ Static files    │ 1041 │ 1041 │ 1041 
+ Processed       │    0 │    0 │    0 
+ images          │      │      │      
+ Aliases         │    1 │    0 │    0 
+ Cleaned         │    0 │    0 │    0 
+
+Built in 269095 ms
+Environment: "development"
+Serving pages from disk
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1) 
+Press Ctrl+C to stop
+
+Change detected, rebuilding site (#1).
+2025-10-05 08:51:00.808 +0000
+Source changed /docs/class/class.py
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 2895 ms
+
+Change detected, rebuilding site (#2).
+2025-10-05 08:55:27.347 +0000
+Source changed /_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 3710 ms
+
+Change detected, rebuilding site (#3).
+2025-10-05 08:58:18.342 +0000
+Source changed /docs/class/cs/cs143/lecture-01/index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 3722 ms
+
+Change detected, rebuilding site (#4).
+2025-10-05 08:58:38.308 +0000
+Source changed /docs/class/college/computerorganization/_index.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 4263 ms
+Watching for changes in /data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs/{archetypes,assets,content,data,i18n,layouts,static,themes}
+Watching for config changes in /data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs/hugo.toml
+Start building sites … 
+hugo v0.148.2+extended android/arm64 BuildDate=unknown
+
+Hugo provides its own webserver which builds and serves the site.
+While hugo server is high performance, it is a webserver with limited options.
+
+The `hugo server` command will by default write and serve files from disk, but
+you can render to memory by using the `--renderToMemory` flag. This can be
+faster in some cases, but it will consume more memory.
+
+By default hugo will also watch your files for any changes you make and
+automatically rebuild the site. It will then live reload any open browser pages
+and push the latest content to them. As most Hugo sites are built in a fraction
+of a second, you will be able to save and see your changes nearly instantly.
+
+Usage:
+  hugo server [command] [flags]
+  hugo server [command]
+
+Aliases:
+  server, serve
+
+Available Commands:
+  trust       Install the local CA in the system trust store
+
+Flags:
+      --appendPort               append port to baseURL (default true)
+  -b, --baseURL string           hostname (and path) to the root, e.g. https://spf13.com/
+      --bind string              interface to which the server will bind (default "127.0.0.1")
+  -D, --buildDrafts              include content marked as draft
+  -E, --buildExpired             include expired content
+  -F, --buildFuture              include content with publishdate in the future
+      --cacheDir string          filesystem path to cache directory
+      --cleanDestinationDir      remove files from destination not found in static directories
+  -c, --contentDir string        filesystem path to content directory
+      --disableBrowserError      do not show build errors in the browser
+      --disableFastRender        enables full re-renders on changes
+      --disableKinds strings     disable different kind of pages (home, RSS etc.)
+      --disableLiveReload        watch without enabling live browser reload on rebuild
+      --enableGitInfo            add Git revision, date, author, and CODEOWNERS info to the pages
+      --forceSyncStatic          copy all files when static is changed.
+      --gc                       enable to run some cleanup tasks (remove unused cache files) after the build
+  -h, --help                     help for server
+      --ignoreCache              ignores the cache directory
+  -l, --layoutDir string         filesystem path to layout directory
+      --liveReloadPort int       port for live reloading (i.e. 443 in HTTPS proxy situations) (default -1)
+      --minify                   minify any supported output format (HTML, XML etc.)
+  -N, --navigateToChanged        navigate to changed content file on live browser reload
+      --noChmod                  don't sync permission mode of files
+      --noHTTPCache              prevent HTTP caching
+      --noTimes                  don't sync modification time of files
+  -O, --openBrowser              open the site in a browser after server startup
+      --panicOnWarning           panic on first WARNING log
+      --poll string              set this to a poll interval, e.g --poll 700ms, to use a poll based approach to watch for file system changes
+  -p, --port int                 port on which the server will listen (default 1313)
+      --pprof                    enable the pprof server (port 8080)
+      --printI18nWarnings        print missing translations
+      --printMemoryUsage         print memory usage to screen at intervals
+      --printPathWarnings        print warnings on duplicate target paths etc.
+      --printUnusedTemplates     print warnings on unused templates.
+      --renderSegments strings   named segments to render (configured in the segments config)
+      --renderStaticToDisk       serve static files from disk and dynamic files from memory
+      --templateMetrics          display metrics about template executions
+      --templateMetricsHints     calculate some improvement hints when combined with --templateMetrics
+  -t, --theme strings            themes to use (located in /themes/THEMENAME/)
+      --tlsAuto                  generate and use locally-trusted certificates.
+      --tlsCertFile string       path to TLS certificate file
+      --tlsKeyFile string        path to TLS key file
+      --trace file               write trace to file (not useful in general)
+  -w, --watch                    watch filesystem for changes and recreate as needed (default true)
+
+Global Flags:
+      --clock string               set the clock used by Hugo, e.g. --clock 2021-11-06T22:30:00.00+09:00
+      --config string              config file (default is hugo.yaml|json|toml)
+      --configDir string           config dir (default "config")
+  -d, --destination string         filesystem path to write files to
+  -e, --environment string         build environment
+      --ignoreVendorPaths string   ignores any _vendor for module paths matching the given Glob pattern
+      --logLevel string            log level (debug|info|warn|error)
+      --noBuildLock                don't create .hugo_build.lock file
+      --quiet                      build in quiet mode
+  -M, --renderToMemory             render to memory (mostly useful when running the server)
+  -s, --source string              filesystem path to read files relative from
+      --themesDir string           filesystem path to themes directory
+
+Use "hugo server [command] --help" for more information about a command.
+
+Error: command error: server startup failed: listen tcp 127.0.0.1:8082: bind: address already in use
+Loading the library from the following files:
+	/data/data/com.termux/files/home/Yu/KiwiZim/kiwix.xml
+The library was successfully loaded.
+The Kiwix server is running and can be accessed in the local network at: http://172.17.48.3:8084
+Watching for changes in /data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs/{archetypes,assets,content,data,i18n,layouts,static,themes}
+Watching for config changes in /data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs/hugo.toml
+Start building sites … 
+hugo v0.148.2+extended android/arm64 BuildDate=unknown
+
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.

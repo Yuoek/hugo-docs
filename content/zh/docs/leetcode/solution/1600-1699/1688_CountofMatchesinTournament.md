@@ -1,0 +1,196 @@
+---
+title: "1688_CountofMatchesinTournament"
+date: 2025-10-06T00:42:37+08:00
+weight: 1688
+tags: [数学, 模拟]
+---
+
+
+{{< katex />}}
+
+{{< badge title="Difficulty" value="简单" >}}
+
+<!-- problem:start -->
+
+# [1688. 比赛中的配对次数](https://leetcode.cn/problems/count-of-matches-in-tournament)
+
+[English Version](../en/1688-88/1688_CountofMatchesinTournament)
+
+## 题目描述
+
+<!-- description:start -->
+
+<p>给你一个整数 <code>n</code> ，表示比赛中的队伍数。比赛遵循一种独特的赛制：</p>
+
+<ul>
+	<li>如果当前队伍数是 <strong>偶数</strong> ，那么每支队伍都会与另一支队伍配对。总共进行 <code>n / 2</code> 场比赛，且产生 <code>n / 2</code> 支队伍进入下一轮。</li>
+	<li>如果当前队伍数为 <strong>奇数</strong> ，那么将会随机轮空并晋级一支队伍，其余的队伍配对。总共进行 <code>(n - 1) / 2</code> 场比赛，且产生 <code>(n - 1) / 2 + 1</code> 支队伍进入下一轮。</li>
+</ul>
+
+<p>返回在比赛中进行的配对次数，直到决出获胜队伍为止。</p>
+
+<p> </p>
+
+<p><strong>示例 1：</strong></p>
+
+<pre><strong>输入：</strong>n = 7
+<strong>输出：</strong>6
+<strong>解释：</strong>比赛详情：
+- 第 1 轮：队伍数 = 7 ，配对次数 = 3 ，4 支队伍晋级。
+- 第 2 轮：队伍数 = 4 ，配对次数 = 2 ，2 支队伍晋级。
+- 第 3 轮：队伍数 = 2 ，配对次数 = 1 ，决出 1 支获胜队伍。
+总配对次数 = 3 + 2 + 1 = 6
+</pre>
+
+<p><strong>示例 2：</strong></p>
+
+<pre><strong>输入：</strong>n = 14
+<strong>输出：</strong>13
+<strong>解释：</strong>比赛详情：
+- 第 1 轮：队伍数 = 14 ，配对次数 = 7 ，7 支队伍晋级。
+- 第 2 轮：队伍数 = 7 ，配对次数 = 3 ，4 支队伍晋级。 
+- 第 3 轮：队伍数 = 4 ，配对次数 = 2 ，2 支队伍晋级。
+- 第 4 轮：队伍数 = 2 ，配对次数 = 1 ，决出 1 支获胜队伍。
+总配对次数 = 7 + 3 + 2 + 1 = 13
+</pre>
+
+<p> </p>
+
+<p><strong>提示：</strong></p>
+
+<ul>
+	<li><code>1 &lt;= n &lt;= 200</code></li>
+</ul>
+
+<!-- description:end -->
+
+## 解法
+
+<!-- solution:start -->
+
+### 方法一：脑筋急转弯
+
+根据题目描述我们知道，一共有 $n$ 支队伍，每一次的配对，都会淘汰一支队伍，所以配对次数就是淘汰的队伍数，即 $n - 1$。
+
+时间复杂度 $O(1)$，空间复杂度 $O(1)$。
+
+<!-- tabs:start -->
+
+#### Python3
+
+
+
+#### Java
+
+
+
+#### C++
+
+
+
+#### Go
+
+
+
+#### TypeScript
+
+
+
+#### JavaScript
+
+
+
+<!-- tabs:end -->
+
+<!-- solution:end -->
+
+<!-- problem:end -->
+
+{{< tabs id >}}
+{{% tab "python" %}}
+```python
+class Solution:
+    def numberOfMatches(self, n: int) -> int:
+        return n - 1
+```
+{{% /tab %}}
+{{% tab "java" %}}
+```java
+class Solution {
+    public int numberOfMatches(int n) {
+        return n - 1;
+    }
+}
+```
+{{% /tab %}}
+{{% tab "cpp" %}}
+```cpp
+class Solution {
+public:
+    int numberOfMatches(int n) {
+        return n - 1;
+    }
+};
+```
+{{% /tab %}}
+{{% tab "go" %}}
+```go
+func numberOfMatches(n int) int {
+	return n - 1
+}
+```
+{{% /tab %}}
+{{% tab "ts" %}}
+```ts
+function numberOfMatches(n: number): number {
+    return n - 1;
+}
+```
+{{% /tab %}}
+{{% tab "js" %}}
+```js
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var numberOfMatches = function (n) {
+    return n - 1;
+};
+```
+{{% /tab %}}
+{{< /tabs>}}
+
+{{% hint info %}}
+{{% details "python 可视化" %}}
+{{< pythontutor width="100%" height="800" language="python" >}}
+class Solution:
+    def numberOfMatches(self, n: int) -> int:
+        return n - 1
+{{< /pythontutor >}}
+{{% /details %}}
+{{% /hint %}}
+
+{{% hint info %}}
+{{% details "java 可视化" %}}
+{{< pythontutor width="100%" height="800" language="java" >}}
+class Solution {
+    public int numberOfMatches(int n) {
+        return n - 1;
+    }
+}
+{{< /pythontutor >}}
+{{% /details %}}
+{{% /hint %}}
+
+{{% hint info %}}
+{{% details "cpp 可视化" %}}
+{{< pythontutor width="100%" height="800" language="cpp" >}}
+class Solution {
+public:
+    int numberOfMatches(int n) {
+        return n - 1;
+    }
+};
+{{< /pythontutor >}}
+{{% /details %}}
+{{% /hint %}}

@@ -1,0 +1,259 @@
+---
+title: "1859_SortingtheSentence"
+date: 2025-10-06T00:42:37+08:00
+weight: 1859
+tags: [String, Sorting]
+---
+
+
+{{< katex />}}
+
+{{< badge title="Difficulty" value="Easy" >}}
+
+<!-- problem:start -->
+
+# [1859. Sorting the Sentence](https://leetcode.com/problems/sorting-the-sentence)
+
+[中文文档](/solution/1800-1899/1859.Sorting%20the%20Sentence/README.md)
+
+## Description
+
+<!-- description:start -->
+
+<p>A <strong>sentence</strong> is a list of words that are separated by a single space with no leading or trailing spaces. Each word consists of lowercase and uppercase English letters.</p>
+
+<p>A sentence can be <strong>shuffled</strong> by appending the <strong>1-indexed word position</strong> to each word then rearranging the words in the sentence.</p>
+
+<ul>
+	<li>For example, the sentence <code>&quot;This is a sentence&quot;</code> can be shuffled as <code>&quot;sentence4 a3 is2 This1&quot;</code> or <code>&quot;is2 sentence4 This1 a3&quot;</code>.</li>
+</ul>
+
+<p>Given a <strong>shuffled sentence</strong> <code>s</code> containing no more than <code>9</code> words, reconstruct and return <em>the original sentence</em>.</p>
+
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+
+<pre>
+<strong>Input:</strong> s = &quot;is2 sentence4 This1 a3&quot;
+<strong>Output:</strong> &quot;This is a sentence&quot;
+<strong>Explanation:</strong> Sort the words in s to their original positions &quot;This1 is2 a3 sentence4&quot;, then remove the numbers.
+</pre>
+
+<p><strong class="example">Example 2:</strong></p>
+
+<pre>
+<strong>Input:</strong> s = &quot;Myself2 Me1 I4 and3&quot;
+<strong>Output:</strong> &quot;Me Myself and I&quot;
+<strong>Explanation:</strong> Sort the words in s to their original positions &quot;Me1 Myself2 and3 I4&quot;, then remove the numbers.
+</pre>
+
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
+
+<ul>
+	<li><code>2 &lt;= s.length &lt;= 200</code></li>
+	<li><code>s</code> consists of lowercase and uppercase English letters, spaces, and digits from <code>1</code> to <code>9</code>.</li>
+	<li>The number of words in <code>s</code> is between <code>1</code> and <code>9</code>.</li>
+	<li>The words in <code>s</code> are separated by a single space.</li>
+	<li><code>s</code> contains no leading or trailing spaces.</li>
+</ul>
+
+<!-- description:end -->
+
+## Solutions
+
+<!-- solution:start -->
+
+### Solution 1: String Splitting
+
+First, we split the string $s$ by spaces to get the array of strings $\textit{ws}$. Then, we iterate through the array $\textit{ws}$, subtracting the character '1' from the last character of each word to get the result as the index of the word. We take the prefix of the word as the content of the word. Finally, we concatenate the words in index order.
+
+The time complexity is $O(n)$, and the space complexity is $O(n)$, where $n$ is the length of the string $s$.
+
+<!-- tabs:start -->
+
+#### Python3
+
+
+
+#### Java
+
+
+
+#### C++
+
+
+
+#### Go
+
+
+
+#### TypeScript
+
+
+
+#### JavaScript
+
+
+
+<!-- tabs:end -->
+
+<!-- solution:end -->
+
+<!-- problem:end -->
+
+{{< tabs id >}}
+{{% tab "python" %}}
+```python
+class Solution:
+    def sortSentence(self, s: str) -> str:
+        ws = s.split()
+        ans = [None] * len(ws)
+        for w in ws:
+            ans[int(w[-1]) - 1] = w[:-1]
+        return " ".join(ans)
+```
+{{% /tab %}}
+{{% tab "java" %}}
+```java
+class Solution {
+    public String sortSentence(String s) {
+        String[] ws = s.split(" ");
+        int n = ws.length;
+        String[] ans = new String[n];
+        for (int i = 0; i < n; ++i) {
+            String w = ws[i];
+            ans[w.charAt(w.length() - 1) - '1'] = w.substring(0, w.length() - 1);
+        }
+        return String.join(" ", ans);
+    }
+}
+```
+{{% /tab %}}
+{{% tab "cpp" %}}
+```cpp
+class Solution {
+public:
+    string sortSentence(string s) {
+        istringstream iss(s);
+        string w;
+        vector<string> ws;
+        while (iss >> w) {
+            ws.push_back(w);
+        }
+        vector<string> ss(ws.size());
+        for (auto& w : ws) {
+            ss[w.back() - '1'] = w.substr(0, w.size() - 1);
+        }
+        string ans;
+        for (auto& w : ss) {
+            ans += w + " ";
+        }
+        ans.pop_back();
+        return ans;
+    }
+};
+```
+{{% /tab %}}
+{{% tab "go" %}}
+```go
+func sortSentence(s string) string {
+	ws := strings.Split(s, " ")
+	ans := make([]string, len(ws))
+	for _, w := range ws {
+		ans[w[len(w)-1]-'1'] = w[:len(w)-1]
+	}
+	return strings.Join(ans, " ")
+}
+```
+{{% /tab %}}
+{{% tab "ts" %}}
+```ts
+function sortSentence(s: string): string {
+    const ws = s.split(' ');
+    const ans = Array(ws.length);
+    for (const w of ws) {
+        ans[w.charCodeAt(w.length - 1) - '1'.charCodeAt(0)] = w.slice(0, -1);
+    }
+    return ans.join(' ');
+}
+```
+{{% /tab %}}
+{{% tab "js" %}}
+```js
+/**
+ * @param {string} s
+ * @return {string}
+ */
+var sortSentence = function (s) {
+    const ws = s.split(' ');
+    const ans = Array(ws.length);
+    for (const w of ws) {
+        ans[w.charCodeAt(w.length - 1) - '1'.charCodeAt(0)] = w.slice(0, -1);
+    }
+    return ans.join(' ');
+};
+```
+{{% /tab %}}
+{{< /tabs>}}
+
+{{% hint info %}}
+{{% details "python 可视化" %}}
+{{< pythontutor width="100%" height="800" language="python" >}}
+class Solution:
+    def sortSentence(self, s: str) -> str:
+        ws = s.split()
+        ans = [None] * len(ws)
+        for w in ws:
+            ans[int(w[-1]) - 1] = w[:-1]
+        return " ".join(ans)
+{{< /pythontutor >}}
+{{% /details %}}
+{{% /hint %}}
+
+{{% hint info %}}
+{{% details "java 可视化" %}}
+{{< pythontutor width="100%" height="800" language="java" >}}
+class Solution {
+    public String sortSentence(String s) {
+        String[] ws = s.split(" ");
+        int n = ws.length;
+        String[] ans = new String[n];
+        for (int i = 0; i < n; ++i) {
+            String w = ws[i];
+            ans[w.charAt(w.length() - 1) - '1'] = w.substring(0, w.length() - 1);
+        }
+        return String.join(" ", ans);
+    }
+}
+{{< /pythontutor >}}
+{{% /details %}}
+{{% /hint %}}
+
+{{% hint info %}}
+{{% details "cpp 可视化" %}}
+{{< pythontutor width="100%" height="800" language="cpp" >}}
+class Solution {
+public:
+    string sortSentence(string s) {
+        istringstream iss(s);
+        string w;
+        vector<string> ws;
+        while (iss >> w) {
+            ws.push_back(w);
+        }
+        vector<string> ss(ws.size());
+        for (auto& w : ws) {
+            ss[w.back() - '1'] = w.substr(0, w.size() - 1);
+        }
+        string ans;
+        for (auto& w : ss) {
+            ans += w + " ";
+        }
+        ans.pop_back();
+        return ans;
+    }
+};
+{{< /pythontutor >}}
+{{% /details %}}
+{{% /hint %}}

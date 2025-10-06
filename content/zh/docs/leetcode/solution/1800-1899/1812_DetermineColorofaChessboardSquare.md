@@ -1,0 +1,234 @@
+---
+title: "1812_DetermineColorofaChessboardSquare"
+date: 2025-10-06T00:42:37+08:00
+weight: 1812
+tags: [数学, 字符串]
+---
+
+
+{{< katex />}}
+
+{{< badge title="Difficulty" value="简单" >}}
+
+<!-- problem:start -->
+
+# [1812. 判断国际象棋棋盘中一个格子的颜色](https://leetcode.cn/problems/determine-color-of-a-chessboard-square)
+
+[English Version](../en/1812-12/1812_DetermineColorofaChessboardSquare)
+
+## 题目描述
+
+<!-- description:start -->
+
+<p>给你一个坐标 <code>coordinates</code> ，它是一个字符串，表示国际象棋棋盘中一个格子的坐标。下图是国际象棋棋盘示意图。</p>
+
+<p><img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/1800-1899/1812.Determine%20Color%20of%20a%20Chessboard%20Square/images/chessboard.png" style="width: 400px; height: 396px;" /></p>
+
+<p>如果所给格子的颜色是白色，请你返回 <code>true</code>，如果是黑色，请返回 <code>false</code> 。</p>
+
+<p>给定坐标一定代表国际象棋棋盘上一个存在的格子。坐标第一个字符是字母，第二个字符是数字。</p>
+
+<p> </p>
+
+<p><strong>示例 1：</strong></p>
+
+<pre>
+<b>输入：</b>coordinates = "a1"
+<b>输出：</b>false
+<b>解释：</b>如上图棋盘所示，"a1" 坐标的格子是黑色的，所以返回 false 。
+</pre>
+
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<b>输入：</b>coordinates = "h3"
+<b>输出：</b>true
+<b>解释：</b>如上图棋盘所示，"h3" 坐标的格子是白色的，所以返回 true 。
+</pre>
+
+<p><strong>示例 3：</strong></p>
+
+<pre>
+<b>输入：</b>coordinates = "c7"
+<b>输出：</b>false
+</pre>
+
+<p> </p>
+
+<p><strong>提示：</strong></p>
+
+<ul>
+	<li><code>coordinates.length == 2</code></li>
+	<li><code>'a' <= coordinates[0] <= 'h'</code></li>
+	<li><code>'1' <= coordinates[1] <= '8'</code></li>
+</ul>
+
+<!-- description:end -->
+
+## 解法
+
+<!-- solution:start -->
+
+### 方法一：找规律
+
+观察棋盘我们发现，颜色相同的两个格子 $(x_1, y_1)$ 和 $(x_2, y_2)$ 满足 $x_1 + y_1$ 和 $x_2 + y_2$ 均为奇数或偶数。
+
+因此，我们可以根据 $\textit{coordinates}$ 获取对应的坐标 $(x, y)$，如果 $x + y$ 为奇数，则格子为白色，返回 $\textit{true}$，否则返回 $\textit{false}$。
+
+时间复杂度 $O(1)$，空间复杂度 $O(1)$。
+
+<!-- tabs:start -->
+
+#### Python3
+
+
+
+#### Java
+
+
+
+#### C++
+
+
+
+#### Go
+
+
+
+#### TypeScript
+
+
+
+#### Rust
+
+
+
+#### JavaScript
+
+
+
+#### C
+
+
+
+<!-- tabs:end -->
+
+<!-- solution:end -->
+
+<!-- problem:end -->
+
+{{< tabs id >}}
+{{% tab "python" %}}
+```python
+class Solution:
+    def squareIsWhite(self, coordinates: str) -> bool:
+        return (ord(coordinates[0]) + ord(coordinates[1])) % 2 == 1
+```
+{{% /tab %}}
+{{% tab "java" %}}
+```java
+class Solution {
+    public boolean squareIsWhite(String coordinates) {
+        return (coordinates.charAt(0) + coordinates.charAt(1)) % 2 == 1;
+    }
+}
+```
+{{% /tab %}}
+{{% tab "cpp" %}}
+```cpp
+class Solution {
+public:
+    bool squareIsWhite(string coordinates) {
+        return (coordinates[0] + coordinates[1]) % 2;
+    }
+};
+```
+{{% /tab %}}
+{{% tab "go" %}}
+```go
+func squareIsWhite(coordinates string) bool {
+	return (coordinates[0]+coordinates[1])%2 == 1
+}
+```
+{{% /tab %}}
+{{% tab "ts" %}}
+```ts
+function squareIsWhite(coordinates: string): boolean {
+    return ((coordinates.charCodeAt(0) + coordinates.charCodeAt(1)) & 1) === 1;
+}
+```
+{{% /tab %}}
+{{% tab "rust" %}}
+```rust
+impl Solution {
+    pub fn square_is_white(coordinates: String) -> bool {
+        let s = coordinates.as_bytes();
+        ((s[0] + s[1]) & 1) == 1
+    }
+}
+```
+{{% /tab %}}
+{{% tab "js" %}}
+```js
+/**
+ * @param {string} coordinates
+ * @return {boolean}
+ */
+var squareIsWhite = function (coordinates) {
+    return (coordinates[0].charCodeAt() + coordinates[1].charCodeAt()) % 2 == 1;
+};
+```
+{{% /tab %}}
+{{% tab "c" %}}
+```c
+bool squareIsWhite(char* coordinates) {
+    return (coordinates[0] + coordinates[1]) & 1;
+}
+```
+{{% /tab %}}
+{{< /tabs>}}
+
+{{% hint info %}}
+{{% details "python 可视化" %}}
+{{< pythontutor width="100%" height="800" language="python" >}}
+class Solution:
+    def squareIsWhite(self, coordinates: str) -> bool:
+        return (ord(coordinates[0]) + ord(coordinates[1])) % 2 == 1
+{{< /pythontutor >}}
+{{% /details %}}
+{{% /hint %}}
+
+{{% hint info %}}
+{{% details "java 可视化" %}}
+{{< pythontutor width="100%" height="800" language="java" >}}
+class Solution {
+    public boolean squareIsWhite(String coordinates) {
+        return (coordinates.charAt(0) + coordinates.charAt(1)) % 2 == 1;
+    }
+}
+{{< /pythontutor >}}
+{{% /details %}}
+{{% /hint %}}
+
+{{% hint info %}}
+{{% details "c 可视化" %}}
+{{< pythontutor width="100%" height="800" language="c" >}}
+bool squareIsWhite(char* coordinates) {
+    return (coordinates[0] + coordinates[1]) & 1;
+}
+{{< /pythontutor >}}
+{{% /details %}}
+{{% /hint %}}
+
+{{% hint info %}}
+{{% details "cpp 可视化" %}}
+{{< pythontutor width="100%" height="800" language="cpp" >}}
+class Solution {
+public:
+    bool squareIsWhite(string coordinates) {
+        return (coordinates[0] + coordinates[1]) % 2;
+    }
+};
+{{< /pythontutor >}}
+{{% /details %}}
+{{% /hint %}}

@@ -1,0 +1,463 @@
+---
+title: "0273_IntegertoEnglishWords"
+date: 2025-10-06T00:42:37+08:00
+weight: 0273
+tags: [Recursion, Math, String]
+---
+
+
+{{< katex />}}
+
+{{< badge title="Difficulty" value="Hard" >}}
+
+<!-- problem:start -->
+
+# [273. Integer to English Words](https://leetcode.com/problems/integer-to-english-words)
+
+[中文文档](/solution/0200-0299/0273.Integer%20to%20English%20Words/README.md)
+
+## Description
+
+<!-- description:start -->
+
+<p>Convert a non-negative integer <code>num</code> to its English words representation.</p>
+
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+
+<pre>
+<strong>Input:</strong> num = 123
+<strong>Output:</strong> &quot;One Hundred Twenty Three&quot;
+</pre>
+
+<p><strong class="example">Example 2:</strong></p>
+
+<pre>
+<strong>Input:</strong> num = 12345
+<strong>Output:</strong> &quot;Twelve Thousand Three Hundred Forty Five&quot;
+</pre>
+
+<p><strong class="example">Example 3:</strong></p>
+
+<pre>
+<strong>Input:</strong> num = 1234567
+<strong>Output:</strong> &quot;One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven&quot;
+</pre>
+
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
+
+<ul>
+	<li><code>0 &lt;= num &lt;= 2<sup>31</sup> - 1</code></li>
+</ul>
+
+<!-- description:end -->
+
+## Solutions
+
+<!-- solution:start -->
+
+### Solution 1
+
+<!-- tabs:start -->
+
+#### Python3
+
+
+
+#### Java
+
+
+
+#### C#
+
+
+
+#### TypeScript
+
+
+
+#### JavaScript
+
+
+
+<!-- tabs:end -->
+
+<!-- solution:end -->
+
+<!-- solution:start -->
+
+### Solution 2
+
+<!-- tabs:start -->
+
+#### Java
+
+
+
+<!-- tabs:end -->
+
+<!-- solution:end -->
+
+<!-- problem:end -->
+
+{{< tabs id >}}
+{{% tab "python" %}}
+```python
+class Solution:
+    def numberToWords(self, num: int) -> str:
+        if num == 0:
+            return 'Zero'
+
+        lt20 = [
+            '',
+            'One',
+            'Two',
+            'Three',
+            'Four',
+            'Five',
+            'Six',
+            'Seven',
+            'Eight',
+            'Nine',
+            'Ten',
+            'Eleven',
+            'Twelve',
+            'Thirteen',
+            'Fourteen',
+            'Fifteen',
+            'Sixteen',
+            'Seventeen',
+            'Eighteen',
+            'Nineteen',
+        ]
+        tens = [
+            '',
+            'Ten',
+            'Twenty',
+            'Thirty',
+            'Forty',
+            'Fifty',
+            'Sixty',
+            'Seventy',
+            'Eighty',
+            'Ninety',
+        ]
+        thousands = ['Billion', 'Million', 'Thousand', '']
+
+        def transfer(num):
+            if num == 0:
+                return ''
+            if num < 20:
+                return lt20[num] + ' '
+            if num < 100:
+                return tens[num // 10] + ' ' + transfer(num % 10)
+            return lt20[num // 100] + ' Hundred ' + transfer(num % 100)
+
+        res = []
+        i, j = 1000000000, 0
+        while i > 0:
+            if num // i != 0:
+                res.append(transfer(num // i))
+                res.append(thousands[j])
+                res.append(' ')
+                num %= i
+            j += 1
+            i //= 1000
+        return ''.join(res).strip()
+```
+{{% /tab %}}
+{{% tab "java" %}}
+```java
+class Solution {
+    private String[] lt20 = {"", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight",
+        "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen",
+        "Seventeen", "Eighteen", "Nineteen"};
+    private String[] tens
+        = {"", "Ten", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"};
+    private String[] thousands = {"Billion", "Million", "Thousand", ""};
+
+    public String numberToWords(int num) {
+        if (num == 0) {
+            return "Zero";
+        }
+        StringBuilder sb = new StringBuilder();
+        for (int i = 1000000000, j = 0; i > 0; i /= 1000, ++j) {
+            if (num / i == 0) {
+                continue;
+            }
+            sb.append(transfer(num / i)).append(thousands[j]).append(' ');
+            num %= i;
+        }
+        return sb.toString().trim();
+    }
+
+    private String transfer(int num) {
+        if (num == 0) {
+            return "";
+        }
+        if (num < 20) {
+            return lt20[num] + " ";
+        }
+        if (num < 100) {
+            return tens[num / 10] + " " + transfer(num % 10);
+        }
+        return lt20[num / 100] + " Hundred " + transfer(num % 100);
+    }
+}
+```
+{{% /tab %}}
+{{% tab "cs" %}}
+```cs
+using System.Collections.Generic;
+using System.Linq;
+
+public class Solution {
+    private string[] bases = { "Thousand", "Million", "Billion" };
+    public string NumberToWords(int num) {
+        if (num == 0)
+        {
+            return "Zero";
+        }
+        var baseIndex = -1;
+        var parts = new List<string>();
+        while (num > 0)
+        {
+            var part = NumberToWordsInternal(num % 1000);
+            if (part.Length > 0 && baseIndex >= 0)
+            {
+                part = JoinParts(part, bases[baseIndex]);
+            }
+            parts.Add(part);
+            baseIndex++;
+            num /= 1000;
+        }
+        parts.Reverse();
+        return JoinParts(parts);
+    }
+
+    private string JoinParts(IEnumerable<string> parts)
+    {
+        return string.Join(" ", parts.Where(p => p.Length > 0));
+    }
+
+    private string JoinParts(params string[] parts)
+    {
+        return JoinParts((IEnumerable<string>)parts);
+    }
+
+    private string NumberToWordsInternal(int num)
+    {
+        switch(num)
+        {
+            case 0: return "";
+            case 1: return "One";
+            case 2: return "Two";
+            case 3: return "Three";
+            case 4: return "Four";
+            case 5: return "Five";
+            case 6: return "Six";
+            case 7: return "Seven";
+            case 8: return "Eight";
+            case 9: return "Nine";
+            case 10: return "Ten";
+            case 11: return "Eleven";
+            case 12: return "Twelve";
+            case 13: return "Thirteen";
+            case 14: return "Fourteen";
+            case 15: return "Fifteen";
+            case 16: return "Sixteen";
+            case 17: return "Seventeen";
+            case 18: return "Eighteen";
+            case 19: return "Nineteen";
+        }
+
+        if (num < 100)
+        {
+            string part1;
+            switch (num/10)
+            {
+                case 2: part1 = "Twenty"; break;
+                case 3: part1 = "Thirty"; break;
+                case 4: part1 = "Forty"; break;
+                case 5: part1 = "Fifty"; break;
+                case 6: part1 = "Sixty"; break;
+                case 7: part1 = "Seventy"; break;
+                case 8: part1 = "Eighty"; break;
+                case 9: default: part1 = "Ninety"; break;
+            }
+            var part2 = NumberToWordsInternal(num % 10);
+            return JoinParts(part1, part2);
+        }
+
+        {
+            var part1 = NumberToWordsInternal(num / 100);
+            var part2 = NumberToWordsInternal(num % 100);
+            return JoinParts(part1, "Hundred", part2);
+        }
+    }
+}
+```
+{{% /tab %}}
+{{% tab "ts" %}}
+```ts
+function numberToWords(num: number): string {
+    if (num === 0) return 'Zero';
+
+    // prettier-ignore
+    const f = (x: number): string => {
+    const dict1 = ['','One','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten','Eleven','Twelve','Thirteen','Fourteen','Fifteen','Sixteen','Seventeen','Eighteen','Nineteen',]
+    const dict2 = ['','','Twenty','Thirty','Forty','Fifty','Sixty','Seventy','Eighty','Ninety',]
+    let ans = ''
+
+    if (x <= 19) ans = dict1[x] ?? ''
+    else if (x < 100) ans = `${dict2[Math.floor(x / 10)]} ${f(x % 10)}`
+    else if (x < 10 ** 3) ans = `${dict1[Math.floor(x / 100)]} Hundred ${f(x % 100)}`
+    else if (x < 10 ** 6) ans = `${f(Math.floor(x / 10 ** 3))} Thousand ${f(x % 10 ** 3)}`
+    else if (x < 10 ** 9) ans = `${f(Math.floor(x / 10 ** 6))} Million ${f(x % 10 ** 6)}`
+    else ans = `${f(Math.floor(x / 10 ** 9))} Billion ${f(x % 10 ** 9)}`
+
+    return ans.trim()
+  }
+
+    return f(num);
+}
+```
+{{% /tab %}}
+{{% tab "js" %}}
+```js
+function numberToWords(num) {
+    if (num === 0) return 'Zero';
+
+    // prettier-ignore
+    const f = (x) => {
+    const dict1 = ['','One','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten','Eleven','Twelve','Thirteen','Fourteen','Fifteen','Sixteen','Seventeen','Eighteen','Nineteen',]
+    const dict2 = ['','','Twenty','Thirty','Forty','Fifty','Sixty','Seventy','Eighty','Ninety',]
+    let ans = ''
+
+    if (x <= 19) ans = dict1[x] ?? ''
+    else if (x < 100) ans = `${dict2[Math.floor(x / 10)]} ${f(x % 10)}`
+    else if (x < 10 ** 3) ans = `${dict1[Math.floor(x / 100)]} Hundred ${f(x % 100)}`
+    else if (x < 10 ** 6) ans = `${f(Math.floor(x / 10 ** 3))} Thousand ${f(x % 10 ** 3)}`
+    else if (x < 10 ** 9) ans = `${f(Math.floor(x / 10 ** 6))} Million ${f(x % 10 ** 6)}`
+    else ans = `${f(Math.floor(x / 10 ** 9))} Billion ${f(x % 10 ** 9)}`
+
+    return ans.trim()
+  }
+
+    return f(num);
+}
+```
+{{% /tab %}}
+{{< /tabs>}}
+
+{{% hint info %}}
+{{% details "python 可视化" %}}
+{{< pythontutor width="100%" height="800" language="python" >}}
+class Solution:
+    def numberToWords(self, num: int) -> str:
+        if num == 0:
+            return 'Zero'
+
+        lt20 = [
+            '',
+            'One',
+            'Two',
+            'Three',
+            'Four',
+            'Five',
+            'Six',
+            'Seven',
+            'Eight',
+            'Nine',
+            'Ten',
+            'Eleven',
+            'Twelve',
+            'Thirteen',
+            'Fourteen',
+            'Fifteen',
+            'Sixteen',
+            'Seventeen',
+            'Eighteen',
+            'Nineteen',
+        ]
+        tens = [
+            '',
+            'Ten',
+            'Twenty',
+            'Thirty',
+            'Forty',
+            'Fifty',
+            'Sixty',
+            'Seventy',
+            'Eighty',
+            'Ninety',
+        ]
+        thousands = ['Billion', 'Million', 'Thousand', '']
+
+        def transfer(num):
+            if num == 0:
+                return ''
+            if num < 20:
+                return lt20[num] + ' '
+            if num < 100:
+                return tens[num // 10] + ' ' + transfer(num % 10)
+            return lt20[num // 100] + ' Hundred ' + transfer(num % 100)
+
+        res = []
+        i, j = 1000000000, 0
+        while i > 0:
+            if num // i != 0:
+                res.append(transfer(num // i))
+                res.append(thousands[j])
+                res.append(' ')
+                num %= i
+            j += 1
+            i //= 1000
+        return ''.join(res).strip()
+{{< /pythontutor >}}
+{{% /details %}}
+{{% /hint %}}
+
+{{% hint info %}}
+{{% details "java 可视化" %}}
+{{< pythontutor width="100%" height="800" language="java" >}}
+class Solution {
+    private String[] lt20 = {"", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight",
+        "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen",
+        "Seventeen", "Eighteen", "Nineteen"};
+    private String[] tens
+        = {"", "Ten", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"};
+    private String[] thousands = {"Billion", "Million", "Thousand", ""};
+
+    public String numberToWords(int num) {
+        if (num == 0) {
+            return "Zero";
+        }
+        StringBuilder sb = new StringBuilder();
+        for (int i = 1000000000, j = 0; i > 0; i /= 1000, ++j) {
+            if (num / i == 0) {
+                continue;
+            }
+            sb.append(transfer(num / i)).append(thousands[j]).append(' ');
+            num %= i;
+        }
+        return sb.toString().trim();
+    }
+
+    private String transfer(int num) {
+        if (num == 0) {
+            return "";
+        }
+        if (num < 20) {
+            return lt20[num] + " ";
+        }
+        if (num < 100) {
+            return tens[num / 10] + " " + transfer(num % 10);
+        }
+        return lt20[num / 100] + " Hundred " + transfer(num % 100);
+    }
+}
+{{< /pythontutor >}}
+{{% /details %}}
+{{% /hint %}}

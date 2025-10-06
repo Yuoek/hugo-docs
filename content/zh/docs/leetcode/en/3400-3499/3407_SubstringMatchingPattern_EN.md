@@ -1,0 +1,266 @@
+---
+title: "3407_SubstringMatchingPattern"
+date: 2025-10-06T00:42:37+08:00
+weight: 3407
+tags: [String, String Matching]
+---
+
+
+{{< katex />}}
+
+{{< badge title="Difficulty" value="Easy" >}}
+
+<!-- problem:start -->
+
+# [3407. Substring Matching Pattern](https://leetcode.com/problems/substring-matching-pattern)
+
+[中文文档](/solution/3400-3499/3407.Substring%20Matching%20Pattern/README.md)
+
+## Description
+
+<!-- description:start -->
+
+<p>You are given a string <code>s</code> and a pattern string <code>p</code>, where <code>p</code> contains <strong>exactly one</strong> <code>&#39;*&#39;</code> character.</p>
+
+<p>The <code>&#39;*&#39;</code> in <code>p</code> can be replaced with any sequence of zero or more characters.</p>
+
+<p>Return <code>true</code> if <code>p</code> can be made a <span data-keyword="substring-nonempty">substring</span> of <code>s</code>, and <code>false</code> otherwise.</p>
+
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+
+<div class="example-block">
+<p><strong>Input:</strong> <span class="example-io">s = &quot;leetcode&quot;, p = &quot;ee*e&quot;</span></p>
+
+<p><strong>Output:</strong> <span class="example-io">true</span></p>
+
+<p><strong>Explanation:</strong></p>
+
+<p>By replacing the <code>&#39;*&#39;</code> with <code>&quot;tcod&quot;</code>, the substring <code>&quot;eetcode&quot;</code> matches the pattern.</p>
+</div>
+
+<p><strong class="example">Example 2:</strong></p>
+
+<div class="example-block">
+<p><strong>Input:</strong> <span class="example-io">s = &quot;car&quot;, p = &quot;c*v&quot;</span></p>
+
+<p><strong>Output:</strong> <span class="example-io">false</span></p>
+
+<p><strong>Explanation:</strong></p>
+
+<p>There is no substring matching the pattern.</p>
+</div>
+
+<p><strong class="example">Example 3:</strong></p>
+
+<div class="example-block">
+<p><strong>Input:</strong> <span class="example-io">s = &quot;luck&quot;, p = &quot;u*&quot;</span></p>
+
+<p><strong>Output:</strong> <span class="example-io">true</span></p>
+
+<p><strong>Explanation:</strong></p>
+
+<p>The substrings <code>&quot;u&quot;</code>, <code>&quot;uc&quot;</code>, and <code>&quot;uck&quot;</code> match the pattern.</p>
+</div>
+
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
+
+<ul>
+	<li><code>1 &lt;= s.length &lt;= 50</code></li>
+	<li><code>1 &lt;= p.length &lt;= 50 </code></li>
+	<li><code>s</code> contains only lowercase English letters.</li>
+	<li><code>p</code> contains only lowercase English letters and exactly one <code>&#39;*&#39;</code></li>
+</ul>
+
+<!-- description:end -->
+
+## Solutions
+
+<!-- solution:start -->
+
+### Solution 1
+
+<!-- tabs:start -->
+
+#### Python3
+
+
+
+#### Java
+
+
+
+#### C++
+
+
+
+#### Go
+
+
+
+#### TypeScript
+
+
+
+<!-- tabs:end -->
+
+<!-- solution:end -->
+
+<!-- problem:end -->
+
+{{< tabs id >}}
+{{% tab "python" %}}
+```python
+class Solution:
+    def hasMatch(self, s: str, p: str) -> bool:
+        i = 0
+        for t in p.split("*"):
+            j = s.find(t, i)
+            if j == -1:
+                return False
+            i = j + len(t)
+        return True
+```
+{{% /tab %}}
+{{% tab "java" %}}
+```java
+class Solution {
+    public boolean hasMatch(String s, String p) {
+        int i = 0;
+        for (String t : p.split("\\*")) {
+            int j = s.indexOf(t, i);
+            if (j == -1) {
+                return false;
+            }
+            i = j + t.length();
+        }
+        return true;
+    }
+}
+```
+{{% /tab %}}
+{{% tab "cpp" %}}
+```cpp
+class Solution {
+public:
+    bool hasMatch(string s, string p) {
+        int i = 0;
+        int pos = 0;
+        int start = 0, end;
+        while ((end = p.find("*", start)) != string::npos) {
+            string t = p.substr(start, end - start);
+            pos = s.find(t, i);
+            if (pos == string::npos) {
+                return false;
+            }
+            i = pos + t.length();
+            start = end + 1;
+        }
+        string t = p.substr(start);
+        pos = s.find(t, i);
+        if (pos == string::npos) {
+            return false;
+        }
+        return true;
+    }
+};
+```
+{{% /tab %}}
+{{% tab "go" %}}
+```go
+func hasMatch(s string, p string) bool {
+	i := 0
+	for _, t := range strings.Split(p, "*") {
+		j := strings.Index(s[i:], t)
+		if j == -1 {
+			return false
+		}
+		i += j + len(t)
+	}
+	return true
+}
+```
+{{% /tab %}}
+{{% tab "ts" %}}
+```ts
+function hasMatch(s: string, p: string): boolean {
+    let i = 0;
+    for (const t of p.split('*')) {
+        const j = s.indexOf(t, i);
+        if (j === -1) {
+            return false;
+        }
+        i = j + t.length;
+    }
+    return true;
+}
+```
+{{% /tab %}}
+{{< /tabs>}}
+
+{{% hint info %}}
+{{% details "python 可视化" %}}
+{{< pythontutor width="100%" height="800" language="python" >}}
+class Solution:
+    def hasMatch(self, s: str, p: str) -> bool:
+        i = 0
+        for t in p.split("*"):
+            j = s.find(t, i)
+            if j == -1:
+                return False
+            i = j + len(t)
+        return True
+{{< /pythontutor >}}
+{{% /details %}}
+{{% /hint %}}
+
+{{% hint info %}}
+{{% details "java 可视化" %}}
+{{< pythontutor width="100%" height="800" language="java" >}}
+class Solution {
+    public boolean hasMatch(String s, String p) {
+        int i = 0;
+        for (String t : p.split("\\*")) {
+            int j = s.indexOf(t, i);
+            if (j == -1) {
+                return false;
+            }
+            i = j + t.length();
+        }
+        return true;
+    }
+}
+{{< /pythontutor >}}
+{{% /details %}}
+{{% /hint %}}
+
+{{% hint info %}}
+{{% details "cpp 可视化" %}}
+{{< pythontutor width="100%" height="800" language="cpp" >}}
+class Solution {
+public:
+    bool hasMatch(string s, string p) {
+        int i = 0;
+        int pos = 0;
+        int start = 0, end;
+        while ((end = p.find("*", start)) != string::npos) {
+            string t = p.substr(start, end - start);
+            pos = s.find(t, i);
+            if (pos == string::npos) {
+                return false;
+            }
+            i = pos + t.length();
+            start = end + 1;
+        }
+        string t = p.substr(start);
+        pos = s.find(t, i);
+        if (pos == string::npos) {
+            return false;
+        }
+        return true;
+    }
+};
+{{< /pythontutor >}}
+{{% /details %}}
+{{% /hint %}}

@@ -1,1 +1,0 @@
-SELECT name FROM records WHERE supervisor = "Oliver Warbucks";

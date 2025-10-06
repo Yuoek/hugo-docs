@@ -1,0 +1,386 @@
+---
+title: "3130_FindAllPossibleStableBinaryArraysII"
+date: 2025-10-06T00:42:37+08:00
+weight: 3130
+tags: [动态规划, 前缀和]
+---
+
+
+{{< katex />}}
+
+{{< badge title="Difficulty" value="困难" >}}
+
+<!-- problem:start -->
+
+# [3130. 找出所有稳定的二进制数组 II](https://leetcode.cn/problems/find-all-possible-stable-binary-arrays-ii)
+
+[English Version](../en/3130-30/3130_FindAllPossibleStableBinaryArraysII)
+
+## 题目描述
+
+<!-- description:start -->
+
+<p>给你 3 个正整数&nbsp;<code>zero</code>&nbsp;，<code>one</code>&nbsp;和&nbsp;<code>limit</code>&nbsp;。</p>
+
+<p>一个 <span data-keyword="binary-array">二进制数组</span> <code>arr</code> 如果满足以下条件，那么我们称它是 <strong>稳定的</strong> ：</p>
+
+<ul>
+	<li>0 在&nbsp;<code>arr</code>&nbsp;中出现次数 <strong>恰好</strong>&nbsp;为<strong>&nbsp;</strong><code>zero</code>&nbsp;。</li>
+	<li>1 在&nbsp;<code>arr</code>&nbsp;中出现次数 <strong>恰好</strong>&nbsp;为&nbsp;<code>one</code>&nbsp;。</li>
+	<li><code>arr</code> 中每个长度超过 <code>limit</code>&nbsp;的 <span data-keyword="subarray-nonempty">子数组</span> 都 <strong>同时</strong> 包含 0 和 1 。</li>
+</ul>
+
+<p>请你返回 <strong>稳定</strong>&nbsp;二进制数组的 <em>总</em> 数目。</p>
+
+<p>由于答案可能很大，将它对&nbsp;<code>10<sup>9</sup> + 7</code>&nbsp;<b>取余</b>&nbsp;后返回。</p>
+
+<p>&nbsp;</p>
+
+<p><strong class="example">示例 1：</strong></p>
+
+<div class="example-block">
+<p><span class="example-io"><b>输入：</b>zero = 1, one = 1, limit = 2</span></p>
+
+<p><span class="example-io"><b>输出：</b>2</span></p>
+
+<p><strong>解释：</strong></p>
+
+<p>两个稳定的二进制数组为&nbsp;<code>[1,0]</code> 和&nbsp;<code>[0,1]</code>&nbsp;，两个数组都有一个 0 和一个 1 ，且没有子数组长度大于 2 。</p>
+</div>
+
+<p><strong class="example">示例 2：</strong></p>
+
+<div class="example-block">
+<p><strong>输入：</strong><span class="example-io">zero = 1, one = 2, limit = 1</span></p>
+
+<p><span class="example-io"><b>输出：</b>1</span></p>
+
+<p><strong>解释：</strong></p>
+
+<p>唯一稳定的二进制数组是&nbsp;<code>[1,0,1]</code>&nbsp;。</p>
+
+<p>二进制数组&nbsp;<code>[1,1,0]</code> 和&nbsp;<code>[0,1,1]</code>&nbsp;都有长度为 2 且元素全都相同的子数组，所以它们不稳定。</p>
+</div>
+
+<p><strong class="example">示例 3：</strong></p>
+
+<div class="example-block">
+<p><span class="example-io"><b>输入：</b>zero = 3, one = 3, limit = 2</span></p>
+
+<p><span class="example-io"><b>输出：</b>14</span></p>
+
+<p><strong>解释：</strong></p>
+
+<p>所有稳定的二进制数组包括&nbsp;<code>[0,0,1,0,1,1]</code>&nbsp;，<code>[0,0,1,1,0,1]</code>&nbsp;，<code>[0,1,0,0,1,1]</code>&nbsp;，<code>[0,1,0,1,0,1]</code>&nbsp;，<code>[0,1,0,1,1,0]</code>&nbsp;，<code>[0,1,1,0,0,1]</code>&nbsp;，<code>[0,1,1,0,1,0]</code>&nbsp;，<code>[1,0,0,1,0,1]</code>&nbsp;，<code>[1,0,0,1,1,0]</code>&nbsp;，<code>[1,0,1,0,0,1]</code>&nbsp;，<code>[1,0,1,0,1,0]</code>&nbsp;，<code>[1,0,1,1,0,0]</code>&nbsp;，<code>[1,1,0,0,1,0]</code>&nbsp;和&nbsp;<code>[1,1,0,1,0,0]</code>&nbsp;。</p>
+</div>
+
+<p>&nbsp;</p>
+
+<p><strong>提示：</strong></p>
+
+<ul>
+	<li><code>1 &lt;= zero, one, limit &lt;= 1000</code></li>
+</ul>
+
+<!-- description:end -->
+
+## 解法
+
+<!-- solution:start -->
+
+### 方法一：记忆化搜索
+
+我们设计一个函数 $dfs(i, j, k)$ 表示还剩下 $i$ 个 $0$ 和 $j$ 个 $1$ 且接下来待填的数字是 $k$ 的情况下，满足题目条件的稳定二进制数组的个数。那么答案就是 $dfs(zero, one, 0) + dfs(zero, one, 1)$。
+
+函数 $dfs(i, j, k)$ 的计算过程如下：
+
+-   如果 $i \lt 0$ 或 $j \lt 0$，返回 $0$。
+-   如果 $i = 0$，那么当 $k = 1$ 且 $j \leq \textit{limit}$ 时返回 $1$，否则返回 $0$。
+-   如果 $j = 0$，那么当 $k = 0$ 且 $i \leq \textit{limit}$ 时返回 $1$，否则返回 $0$。
+-   如果 $k = 0$，我们考虑前一个数字是 $0$ 的情况 $dfs(i - 1, j, 0)$ 和前一个数字是 $1$ 的情况 $dfs(i - 1, j, 1)$，如果前一个数是 $0$，那么有可能使得子数组中有超过 $\textit{limit}$ 个 $0$，即不允许出现倒数第 $\textit{limit} + 1$ 个数是 $1$ 的情况，所以我们要减去这种情况，即 $dfs(i - \textit{limit} - 1, j, 1)$。
+-   如果 $k = 1$，我们考虑前一个数字是 $0$ 的情况 $dfs(i, j - 1, 0)$ 和前一个数字是 $1$ 的情况 $dfs(i, j - 1, 1)$，如果前一个数是 $1$，那么有可能使得子数组中有超过 $\textit{limit}$ 个 $1$，即不允许出现倒数第 $\textit{limit} + 1$ 个数是 $0$ 的情况，所以我们要减去这种情况，即 $dfs(i, j - \textit{limit} - 1, 0)$。
+
+为了避免重复计算，我们使用记忆化搜索的方法。
+
+时间复杂度 $O(zero \times one)$，空间复杂度 $O(zero \times one)$。
+
+<!-- tabs:start -->
+
+#### Python3
+
+
+
+#### Java
+
+
+
+#### C++
+
+
+
+#### Go
+
+
+
+<!-- tabs:end -->
+
+<!-- solution:end -->
+
+<!-- solution:start -->
+
+### 方法二：动态规划
+
+我们也可以将方法一的记忆化搜索转换为动态规划。
+
+我们定义 $f[i][j][k]$ 表示使用 $i$ 个 $0$ 和 $j$ 个 $1$ 且最后一个数字是 $k$ 的稳定二进制数组的个数。那么答案就是 $f[zero][one][0] + f[zero][one][1]$。
+
+初始时，我们有 $f[i][0][0] = 1$，其中 $1 \leq i \leq \min(\textit{limit}, \textit{zero})$；有 $f[0][j][1] = 1$，其中 $1 \leq j \leq \min(\textit{limit}, \textit{one})$。
+
+状态转移方程如下：
+
+-   $f[i][j][0] = f[i - 1][j][0] + f[i - 1][j][1] - f[i - \textit{limit} - 1][j][1]$。
+-   $f[i][j][1] = f[i][j - 1][0] + f[i][j - 1][1] - f[i][j - \textit{limit} - 1][0]$。
+
+时间复杂度 $O(zero \times one)$，空间复杂度 $O(zero \times one)$。
+
+<!-- tabs:start -->
+
+#### Python3
+
+
+
+#### Java
+
+
+
+#### C++
+
+
+
+#### Go
+
+
+
+#### TypeScript
+
+
+
+<!-- tabs:end -->
+
+<!-- solution:end -->
+
+<!-- problem:end -->
+
+{{< tabs id >}}
+{{% tab "python" %}}
+```python
+class Solution:
+    def numberOfStableArrays(self, zero: int, one: int, limit: int) -> int:
+        mod = 10**9 + 7
+        f = [[[0, 0] for _ in range(one + 1)] for _ in range(zero + 1)]
+        for i in range(1, min(limit, zero) + 1):
+            f[i][0][0] = 1
+        for j in range(1, min(limit, one) + 1):
+            f[0][j][1] = 1
+        for i in range(1, zero + 1):
+            for j in range(1, one + 1):
+                x = 0 if i - limit - 1 < 0 else f[i - limit - 1][j][1]
+                y = 0 if j - limit - 1 < 0 else f[i][j - limit - 1][0]
+                f[i][j][0] = (f[i - 1][j][0] + f[i - 1][j][1] - x) % mod
+                f[i][j][1] = (f[i][j - 1][0] + f[i][j - 1][1] - y) % mod
+        return sum(f[zero][one]) % mod
+```
+{{% /tab %}}
+{{% tab "java" %}}
+```java
+class Solution {
+    public int numberOfStableArrays(int zero, int one, int limit) {
+        final int mod = (int) 1e9 + 7;
+        long[][][] f = new long[zero + 1][one + 1][2];
+        for (int i = 1; i <= Math.min(zero, limit); ++i) {
+            f[i][0][0] = 1;
+        }
+        for (int j = 1; j <= Math.min(one, limit); ++j) {
+            f[0][j][1] = 1;
+        }
+        for (int i = 1; i <= zero; ++i) {
+            for (int j = 1; j <= one; ++j) {
+                long x = i - limit - 1 < 0 ? 0 : f[i - limit - 1][j][1];
+                long y = j - limit - 1 < 0 ? 0 : f[i][j - limit - 1][0];
+                f[i][j][0] = (f[i - 1][j][0] + f[i - 1][j][1] - x + mod) % mod;
+                f[i][j][1] = (f[i][j - 1][0] + f[i][j - 1][1] - y + mod) % mod;
+            }
+        }
+        return (int) ((f[zero][one][0] + f[zero][one][1]) % mod);
+    }
+}
+```
+{{% /tab %}}
+{{% tab "cpp" %}}
+```cpp
+class Solution {
+public:
+    int numberOfStableArrays(int zero, int one, int limit) {
+        const int mod = 1e9 + 7;
+        using ll = long long;
+        ll f[zero + 1][one + 1][2];
+        memset(f, 0, sizeof(f));
+        for (int i = 1; i <= min(zero, limit); ++i) {
+            f[i][0][0] = 1;
+        }
+        for (int j = 1; j <= min(one, limit); ++j) {
+            f[0][j][1] = 1;
+        }
+        for (int i = 1; i <= zero; ++i) {
+            for (int j = 1; j <= one; ++j) {
+                ll x = i - limit - 1 < 0 ? 0 : f[i - limit - 1][j][1];
+                ll y = j - limit - 1 < 0 ? 0 : f[i][j - limit - 1][0];
+                f[i][j][0] = (f[i - 1][j][0] + f[i - 1][j][1] - x + mod) % mod;
+                f[i][j][1] = (f[i][j - 1][0] + f[i][j - 1][1] - y + mod) % mod;
+            }
+        }
+        return (f[zero][one][0] + f[zero][one][1]) % mod;
+    }
+};
+```
+{{% /tab %}}
+{{% tab "go" %}}
+```go
+func numberOfStableArrays(zero int, one int, limit int) int {
+	const mod int = 1e9 + 7
+	f := make([][][2]int, zero+1)
+	for i := range f {
+		f[i] = make([][2]int, one+1)
+	}
+	for i := 1; i <= min(zero, limit); i++ {
+		f[i][0][0] = 1
+	}
+	for j := 1; j <= min(one, limit); j++ {
+		f[0][j][1] = 1
+	}
+	for i := 1; i <= zero; i++ {
+		for j := 1; j <= one; j++ {
+			f[i][j][0] = (f[i-1][j][0] + f[i-1][j][1]) % mod
+			if i-limit-1 >= 0 {
+				f[i][j][0] = (f[i][j][0] - f[i-limit-1][j][1] + mod) % mod
+			}
+			f[i][j][1] = (f[i][j-1][0] + f[i][j-1][1]) % mod
+			if j-limit-1 >= 0 {
+				f[i][j][1] = (f[i][j][1] - f[i][j-limit-1][0] + mod) % mod
+			}
+		}
+	}
+	return (f[zero][one][0] + f[zero][one][1]) % mod
+}
+```
+{{% /tab %}}
+{{% tab "ts" %}}
+```ts
+function numberOfStableArrays(zero: number, one: number, limit: number): number {
+    const mod = 1e9 + 7;
+    const f: number[][][] = Array.from({ length: zero + 1 }, () =>
+        Array.from({ length: one + 1 }, () => [0, 0]),
+    );
+
+    for (let i = 1; i <= Math.min(limit, zero); i++) {
+        f[i][0][0] = 1;
+    }
+    for (let j = 1; j <= Math.min(limit, one); j++) {
+        f[0][j][1] = 1;
+    }
+
+    for (let i = 1; i <= zero; i++) {
+        for (let j = 1; j <= one; j++) {
+            const x = i - limit - 1 < 0 ? 0 : f[i - limit - 1][j][1];
+            const y = j - limit - 1 < 0 ? 0 : f[i][j - limit - 1][0];
+            f[i][j][0] = (f[i - 1][j][0] + f[i - 1][j][1] - x + mod) % mod;
+            f[i][j][1] = (f[i][j - 1][0] + f[i][j - 1][1] - y + mod) % mod;
+        }
+    }
+
+    return (f[zero][one][0] + f[zero][one][1]) % mod;
+}
+```
+{{% /tab %}}
+{{< /tabs>}}
+
+{{% hint info %}}
+{{% details "python 可视化" %}}
+{{< pythontutor width="100%" height="800" language="python" >}}
+class Solution:
+    def numberOfStableArrays(self, zero: int, one: int, limit: int) -> int:
+        mod = 10**9 + 7
+        f = [[[0, 0] for _ in range(one + 1)] for _ in range(zero + 1)]
+        for i in range(1, min(limit, zero) + 1):
+            f[i][0][0] = 1
+        for j in range(1, min(limit, one) + 1):
+            f[0][j][1] = 1
+        for i in range(1, zero + 1):
+            for j in range(1, one + 1):
+                x = 0 if i - limit - 1 < 0 else f[i - limit - 1][j][1]
+                y = 0 if j - limit - 1 < 0 else f[i][j - limit - 1][0]
+                f[i][j][0] = (f[i - 1][j][0] + f[i - 1][j][1] - x) % mod
+                f[i][j][1] = (f[i][j - 1][0] + f[i][j - 1][1] - y) % mod
+        return sum(f[zero][one]) % mod
+{{< /pythontutor >}}
+{{% /details %}}
+{{% /hint %}}
+
+{{% hint info %}}
+{{% details "java 可视化" %}}
+{{< pythontutor width="100%" height="800" language="java" >}}
+class Solution {
+    public int numberOfStableArrays(int zero, int one, int limit) {
+        final int mod = (int) 1e9 + 7;
+        long[][][] f = new long[zero + 1][one + 1][2];
+        for (int i = 1; i <= Math.min(zero, limit); ++i) {
+            f[i][0][0] = 1;
+        }
+        for (int j = 1; j <= Math.min(one, limit); ++j) {
+            f[0][j][1] = 1;
+        }
+        for (int i = 1; i <= zero; ++i) {
+            for (int j = 1; j <= one; ++j) {
+                long x = i - limit - 1 < 0 ? 0 : f[i - limit - 1][j][1];
+                long y = j - limit - 1 < 0 ? 0 : f[i][j - limit - 1][0];
+                f[i][j][0] = (f[i - 1][j][0] + f[i - 1][j][1] - x + mod) % mod;
+                f[i][j][1] = (f[i][j - 1][0] + f[i][j - 1][1] - y + mod) % mod;
+            }
+        }
+        return (int) ((f[zero][one][0] + f[zero][one][1]) % mod);
+    }
+}
+{{< /pythontutor >}}
+{{% /details %}}
+{{% /hint %}}
+
+{{% hint info %}}
+{{% details "cpp 可视化" %}}
+{{< pythontutor width="100%" height="800" language="cpp" >}}
+class Solution {
+public:
+    int numberOfStableArrays(int zero, int one, int limit) {
+        const int mod = 1e9 + 7;
+        using ll = long long;
+        ll f[zero + 1][one + 1][2];
+        memset(f, 0, sizeof(f));
+        for (int i = 1; i <= min(zero, limit); ++i) {
+            f[i][0][0] = 1;
+        }
+        for (int j = 1; j <= min(one, limit); ++j) {
+            f[0][j][1] = 1;
+        }
+        for (int i = 1; i <= zero; ++i) {
+            for (int j = 1; j <= one; ++j) {
+                ll x = i - limit - 1 < 0 ? 0 : f[i - limit - 1][j][1];
+                ll y = j - limit - 1 < 0 ? 0 : f[i][j - limit - 1][0];
+                f[i][j][0] = (f[i - 1][j][0] + f[i - 1][j][1] - x + mod) % mod;
+                f[i][j][1] = (f[i][j - 1][0] + f[i][j - 1][1] - y + mod) % mod;
+            }
+        }
+        return (f[zero][one][0] + f[zero][one][1]) % mod;
+    }
+};
+{{< /pythontutor >}}
+{{% /details %}}
+{{% /hint %}}
