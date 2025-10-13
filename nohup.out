@@ -48959,3 +48959,1753 @@ Start building sites …
 hugo v0.148.2+extended android/arm64 BuildDate=unknown
 
 WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Watching for changes in /data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/{archetypes,assets,content,data,i18n,layouts,static,themes}
+Watching for config changes in /data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/hugo.toml
+Start building sites … 
+hugo v0.148.2+extended android/arm64 BuildDate=unknown
+
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+
+                 │  EN  │  ZH  │  HE  
+─────────────────┼──────┼──────┼──────
+ Pages           │   11 │ 1757 │    8 
+ Paginator pages │    0 │  283 │    0 
+ Non-page files  │    1 │   19 │    0 
+ Static files    │ 1041 │ 1041 │ 1041 
+ Processed       │    0 │    0 │    0 
+ images          │      │      │      
+ Aliases         │    1 │   68 │    0 
+ Cleaned         │    0 │    0 │    0 
+
+Built in 114649 ms
+Environment: "development"
+Serving pages from disk
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1) 
+Press Ctrl+C to stop
+
+Change detected, rebuilding site (#1).
+2025-10-08 03:58:17.355 +0000
+Source changed /docs/example/shortcode/shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 3007 ms
+
+Change detected, rebuilding site (#2).
+2025-10-08 04:04:00.850 +0000
+Source changed /docs/example/shortcode/shortcode.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 5847 ms
+adding created directory to watchlist /data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/content/zh/docs/example/shortcode/shotcodetoc
+
+Change detected, rebuilding site (#3).
+2025-10-08 04:05:45.847 +0000
+Source changed /docs/example/shortcode/shotcodetoc
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 873 ms
+
+Change detected, rebuilding site (#4).
+2025-10-08 04:05:50.848 +0000
+Source changed /docs/example/shortcode/shotcodetoc/shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 2075 ms
+
+Change detected, rebuilding site (#5).
+2025-10-08 04:05:53.847 +0000
+Source changed /docs/example/shortcode/shotcodetoc/shortcode.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1330 ms
+
+Change detected, rebuilding site (#6).
+2025-10-08 04:06:03.850 +0000
+Source changed /docs/example/shortcode/shotcodetoc/shortcode.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1319 ms
+
+Change detected, rebuilding site (#7).
+2025-10-08 04:06:42.845 +0000
+Source changed /docs/example/shortcode/shotcodetoc/pre_shortcode.md
+ERROR Rebuild failed: process: "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/content/zh/docs/example/shortcode/shotcodetoc/pre_shortcode.md:1:1": unmarshal failed: invalid character '{' looking for beginning of object key string
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1756 ms
+
+Change detected, rebuilding site (#8).
+2025-10-08 04:07:07.391 +0000
+Source changed /docs/example/shortcode/shotcodetoc/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 2108 ms
+
+Change detected, rebuilding site (#9).
+2025-10-08 04:07:23.348 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 4130 ms
+
+Change detected, rebuilding site (#10).
+2025-10-08 04:09:37.388 +0000
+Source changed /docs/example/shortcode/shotcodetoc/pre_shortcode.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 2629 ms
+
+Change detected, rebuilding site (#11).
+2025-10-08 04:10:21.379 +0000
+Source changed /docs/example/shortcode/shotcodetoc/shortcode.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1617 ms
+
+Change detected, rebuilding site (#12).
+2025-10-08 04:10:25.348 +0000
+Source changed /docs/example/shortcode/shotcodetoc/pre_shortcode.md
+ERROR Rebuild failed: process: "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/content/zh/docs/example/shortcode/shotcodetoc/pre_shortcode.md:1:1": unmarshal failed: invalid character '{' looking for beginning of object key string
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1599 ms
+
+Change detected, rebuilding site (#13).
+2025-10-08 04:10:46.345 +0000
+Source changed /docs/example/shortcode/shotcodetoc/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1007 ms
+
+Change detected, rebuilding site (#14).
+2025-10-08 04:10:50.866 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 2628 ms
+
+Change detected, rebuilding site (#15).
+2025-10-08 04:10:55.347 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 4977 ms
+
+Change detected, rebuilding site (#16).
+2025-10-08 04:13:27.854 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 5438 ms
+
+Change detected, rebuilding site (#17).
+2025-10-08 04:15:06.350 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 5471 ms
+
+Change detected, rebuilding site (#18).
+2025-10-08 04:16:26.856 +0000
+Source changed /docs/toc_word.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1658 ms
+
+Change detected, rebuilding site (#19).
+2025-10-08 04:16:28.517 +0000
+Source changed /docs/toc_word.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1326 ms
+
+Change detected, rebuilding site (#20).
+2025-10-08 04:16:29.844 +0000
+Source changed /docs/toc_word.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1060 ms
+
+Change detected, rebuilding site (#21).
+2025-10-08 04:16:30.906 +0000
+Source changed /docs/toc_word.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 932 ms
+
+Change detected, rebuilding site (#22).
+2025-10-08 04:20:04.858 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1778 ms
+
+Change detected, rebuilding site (#23).
+2025-10-08 04:25:40.347 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 6601 ms
+
+Change detected, rebuilding site (#24).
+2025-10-08 04:26:13.346 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 5774 ms
+
+Change detected, rebuilding site (#25).
+2025-10-08 04:27:31.347 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 3761 ms
+
+Change detected, rebuilding site (#26).
+2025-10-08 04:27:54.846 +0000
+Source changed /docs/example/shortcode/shortcode.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1590 ms
+
+Change detected, rebuilding site (#27).
+2025-10-08 04:28:52.847 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 4182 ms
+
+Change detected, rebuilding site (#28).
+2025-10-08 04:29:09.846 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1613 ms
+
+Change detected, rebuilding site (#29).
+2025-10-08 04:29:16.348 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 5086 ms
+
+Change detected, rebuilding site (#30).
+2025-10-08 04:30:19.846 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 6087 ms
+
+Change detected, rebuilding site (#31).
+2025-10-08 04:31:14.850 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 4992 ms
+
+Change detected, rebuilding site (#32).
+2025-10-08 04:32:30.865 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 2311 ms
+
+Change detected, rebuilding site (#33).
+2025-10-08 04:33:13.348 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1572 ms
+
+Change detected, rebuilding site (#34).
+2025-10-08 04:33:20.354 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1893 ms
+
+Change detected, rebuilding site (#35).
+2025-10-08 04:33:26.348 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1657 ms
+
+Change detected, rebuilding site (#36).
+2025-10-08 04:33:28.007 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 3460 ms
+
+Change detected, rebuilding site (#37).
+2025-10-08 04:34:41.351 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 6865 ms
+
+Change detected, rebuilding site (#38).
+2025-10-08 04:36:51.354 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 5800 ms
+
+Change detected, rebuilding site (#39).
+2025-10-08 04:38:15.347 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 3282 ms
+
+Change detected, rebuilding site (#40).
+2025-10-08 04:38:59.405 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1709 ms
+
+Change detected, rebuilding site (#41).
+2025-10-08 04:39:02.347 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 5088 ms
+
+Change detected, rebuilding site (#42).
+2025-10-08 04:39:45.377 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1856 ms
+
+Change detected, rebuilding site (#43).
+2025-10-08 04:40:39.375 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 5642 ms
+
+Change detected, rebuilding site (#44).
+2025-10-08 04:42:45.381 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 4086 ms
+
+Change detected, rebuilding site (#45).
+2025-10-08 04:43:40.350 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 2128 ms
+
+Change detected, rebuilding site (#46).
+2025-10-08 04:47:07.864 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 4408 ms
+
+Change detected, rebuilding site (#47).
+2025-10-08 04:51:05.360 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 2019 ms
+
+Change detected, rebuilding site (#48).
+2025-10-08 04:54:27.381 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 4816 ms
+
+Change detected, rebuilding site (#49).
+2025-10-08 04:56:26.855 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 5124 ms
+
+Change detected, rebuilding site (#50).
+2025-10-08 04:57:03.354 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1690 ms
+
+Change detected, rebuilding site (#51).
+2025-10-08 04:58:31.350 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 5399 ms
+
+Change detected, rebuilding site (#52).
+2025-10-08 05:00:24.903 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 3314 ms
+
+Change detected, rebuilding site (#53).
+2025-10-08 05:01:39.848 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 4216 ms
+
+Change detected, rebuilding site (#54).
+2025-10-08 05:04:26.904 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 4096 ms
+
+Change detected, rebuilding site (#55).
+2025-10-08 05:06:02.347 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1562 ms
+
+Change detected, rebuilding site (#56).
+2025-10-08 05:07:37.410 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1617 ms
+
+Change detected, rebuilding site (#57).
+2025-10-08 05:07:46.853 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 6391 ms
+
+Change detected, rebuilding site (#58).
+2025-10-08 05:09:32.380 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 5081 ms
+
+Change detected, rebuilding site (#59).
+2025-10-08 05:11:01.905 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 3685 ms
+
+Change detected, rebuilding site (#60).
+2025-10-08 05:13:09.350 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1619 ms
+
+Change detected, rebuilding site (#61).
+2025-10-08 05:16:57.898 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 5446 ms
+
+Change detected, rebuilding site (#62).
+2025-10-08 05:17:23.350 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1590 ms
+
+Change detected, rebuilding site (#63).
+2025-10-08 05:18:41.349 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 4352 ms
+
+Change detected, rebuilding site (#64).
+2025-10-08 05:20:04.929 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1712 ms
+
+Change detected, rebuilding site (#65).
+2025-10-08 05:20:21.351 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1474 ms
+
+Change detected, rebuilding site (#66).
+2025-10-08 05:20:25.344 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1811 ms
+
+Change detected, rebuilding site (#67).
+2025-10-08 05:22:09.348 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1609 ms
+
+Change detected, rebuilding site (#68).
+2025-10-08 05:22:19.856 +0000
+Source changed /docs/example/shortcode/pre_shortcode.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 4664 ms
+Watching for changes in /data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/{archetypes,assets,content,data,i18n,layouts,static,themes}
+Watching for config changes in /data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/hugo.toml
+Start building sites … 
+hugo v0.148.2+extended android/arm64 BuildDate=unknown
+
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+
+                 │  EN  │  ZH  │  HE  
+─────────────────┼──────┼──────┼──────
+ Pages           │   11 │ 1761 │    8 
+ Paginator pages │    0 │  283 │    0 
+ Non-page files  │    1 │   19 │    0 
+ Static files    │ 1041 │ 1041 │ 1041 
+ Processed       │    0 │    0 │    0 
+ images          │      │      │      
+ Aliases         │    1 │   68 │    0 
+ Cleaned         │    0 │    0 │    0 
+
+Built in 271255 ms
+Environment: "development"
+Serving pages from disk
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1) 
+Press Ctrl+C to stop
+
+Change detected, rebuilding site (#1).
+2025-10-08 06:21:15.356 +0000
+Source changed /docs/example/template/codemerge.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1494 ms
+
+Change detected, rebuilding site (#2).
+2025-10-08 06:53:07.927 +0000
+Source changed /docs/example/template/codemerge.md
+ERROR Rebuild failed: process: "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/content/zh/docs/example/template/codemerge.md:136:6": closing tag for shortcode 'details' does not match start tag
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1006 ms
+
+Change detected, rebuilding site (#3).
+2025-10-08 06:54:40.892 +0000
+Source changed /docs/example/template/codemerge.py
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 3632 ms
+adding created directory to watchlist /data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/content/zh/docs/example/template/0000-0099
+
+Change detected, rebuilding site (#4).
+2025-10-08 06:54:49.905 +0000
+Source changed /docs/example/template/0000-0099/_index.md
+Source changed /docs/example/template/0000-0099/solution_0001.md
+Source changed /docs/example/template/0000-0099/solution_0002.md
+Source changed /docs/example/template/0000-0099/solution_0003.md
+Source changed /docs/example/template/0000-0099/solution_0004.md
+Source changed /docs/example/template/0000-0099/solution_0005.md
+Source changed /docs/example/template/0000-0099/solution_0006.md
+Source changed /docs/example/template/0000-0099/solution_0007.md
+Source changed /docs/example/template/0000-0099/solution_0008.md
+Source changed /docs/example/template/0000-0099/solution_0009.md
+Source changed /docs/example/template/0000-0099/solution_0010.md
+Source changed /docs/example/template/0000-0099/solution_0011.md
+Source changed /docs/example/template/0000-0099/solution_0012.md
+Source changed /docs/example/template/0000-0099/solution_0013.md
+Source changed /docs/example/template/0000-0099/solution_0014.md
+Source changed /docs/example/template/0000-0099/solution_0015.md
+Source changed /docs/example/template/0000-0099/solution_0016.md
+Source changed /docs/example/template/0000-0099/solution_0017.md
+Source changed /docs/example/template/0000-0099/solution_0018.md
+Source changed /docs/example/template/0000-0099/solution_0019.md
+Source changed /docs/example/template/0000-0099/solution_0020.md
+Source changed /docs/example/template/0000-0099/solution_0021.md
+Source changed /docs/example/template/0000-0099/solution_0022.md
+Source changed /docs/example/template/0000-0099/solution_0023.md
+Source changed /docs/example/template/0000-0099/solution_0024.md
+Source changed /docs/example/template/0000-0099/solution_0025.md
+Source changed /docs/example/template/0000-0099/solution_0026.md
+Source changed /docs/example/template/0000-0099/solution_0027.md
+Source changed /docs/example/template/0000-0099/solution_0028.md
+Source changed /docs/example/template/0000-0099/solution_0029.md
+Source changed /docs/example/template/0000-0099/solution_0030.md
+Source changed /docs/example/template/0000-0099/solution_0031.md
+Source changed /docs/example/template/0000-0099/solution_0032.md
+Source changed /docs/example/template/0000-0099/solution_0033.md
+Source changed /docs/example/template/0000-0099/solution_0034.md
+Source changed /docs/example/template/0000-0099/solution_0035.md
+Source changed /docs/example/template/0000-0099/solution_0036.md
+Source changed /docs/example/template/0000-0099/solution_0037.md
+Source changed /docs/example/template/0000-0099/solution_0038.md
+Source changed /docs/example/template/0000-0099/solution_0039.md
+Source changed /docs/example/template/0000-0099/solution_0040.md
+Source changed /docs/example/template/0000-0099/solution_0041.md
+Source changed /docs/example/template/0000-0099/solution_0042.md
+Source changed /docs/example/template/0000-0099/solution_0043.md
+Source changed /docs/example/template/0000-0099/solution_0044.md
+Source changed /docs/example/template/0000-0099/solution_0045.md
+Source changed /docs/example/template/0000-0099/solution_0046.md
+Source changed /docs/example/template/0000-0099/solution_0047.md
+Source changed /docs/example/template/0000-0099/solution_0048.md
+Source changed /docs/example/template/0000-0099/solution_0049.md
+Source changed /docs/example/template/0000-0099/solution_0050.md
+Source changed /docs/example/template/0000-0099/solution_0051.md
+Source changed /docs/example/template/0000-0099/solution_0052.md
+Source changed /docs/example/template/0000-0099/solution_0053.md
+Source changed /docs/example/template/0000-0099/solution_0054.md
+Source changed /docs/example/template/0000-0099/solution_0055.md
+Source changed /docs/example/template/0000-0099/solution_0056.md
+Source changed /docs/example/template/0000-0099/solution_0057.md
+Source changed /docs/example/template/0000-0099/solution_0058.md
+Source changed /docs/example/template/0000-0099/solution_0059.md
+Source changed /docs/example/template/0000-0099/solution_0060.md
+Source changed /docs/example/template/0000-0099/solution_0061.md
+Source changed /docs/example/template/0000-0099/solution_0062.md
+Source changed /docs/example/template/0000-0099/solution_0063.md
+Source changed /docs/example/template/0000-0099/solution_0064.md
+Source changed /docs/example/template/0000-0099/solution_0065.md
+Source changed /docs/example/template/0000-0099/solution_0066.md
+Source changed /docs/example/template/0000-0099/solution_0067.md
+Source changed /docs/example/template/0000-0099/solution_0068.md
+Source changed /docs/example/template/0000-0099/solution_0069.md
+Source changed /docs/example/template/0000-0099/solution_0070.md
+Source changed /docs/example/template/0000-0099/solution_0071.md
+Source changed /docs/example/template/0000-0099/solution_0072.md
+Source changed /docs/example/template/0000-0099/solution_0073.md
+Source changed /docs/example/template/0000-0099/solution_0074.md
+Source changed /docs/example/template/0000-0099/solution_0075.md
+Source changed /docs/example/template/0000-0099/solution_0076.md
+Source changed /docs/example/template/0000-0099/solution_0077.md
+Source changed /docs/example/template/0000-0099/solution_0078.md
+Source changed /docs/example/template/0000-0099/solution_0079.md
+Source changed /docs/example/template/0000-0099/solution_0080.md
+Source changed /docs/example/template/0000-0099/solution_0081.md
+Source changed /docs/example/template/0000-0099/solution_0082.md
+Source changed /docs/example/template/0000-0099/solution_0083.md
+Source changed /docs/example/template/0000-0099/solution_0084.md
+Source changed /docs/example/template/0000-0099/solution_0085.md
+Source changed /docs/example/template/0000-0099/solution_0086.md
+Source changed /docs/example/template/0000-0099/solution_0087.md
+Source changed /docs/example/template/0000-0099/solution_0088.md
+Source changed /docs/example/template/0000-0099/solution_0089.md
+Source changed /docs/example/template/0000-0099/solution_0090.md
+Source changed /docs/example/template/0000-0099/solution_0091.md
+Source changed /docs/example/template/0000-0099/solution_0092.md
+Source changed /docs/example/template/0000-0099/solution_0093.md
+Source changed /docs/example/template/0000-0099/solution_0094.md
+Source changed /docs/example/template/0000-0099/solution_0095.md
+Source changed /docs/example/template/0000-0099/solution_0096.md
+Source changed /docs/example/template/0000-0099/solution_0097.md
+Source changed /docs/example/template/0000-0099/solution_0098.md
+Source changed /docs/example/template/0000-0099/solution_0099.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 10150 ms
+adding created directory to watchlist /data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/content/zh/docs/example/template/codemerge
+
+Change detected, rebuilding site (#5).
+2025-10-08 06:55:02.869 +0000
+Source changed /docs/example/template/0000-0099/_index.md
+Source changed /docs/example/template/codemerge/_index.md
+Source changed /docs/example/template/codemerge/solution_0001.md
+Source changed /docs/example/template/codemerge/solution_0002.md
+Source changed /docs/example/template/codemerge/solution_0003.md
+Source changed /docs/example/template/codemerge/solution_0004.md
+Source changed /docs/example/template/codemerge/solution_0005.md
+Source changed /docs/example/template/codemerge/solution_0006.md
+Source changed /docs/example/template/codemerge/solution_0007.md
+Source changed /docs/example/template/codemerge/solution_0008.md
+Source changed /docs/example/template/codemerge/solution_0009.md
+Source changed /docs/example/template/codemerge/solution_0010.md
+Source changed /docs/example/template/codemerge/solution_0011.md
+Source changed /docs/example/template/codemerge/solution_0012.md
+Source changed /docs/example/template/codemerge/solution_0013.md
+Source changed /docs/example/template/codemerge/solution_0014.md
+Source changed /docs/example/template/codemerge/solution_0015.md
+Source changed /docs/example/template/codemerge/solution_0016.md
+Source changed /docs/example/template/codemerge/solution_0017.md
+Source changed /docs/example/template/codemerge/solution_0018.md
+Source changed /docs/example/template/codemerge/solution_0019.md
+Source changed /docs/example/template/codemerge/solution_0020.md
+Source changed /docs/example/template/codemerge/solution_0021.md
+Source changed /docs/example/template/codemerge/solution_0022.md
+Source changed /docs/example/template/codemerge/solution_0023.md
+Source changed /docs/example/template/codemerge/solution_0024.md
+Source changed /docs/example/template/codemerge/solution_0025.md
+Source changed /docs/example/template/codemerge/solution_0026.md
+Source changed /docs/example/template/codemerge/solution_0027.md
+Source changed /docs/example/template/codemerge/solution_0028.md
+Source changed /docs/example/template/codemerge/solution_0029.md
+Source changed /docs/example/template/codemerge/solution_0030.md
+Source changed /docs/example/template/codemerge/solution_0031.md
+Source changed /docs/example/template/codemerge/solution_0032.md
+Source changed /docs/example/template/codemerge/solution_0033.md
+Source changed /docs/example/template/codemerge/solution_0034.md
+Source changed /docs/example/template/codemerge/solution_0035.md
+Source changed /docs/example/template/codemerge/solution_0036.md
+Source changed /docs/example/template/codemerge/solution_0037.md
+Source changed /docs/example/template/codemerge/solution_0038.md
+Source changed /docs/example/template/codemerge/solution_0039.md
+Source changed /docs/example/template/codemerge/solution_0040.md
+Source changed /docs/example/template/codemerge/solution_0041.md
+Source changed /docs/example/template/codemerge/solution_0042.md
+Source changed /docs/example/template/codemerge/solution_0043.md
+Source changed /docs/example/template/codemerge/solution_0044.md
+Source changed /docs/example/template/codemerge/solution_0045.md
+Source changed /docs/example/template/codemerge/solution_0046.md
+Source changed /docs/example/template/codemerge/solution_0047.md
+Source changed /docs/example/template/codemerge/solution_0048.md
+Source changed /docs/example/template/codemerge/solution_0049.md
+Source changed /docs/example/template/codemerge/solution_0050.md
+Source changed /docs/example/template/codemerge/solution_0051.md
+Source changed /docs/example/template/codemerge/solution_0052.md
+Source changed /docs/example/template/codemerge/solution_0053.md
+Source changed /docs/example/template/codemerge/solution_0054.md
+Source changed /docs/example/template/codemerge/solution_0055.md
+Source changed /docs/example/template/codemerge/solution_0056.md
+Source changed /docs/example/template/codemerge/solution_0057.md
+Source changed /docs/example/template/codemerge/solution_0058.md
+Source changed /docs/example/template/codemerge/solution_0059.md
+Source changed /docs/example/template/codemerge/solution_0060.md
+Source changed /docs/example/template/codemerge/solution_0061.md
+Source changed /docs/example/template/codemerge/solution_0062.md
+Source changed /docs/example/template/codemerge/solution_0063.md
+Source changed /docs/example/template/codemerge/solution_0064.md
+Source changed /docs/example/template/codemerge/solution_0065.md
+Source changed /docs/example/template/codemerge/solution_0066.md
+Source changed /docs/example/template/codemerge/solution_0067.md
+Source changed /docs/example/template/codemerge/solution_0068.md
+Source changed /docs/example/template/codemerge/solution_0069.md
+Source changed /docs/example/template/codemerge/solution_0070.md
+Source changed /docs/example/template/codemerge/solution_0071.md
+Source changed /docs/example/template/codemerge/solution_0072.md
+Source changed /docs/example/template/codemerge/solution_0073.md
+Source changed /docs/example/template/codemerge/solution_0074.md
+Source changed /docs/example/template/codemerge/solution_0075.md
+Source changed /docs/example/template/codemerge/solution_0076.md
+Source changed /docs/example/template/codemerge/solution_0077.md
+Source changed /docs/example/template/codemerge/solution_0078.md
+Source changed /docs/example/template/codemerge/solution_0079.md
+Source changed /docs/example/template/codemerge/solution_0080.md
+Source changed /docs/example/template/codemerge/solution_0081.md
+Source changed /docs/example/template/codemerge/solution_0082.md
+Source changed /docs/example/template/codemerge/solution_0083.md
+Source changed /docs/example/template/codemerge/solution_0084.md
+Source changed /docs/example/template/codemerge/solution_0085.md
+Source changed /docs/example/template/codemerge/solution_0086.md
+Source changed /docs/example/template/codemerge/solution_0087.md
+Source changed /docs/example/template/codemerge/solution_0088.md
+Source changed /docs/example/template/codemerge/solution_0089.md
+Source changed /docs/example/template/codemerge/solution_0090.md
+Source changed /docs/example/template/codemerge/solution_0091.md
+Source changed /docs/example/template/codemerge/solution_0092.md
+Source changed /docs/example/template/codemerge/solution_0093.md
+Source changed /docs/example/template/codemerge/solution_0094.md
+Source changed /docs/example/template/codemerge/solution_0095.md
+Source changed /docs/example/template/codemerge/solution_0096.md
+Source changed /docs/example/template/codemerge/solution_0097.md
+Source changed /docs/example/template/codemerge/solution_0098.md
+Source changed /docs/example/template/codemerge/solution_0099.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 11977 ms
+
+Change detected, rebuilding site (#6).
+2025-10-08 06:55:14.847 +0000
+Source changed /docs/example/template/codemerge/codemerge.py
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 12054 ms
+
+Change detected, rebuilding site (#7).
+2025-10-08 06:55:26.902 +0000
+Source changed /docs/example/template/codemerge/codemerge.py
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 785 ms
+
+Change detected, rebuilding site (#8).
+2025-10-08 06:56:27.878 +0000
+Source changed /docs/example/template/codemerge/solution_0001.md
+Source changed /docs/example/template/codemerge/solution_0002.md
+Source changed /docs/example/template/codemerge/solution_0003.md
+Source changed /docs/example/template/codemerge/solution_0004.md
+Source changed /docs/example/template/codemerge/solution_0005.md
+Source changed /docs/example/template/codemerge/solution_0006.md
+Source changed /docs/example/template/codemerge/solution_0007.md
+Source changed /docs/example/template/codemerge/solution_0008.md
+Source changed /docs/example/template/codemerge/solution_0009.md
+Source changed /docs/example/template/codemerge/solution_0010.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 11890 ms
+adding created directory to watchlist /data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/content/zh/docs/example/template/codemerge/0100-0199
+
+Change detected, rebuilding site (#9).
+2025-10-08 06:57:29.952 +0000
+Source changed /docs/example/template/codemerge/0100-0199/_index.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0100.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0101.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0102.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0103.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0104.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0105.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0106.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0107.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0108.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0109.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0110.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0111.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0112.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0113.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0114.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0115.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0116.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0117.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0118.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0119.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0120.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0121.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0122.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0123.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0124.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0125.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0126.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0127.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0128.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0129.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0130.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0131.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0132.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0133.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0134.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0135.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0136.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0137.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0138.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0139.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0140.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0141.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0142.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0143.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0144.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0145.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0146.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0147.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0148.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0149.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0150.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0151.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0152.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0153.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0154.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0155.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0156.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0157.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0158.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0159.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0160.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0161.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0162.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0163.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0164.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0165.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0166.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0167.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0168.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0169.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0170.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0171.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0172.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0173.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0174.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0175.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0176.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0177.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0178.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0179.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0180.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0181.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0182.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0183.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0184.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0185.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0186.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0187.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0188.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0189.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0190.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0191.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0192.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0193.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0194.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0195.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0196.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0197.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0198.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0199.md
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 18420 ms
+adding created directory to watchlist /data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/content/zh/docs/example/template/0100-0199
+
+Change detected, rebuilding site (#10).
+2025-10-08 06:57:48.378 +0000
+Source changed /docs/example/template/0100-0199/_index.md
+Source changed /docs/example/template/0100-0199/solution_0100.md
+Source changed /docs/example/template/0100-0199/solution_0101.md
+Source changed /docs/example/template/0100-0199/solution_0102.md
+Source changed /docs/example/template/0100-0199/solution_0103.md
+Source changed /docs/example/template/0100-0199/solution_0104.md
+Source changed /docs/example/template/0100-0199/solution_0105.md
+Source changed /docs/example/template/0100-0199/solution_0106.md
+Source changed /docs/example/template/0100-0199/solution_0107.md
+Source changed /docs/example/template/0100-0199/solution_0108.md
+Source changed /docs/example/template/0100-0199/solution_0109.md
+Source changed /docs/example/template/0100-0199/solution_0110.md
+Source changed /docs/example/template/0100-0199/solution_0111.md
+Source changed /docs/example/template/0100-0199/solution_0112.md
+Source changed /docs/example/template/0100-0199/solution_0113.md
+Source changed /docs/example/template/0100-0199/solution_0114.md
+Source changed /docs/example/template/0100-0199/solution_0115.md
+Source changed /docs/example/template/0100-0199/solution_0116.md
+Source changed /docs/example/template/0100-0199/solution_0117.md
+Source changed /docs/example/template/0100-0199/solution_0118.md
+Source changed /docs/example/template/0100-0199/solution_0119.md
+Source changed /docs/example/template/0100-0199/solution_0120.md
+Source changed /docs/example/template/0100-0199/solution_0121.md
+Source changed /docs/example/template/0100-0199/solution_0122.md
+Source changed /docs/example/template/0100-0199/solution_0123.md
+Source changed /docs/example/template/0100-0199/solution_0124.md
+Source changed /docs/example/template/0100-0199/solution_0125.md
+Source changed /docs/example/template/0100-0199/solution_0126.md
+Source changed /docs/example/template/0100-0199/solution_0127.md
+Source changed /docs/example/template/0100-0199/solution_0128.md
+Source changed /docs/example/template/0100-0199/solution_0129.md
+Source changed /docs/example/template/0100-0199/solution_0130.md
+Source changed /docs/example/template/0100-0199/solution_0131.md
+Source changed /docs/example/template/0100-0199/solution_0132.md
+Source changed /docs/example/template/0100-0199/solution_0133.md
+Source changed /docs/example/template/0100-0199/solution_0134.md
+Source changed /docs/example/template/0100-0199/solution_0135.md
+Source changed /docs/example/template/0100-0199/solution_0136.md
+Source changed /docs/example/template/0100-0199/solution_0137.md
+Source changed /docs/example/template/0100-0199/solution_0138.md
+Source changed /docs/example/template/0100-0199/solution_0139.md
+Source changed /docs/example/template/0100-0199/solution_0140.md
+Source changed /docs/example/template/0100-0199/solution_0141.md
+Source changed /docs/example/template/0100-0199/solution_0142.md
+Source changed /docs/example/template/0100-0199/solution_0143.md
+Source changed /docs/example/template/0100-0199/solution_0144.md
+Source changed /docs/example/template/0100-0199/solution_0145.md
+Source changed /docs/example/template/0100-0199/solution_0146.md
+Source changed /docs/example/template/0100-0199/solution_0147.md
+Source changed /docs/example/template/0100-0199/solution_0148.md
+Source changed /docs/example/template/0100-0199/solution_0149.md
+Source changed /docs/example/template/0100-0199/solution_0150.md
+Source changed /docs/example/template/0100-0199/solution_0151.md
+Source changed /docs/example/template/0100-0199/solution_0152.md
+Source changed /docs/example/template/0100-0199/solution_0153.md
+Source changed /docs/example/template/0100-0199/solution_0154.md
+Source changed /docs/example/template/0100-0199/solution_0155.md
+Source changed /docs/example/template/0100-0199/solution_0156.md
+Source changed /docs/example/template/0100-0199/solution_0157.md
+Source changed /docs/example/template/0100-0199/solution_0158.md
+Source changed /docs/example/template/0100-0199/solution_0159.md
+Source changed /docs/example/template/0100-0199/solution_0160.md
+Source changed /docs/example/template/0100-0199/solution_0161.md
+Source changed /docs/example/template/0100-0199/solution_0162.md
+Source changed /docs/example/template/0100-0199/solution_0163.md
+Source changed /docs/example/template/0100-0199/solution_0164.md
+Source changed /docs/example/template/0100-0199/solution_0165.md
+Source changed /docs/example/template/0100-0199/solution_0166.md
+Source changed /docs/example/template/0100-0199/solution_0167.md
+Source changed /docs/example/template/0100-0199/solution_0168.md
+Source changed /docs/example/template/0100-0199/solution_0169.md
+Source changed /docs/example/template/0100-0199/solution_0170.md
+Source changed /docs/example/template/0100-0199/solution_0171.md
+Source changed /docs/example/template/0100-0199/solution_0172.md
+Source changed /docs/example/template/0100-0199/solution_0173.md
+Source changed /docs/example/template/0100-0199/solution_0174.md
+Source changed /docs/example/template/0100-0199/solution_0175.md
+Source changed /docs/example/template/0100-0199/solution_0176.md
+Source changed /docs/example/template/0100-0199/solution_0177.md
+Source changed /docs/example/template/0100-0199/solution_0178.md
+Source changed /docs/example/template/0100-0199/solution_0179.md
+Source changed /docs/example/template/0100-0199/solution_0180.md
+Source changed /docs/example/template/0100-0199/solution_0181.md
+Source changed /docs/example/template/0100-0199/solution_0182.md
+Source changed /docs/example/template/0100-0199/solution_0183.md
+Source changed /docs/example/template/0100-0199/solution_0184.md
+Source changed /docs/example/template/0100-0199/solution_0185.md
+Source changed /docs/example/template/0100-0199/solution_0186.md
+Source changed /docs/example/template/0100-0199/solution_0187.md
+Source changed /docs/example/template/0100-0199/solution_0188.md
+Source changed /docs/example/template/0100-0199/solution_0189.md
+Source changed /docs/example/template/0100-0199/solution_0190.md
+Source changed /docs/example/template/0100-0199/solution_0191.md
+Source changed /docs/example/template/0100-0199/solution_0192.md
+Source changed /docs/example/template/0100-0199/solution_0193.md
+Source changed /docs/example/template/0100-0199/solution_0194.md
+Source changed /docs/example/template/0100-0199/solution_0195.md
+Source changed /docs/example/template/0100-0199/solution_0196.md
+Source changed /docs/example/template/0100-0199/solution_0197.md
+Source changed /docs/example/template/0100-0199/solution_0198.md
+Source changed /docs/example/template/0100-0199/solution_0199.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 8450 ms
+adding created directory to watchlist /data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/content/zh/docs/example/template/0100-0199/0100-0199
+
+Change detected, rebuilding site (#11).
+2025-10-08 06:57:56.833 +0000
+Source changed /docs/example/template/0100-0199/0100-0199/_index.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0100.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0101.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0102.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0103.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0104.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0105.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0106.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0107.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0108.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0109.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0110.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0111.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0112.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0113.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0114.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0115.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0116.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0117.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0118.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0119.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0120.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0121.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0122.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0123.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0124.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0125.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0126.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0127.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0128.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0129.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0130.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0131.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0132.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0133.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0134.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0135.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0136.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0137.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0138.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0139.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0140.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0141.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0142.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0143.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0144.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0145.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0146.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0147.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0148.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0149.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0150.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0151.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0152.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0153.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0154.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0155.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0156.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0157.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0158.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0159.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0160.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0161.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0162.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0163.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0164.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0165.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0166.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0167.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0168.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0169.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0170.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0171.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0172.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0173.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0174.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0175.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0176.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0177.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0178.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0179.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0180.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0181.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0182.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0183.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0184.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0185.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0186.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0187.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0188.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0189.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0190.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0191.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0192.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0193.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0194.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0195.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0196.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0197.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0198.md
+Source changed /docs/example/template/0100-0199/0100-0199/solution_0199.md
+Source changed /docs/example/template/0100-0199/codemerge.py
+ERROR render of "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/content/zh/docs/example/template/0100-0199/solution_0100.md" failed: "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/themes/hugo-book/layouts/baseof.html:47:5": execute of template failed: template: single.html:47:5: executing "menu" at <partial "docs/menu" .>: error calling partial: "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/themes/hugo-book/layouts/_partials/docs/menu.html:11:3": execute of template failed: template: _partials/docs/menu.html:11:3: executing "_partials/docs/menu.html" at <partial "docs/menu-filetree" .>: error calling partial: "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/themes/hugo-book/layouts/_partials/docs/menu-filetree.html:18:29": execute of template failed: template: _partials/docs/menu-filetree.html:18:29: executing "book-section-children" at <.Content>: error calling Content: "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/content/zh/docs/example/template/0100-0199/solution_0100.md:1:1": failed to open file "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/content/zh/docs/example/template/0100-0199/solution_0100.md": open /data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/content/zh/docs/example/template/0100-0199/solution_0100.md: no such file or directory
+ERROR render of "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/content/zh/docs/example/template/0100-0199/solution_0102.md" failed: "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/themes/hugo-book/layouts/baseof.html:47:5": execute of template failed: template: single.html:47:5: executing "menu" at <partial "docs/menu" .>: error calling partial: "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/themes/hugo-book/layouts/_partials/docs/menu.html:11:3": execute of template failed: template: _partials/docs/menu.html:11:3: executing "_partials/docs/menu.html" at <partial "docs/menu-filetree" .>: error calling partial: "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/themes/hugo-book/layouts/_partials/docs/menu-filetree.html:18:29": execute of template failed: template: _partials/docs/menu-filetree.html:18:29: executing "book-section-children" at <.Content>: error calling Content: "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/content/zh/docs/example/template/0100-0199/solution_0100.md:1:1": failed to open file "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/content/zh/docs/example/template/0100-0199/solution_0100.md": open /data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/content/zh/docs/example/template/0100-0199/solution_0100.md: no such file or directory
+ERROR render of "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/content/zh/docs/example/template/0100-0199/solution_0107.md" failed: "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/themes/hugo-book/layouts/baseof.html:47:5": execute of template failed: template: single.html:47:5: executing "menu" at <partial "docs/menu" .>: error calling partial: "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/themes/hugo-book/layouts/_partials/docs/menu.html:11:3": execute of template failed: template: _partials/docs/menu.html:11:3: executing "_partials/docs/menu.html" at <partial "docs/menu-filetree" .>: error calling partial: "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/themes/hugo-book/layouts/_partials/docs/menu-filetree.html:18:29": execute of template failed: template: _partials/docs/menu-filetree.html:18:29: executing "book-section-children" at <.Content>: error calling Content: "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/content/zh/docs/example/template/0100-0199/solution_0100.md:1:1": failed to open file "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/content/zh/docs/example/template/0100-0199/solution_0100.md": open /data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/content/zh/docs/example/template/0100-0199/solution_0100.md: no such file or directory
+ERROR render of "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/content/zh/docs/example/template/0100-0199/solution_0106.md" failed: "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/themes/hugo-book/layouts/baseof.html:47:5": execute of template failed: template: single.html:47:5: executing "menu" at <partial "docs/menu" .>: error calling partial: "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/themes/hugo-book/layouts/_partials/docs/menu.html:11:3": execute of template failed: template: _partials/docs/menu.html:11:3: executing "_partials/docs/menu.html" at <partial "docs/menu-filetree" .>: error calling partial: "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/themes/hugo-book/layouts/_partials/docs/menu-filetree.html:18:29": execute of template failed: template: _partials/docs/menu-filetree.html:18:29: executing "book-section-children" at <.Content>: error calling Content: "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/content/zh/docs/example/template/0100-0199/solution_0100.md:1:1": failed to open file "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/content/zh/docs/example/template/0100-0199/solution_0100.md": open /data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/content/zh/docs/example/template/0100-0199/solution_0100.md: no such file or directory
+ERROR Rebuild failed: render: failed to render pages: render of "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/content/zh/docs/example/template/0100-0199/solution_0104.md" failed: "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/themes/hugo-book/layouts/baseof.html:47:5": execute of template failed at <partial "docs/menu" .>: error calling partial: "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/themes/hugo-book/layouts/_partials/docs/menu.html:11:3": execute of template failed at <partial "docs/menu-filetree" .>: "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/themes/hugo-book/layouts/_partials/docs/menu-filetree.html:18:29": execute of template failed at <.Content>: error calling Content: "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/content/zh/docs/example/template/0100-0199/solution_0100.md:1:1": failed to open file "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/content/zh/docs/example/template/0100-0199/solution_0100.md": open /data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/content/zh/docs/example/template/0100-0199/solution_0100.md: no such file or directory
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 12219 ms
+adding created directory to watchlist /data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/content/zh/docs/example/template/codemerge
+adding created directory to watchlist /data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/content/zh/docs/example/template/codemerge/0100-0199
+
+Change detected, rebuilding site (#12).
+2025-10-08 06:58:09.062 +0000
+Source changed /docs/example/template/0100-0199/_index.md
+Source changed /docs/example/template/codemerge/0100-0199/_index.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0100.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0101.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0102.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0103.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0104.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0105.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0106.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0107.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0108.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0109.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0110.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0111.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0112.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0113.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0114.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0115.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0116.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0117.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0118.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0119.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0120.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0121.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0122.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0123.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0124.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0125.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0126.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0127.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0128.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0129.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0130.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0131.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0132.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0133.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0134.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0135.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0136.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0137.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0138.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0139.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0140.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0141.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0142.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0143.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0144.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0145.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0146.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0147.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0148.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0149.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0150.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0151.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0152.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0153.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0154.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0155.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0156.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0157.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0158.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0159.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0160.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0161.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0162.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0163.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0164.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0165.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0166.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0167.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0168.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0169.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0170.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0171.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0172.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0173.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0174.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0175.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0176.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0177.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0178.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0179.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0180.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0181.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0182.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0183.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0184.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0185.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0186.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0187.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0188.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0189.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0190.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0191.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0192.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0193.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0194.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0195.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0196.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0197.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0198.md
+Source changed /docs/example/template/codemerge/0100-0199/solution_0199.md
+Source changed /docs/example/template/codemerge/_index.md
+Source changed /docs/example/template/codemerge/codemerge.py
+Source changed /docs/example/template/codemerge/solution_0100.md
+Source changed /docs/example/template/codemerge/solution_0101.md
+Source changed /docs/example/template/codemerge/solution_0102.md
+Source changed /docs/example/template/codemerge/solution_0103.md
+Source changed /docs/example/template/codemerge/solution_0104.md
+Source changed /docs/example/template/codemerge/solution_0105.md
+Source changed /docs/example/template/codemerge/solution_0106.md
+Source changed /docs/example/template/codemerge/solution_0107.md
+Source changed /docs/example/template/codemerge/solution_0108.md
+Source changed /docs/example/template/codemerge/solution_0109.md
+Source changed /docs/example/template/codemerge/solution_0110.md
+Source changed /docs/example/template/codemerge/solution_0111.md
+Source changed /docs/example/template/codemerge/solution_0112.md
+Source changed /docs/example/template/codemerge/solution_0113.md
+Source changed /docs/example/template/codemerge/solution_0114.md
+Source changed /docs/example/template/codemerge/solution_0115.md
+Source changed /docs/example/template/codemerge/solution_0116.md
+Source changed /docs/example/template/codemerge/solution_0117.md
+Source changed /docs/example/template/codemerge/solution_0118.md
+Source changed /docs/example/template/codemerge/solution_0119.md
+Source changed /docs/example/template/codemerge/solution_0120.md
+Source changed /docs/example/template/codemerge/solution_0121.md
+Source changed /docs/example/template/codemerge/solution_0122.md
+Source changed /docs/example/template/codemerge/solution_0123.md
+Source changed /docs/example/template/codemerge/solution_0124.md
+Source changed /docs/example/template/codemerge/solution_0125.md
+Source changed /docs/example/template/codemerge/solution_0126.md
+Source changed /docs/example/template/codemerge/solution_0127.md
+Source changed /docs/example/template/codemerge/solution_0128.md
+Source changed /docs/example/template/codemerge/solution_0129.md
+Source changed /docs/example/template/codemerge/solution_0130.md
+Source changed /docs/example/template/codemerge/solution_0131.md
+Source changed /docs/example/template/codemerge/solution_0132.md
+Source changed /docs/example/template/codemerge/solution_0133.md
+Source changed /docs/example/template/codemerge/solution_0134.md
+Source changed /docs/example/template/codemerge/solution_0135.md
+Source changed /docs/example/template/codemerge/solution_0136.md
+Source changed /docs/example/template/codemerge/solution_0137.md
+Source changed /docs/example/template/codemerge/solution_0138.md
+Source changed /docs/example/template/codemerge/solution_0139.md
+Source changed /docs/example/template/codemerge/solution_0140.md
+Source changed /docs/example/template/codemerge/solution_0141.md
+Source changed /docs/example/template/codemerge/solution_0142.md
+Source changed /docs/example/template/codemerge/solution_0143.md
+Source changed /docs/example/template/codemerge/solution_0144.md
+Source changed /docs/example/template/codemerge/solution_0145.md
+Source changed /docs/example/template/codemerge/solution_0146.md
+Source changed /docs/example/template/codemerge/solution_0147.md
+Source changed /docs/example/template/codemerge/solution_0148.md
+Source changed /docs/example/template/codemerge/solution_0149.md
+Source changed /docs/example/template/codemerge/solution_0150.md
+Source changed /docs/example/template/codemerge/solution_0151.md
+Source changed /docs/example/template/codemerge/solution_0152.md
+Source changed /docs/example/template/codemerge/solution_0153.md
+Source changed /docs/example/template/codemerge/solution_0154.md
+Source changed /docs/example/template/codemerge/solution_0155.md
+Source changed /docs/example/template/codemerge/solution_0156.md
+Source changed /docs/example/template/codemerge/solution_0157.md
+Source changed /docs/example/template/codemerge/solution_0158.md
+Source changed /docs/example/template/codemerge/solution_0159.md
+Source changed /docs/example/template/codemerge/solution_0160.md
+Source changed /docs/example/template/codemerge/solution_0161.md
+Source changed /docs/example/template/codemerge/solution_0162.md
+Source changed /docs/example/template/codemerge/solution_0163.md
+Source changed /docs/example/template/codemerge/solution_0164.md
+Source changed /docs/example/template/codemerge/solution_0165.md
+Source changed /docs/example/template/codemerge/solution_0166.md
+Source changed /docs/example/template/codemerge/solution_0167.md
+Source changed /docs/example/template/codemerge/solution_0168.md
+Source changed /docs/example/template/codemerge/solution_0169.md
+Source changed /docs/example/template/codemerge/solution_0170.md
+Source changed /docs/example/template/codemerge/solution_0171.md
+Source changed /docs/example/template/codemerge/solution_0172.md
+Source changed /docs/example/template/codemerge/solution_0173.md
+Source changed /docs/example/template/codemerge/solution_0174.md
+Source changed /docs/example/template/codemerge/solution_0175.md
+Source changed /docs/example/template/codemerge/solution_0176.md
+Source changed /docs/example/template/codemerge/solution_0177.md
+Source changed /docs/example/template/codemerge/solution_0178.md
+Source changed /docs/example/template/codemerge/solution_0179.md
+Source changed /docs/example/template/codemerge/solution_0180.md
+Source changed /docs/example/template/codemerge/solution_0181.md
+Source changed /docs/example/template/codemerge/solution_0182.md
+Source changed /docs/example/template/codemerge/solution_0183.md
+Source changed /docs/example/template/codemerge/solution_0184.md
+Source changed /docs/example/template/codemerge/solution_0185.md
+Source changed /docs/example/template/codemerge/solution_0186.md
+Source changed /docs/example/template/codemerge/solution_0187.md
+Source changed /docs/example/template/codemerge/solution_0188.md
+Source changed /docs/example/template/codemerge/solution_0189.md
+Source changed /docs/example/template/codemerge/solution_0190.md
+Source changed /docs/example/template/codemerge/solution_0191.md
+Source changed /docs/example/template/codemerge/solution_0192.md
+Source changed /docs/example/template/codemerge/solution_0193.md
+Source changed /docs/example/template/codemerge/solution_0194.md
+Source changed /docs/example/template/codemerge/solution_0195.md
+Source changed /docs/example/template/codemerge/solution_0196.md
+Source changed /docs/example/template/codemerge/solution_0197.md
+Source changed /docs/example/template/codemerge/solution_0198.md
+Source changed /docs/example/template/codemerge/solution_0199.md
+Template changed /_partials/docs/menu-filetree.html
+Template changed /_partials/docs/menu.html
+Template changed /baseof.html
+
+Change detected, rebuilding site (#13).
+2025-10-08 06:58:13.053 +0000
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 53083 ms
+ERROR process: readAndProcessContent: "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/content/zh/docs/example/template/codemerge.md:136:6": closing tag for shortcode 'details' does not match start tag
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Rebuilt in 49176 ms
+
+Change detected, rebuilding site (#14).
+2025-10-08 06:59:02.231 +0000
+Source changed /docs/example/template/codemerge/solution_0001.md
+Source changed /docs/example/template/codemerge/solution_0002.md
+Source changed /docs/example/template/codemerge/solution_0003.md
+Source changed /docs/example/template/codemerge/solution_0004.md
+Source changed /docs/example/template/codemerge/solution_0005.md
+Source changed /docs/example/template/codemerge/solution_0006.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+ERROR Rebuild failed: logged 1 error(s)
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 4230 ms
+
+Change detected, rebuilding site (#15).
+2025-10-08 06:59:06.669 +0000
+Source changed /docs/example/template/codemerge/solution_0007.md
+Source changed /docs/example/template/codemerge/solution_0008.md
+Source changed /docs/example/template/codemerge/solution_0009.md
+Source changed /docs/example/template/codemerge/solution_0010.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+ERROR Rebuild failed: logged 2 error(s)
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 637 ms
+
+Change detected, rebuilding site (#16).
+2025-10-08 06:59:14.854 +0000
+ERROR process: readAndProcessContent: "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/content/zh/docs/example/template/codemerge.md:136:6": closing tag for shortcode 'details' does not match start tag
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Rebuilt in 659 ms
+
+Change detected, rebuilding site (#17).
+2025-10-08 06:59:19.869 +0000
+Source changed /docs/example/template/codemerge.py
+ERROR Rebuild failed: process: "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/content/zh/docs/example/template/codemerge.md:136:6": closing tag for shortcode 'details' does not match start tag
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 20 ms
+
+Change detected, rebuilding site (#18).
+2025-10-08 06:59:24.853 +0000
+Source changed /docs/example/template/codemerge.py
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+ERROR Rebuild failed: logged 2 error(s)
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 3878 ms
+
+Change detected, rebuilding site (#19).
+2025-10-08 06:59:34.357 +0000
+ERROR process: readAndProcessContent: "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/content/zh/docs/example/template/codemerge.md:136:6": closing tag for shortcode 'details' does not match start tag
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Rebuilt in 614 ms
+
+Change detected, rebuilding site (#20).
+2025-10-08 06:59:38.852 +0000
+Source changed /docs/example/template/codemergo
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+ERROR Rebuild failed: logged 1 error(s)
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 3986 ms
+
+Change detected, rebuilding site (#21).
+2025-10-08 06:59:42.842 +0000
+Source changed /docs/example/template/codemergo/_index.md
+Source changed /docs/example/template/codemerge
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+ERROR Rebuild failed: logged 2 error(s)
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 610 ms
+adding created directory to watchlist /data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/content/zh/docs/example/template/0200-0299
+
+Change detected, rebuilding site (#22).
+2025-10-08 06:59:48.883 +0000
+Source changed /docs/example/template/0200-0299/_index.md
+Source changed /docs/example/template/0200-0299/solution_0200.md
+Source changed /docs/example/template/0200-0299/solution_0201.md
+Source changed /docs/example/template/0200-0299/solution_0202.md
+Source changed /docs/example/template/0200-0299/solution_0203.md
+Source changed /docs/example/template/0200-0299/solution_0204.md
+Source changed /docs/example/template/0200-0299/solution_0205.md
+Source changed /docs/example/template/0200-0299/solution_0206.md
+Source changed /docs/example/template/0200-0299/solution_0207.md
+Source changed /docs/example/template/0200-0299/solution_0208.md
+Source changed /docs/example/template/0200-0299/solution_0209.md
+Source changed /docs/example/template/0200-0299/solution_0210.md
+Source changed /docs/example/template/0200-0299/solution_0211.md
+Source changed /docs/example/template/0200-0299/solution_0212.md
+Source changed /docs/example/template/0200-0299/solution_0213.md
+Source changed /docs/example/template/0200-0299/solution_0214.md
+Source changed /docs/example/template/0200-0299/solution_0215.md
+Source changed /docs/example/template/0200-0299/solution_0216.md
+Source changed /docs/example/template/0200-0299/solution_0217.md
+Source changed /docs/example/template/0200-0299/solution_0218.md
+Source changed /docs/example/template/0200-0299/solution_0219.md
+Source changed /docs/example/template/0200-0299/solution_0220.md
+Source changed /docs/example/template/0200-0299/solution_0221.md
+Source changed /docs/example/template/0200-0299/solution_0222.md
+Source changed /docs/example/template/0200-0299/solution_0223.md
+Source changed /docs/example/template/0200-0299/solution_0224.md
+Source changed /docs/example/template/0200-0299/solution_0225.md
+Source changed /docs/example/template/0200-0299/solution_0226.md
+Source changed /docs/example/template/0200-0299/solution_0227.md
+Source changed /docs/example/template/0200-0299/solution_0228.md
+Source changed /docs/example/template/0200-0299/solution_0229.md
+Source changed /docs/example/template/0200-0299/solution_0230.md
+Source changed /docs/example/template/0200-0299/solution_0231.md
+Source changed /docs/example/template/0200-0299/solution_0232.md
+Source changed /docs/example/template/0200-0299/solution_0233.md
+Source changed /docs/example/template/0200-0299/solution_0234.md
+Source changed /docs/example/template/0200-0299/solution_0235.md
+Source changed /docs/example/template/0200-0299/solution_0236.md
+Source changed /docs/example/template/0200-0299/solution_0237.md
+Source changed /docs/example/template/0200-0299/solution_0238.md
+Source changed /docs/example/template/0200-0299/solution_0239.md
+Source changed /docs/example/template/0200-0299/solution_0240.md
+Source changed /docs/example/template/0200-0299/solution_0241.md
+Source changed /docs/example/template/0200-0299/solution_0242.md
+Source changed /docs/example/template/0200-0299/solution_0243.md
+Source changed /docs/example/template/0200-0299/solution_0244.md
+Source changed /docs/example/template/0200-0299/solution_0245.md
+Source changed /docs/example/template/0200-0299/solution_0246.md
+Source changed /docs/example/template/0200-0299/solution_0247.md
+Source changed /docs/example/template/0200-0299/solution_0248.md
+Source changed /docs/example/template/0200-0299/solution_0249.md
+Source changed /docs/example/template/0200-0299/solution_0250.md
+Source changed /docs/example/template/0200-0299/solution_0251.md
+Source changed /docs/example/template/0200-0299/solution_0252.md
+Source changed /docs/example/template/0200-0299/solution_0253.md
+Source changed /docs/example/template/0200-0299/solution_0254.md
+Source changed /docs/example/template/0200-0299/solution_0255.md
+Source changed /docs/example/template/0200-0299/solution_0256.md
+Source changed /docs/example/template/0200-0299/solution_0257.md
+Source changed /docs/example/template/0200-0299/solution_0258.md
+Source changed /docs/example/template/0200-0299/solution_0259.md
+Source changed /docs/example/template/0200-0299/solution_0260.md
+Source changed /docs/example/template/0200-0299/solution_0261.md
+Source changed /docs/example/template/0200-0299/solution_0262.md
+Source changed /docs/example/template/0200-0299/solution_0263.md
+Source changed /docs/example/template/0200-0299/solution_0264.md
+Source changed /docs/example/template/0200-0299/solution_0265.md
+Source changed /docs/example/template/0200-0299/solution_0266.md
+Source changed /docs/example/template/0200-0299/solution_0267.md
+Source changed /docs/example/template/0200-0299/solution_0268.md
+Source changed /docs/example/template/0200-0299/solution_0269.md
+Source changed /docs/example/template/0200-0299/solution_0270.md
+Source changed /docs/example/template/0200-0299/solution_0271.md
+Source changed /docs/example/template/0200-0299/solution_0272.md
+Source changed /docs/example/template/0200-0299/solution_0273.md
+Source changed /docs/example/template/0200-0299/solution_0274.md
+Source changed /docs/example/template/0200-0299/solution_0275.md
+Source changed /docs/example/template/0200-0299/solution_0276.md
+Source changed /docs/example/template/0200-0299/solution_0277.md
+Source changed /docs/example/template/0200-0299/solution_0278.md
+Source changed /docs/example/template/0200-0299/solution_0279.md
+Source changed /docs/example/template/0200-0299/solution_0280.md
+Source changed /docs/example/template/0200-0299/solution_0281.md
+Source changed /docs/example/template/0200-0299/solution_0282.md
+Source changed /docs/example/template/0200-0299/solution_0283.md
+Source changed /docs/example/template/0200-0299/solution_0284.md
+Source changed /docs/example/template/0200-0299/solution_0285.md
+Source changed /docs/example/template/0200-0299/solution_0286.md
+Source changed /docs/example/template/0200-0299/solution_0287.md
+Source changed /docs/example/template/0200-0299/solution_0288.md
+Source changed /docs/example/template/0200-0299/solution_0289.md
+Source changed /docs/example/template/0200-0299/solution_0290.md
+Source changed /docs/example/template/0200-0299/solution_0291.md
+Source changed /docs/example/template/0200-0299/solution_0292.md
+Source changed /docs/example/template/0200-0299/solution_0293.md
+Source changed /docs/example/template/0200-0299/solution_0294.md
+Source changed /docs/example/template/0200-0299/solution_0295.md
+Source changed /docs/example/template/0200-0299/solution_0296.md
+Source changed /docs/example/template/0200-0299/solution_0297.md
+Source changed /docs/example/template/0200-0299/solution_0298.md
+Source changed /docs/example/template/0200-0299/solution_0299.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+ERROR Rebuild failed: logged 3 error(s)
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 5700 ms
+
+Change detected, rebuilding site (#23).
+2025-10-08 07:00:07.853 +0000
+Source changed /docs/example/template/codemerge/_index.md
+ERROR Rebuild failed: logged 4 error(s)
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 445 ms
+
+Change detected, rebuilding site (#24).
+2025-10-08 07:00:17.864 +0000
+Source changed /docs/example/template/codemerge
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+ERROR Rebuild failed: logged 5 error(s)
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1196 ms
+
+Change detected, rebuilding site (#25).
+2025-10-08 07:00:23.865 +0000
+Source changed /docs/example/template/codemerge/_index.md
+ERROR Rebuild failed: logged 6 error(s)
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 535 ms
+adding created directory to watchlist /data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/content/zh/docs/example/template/codemerge
+
+Change detected, rebuilding site (#26).
+2025-10-08 07:00:29.364 +0000
+Source changed /docs/example/template/codemerge
+ERROR Rebuild failed: logged 7 error(s)
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 199 ms
+adding created directory to watchlist /data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/content/zh/docs/example/template/codemerge/0200-0299
+
+Change detected, rebuilding site (#27).
+2025-10-08 07:00:55.409 +0000
+Source changed /docs/example/template/0200-0299/_index.md
+Source changed /docs/example/template/codemerge/0200-0299/_index.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0200.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0201.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0202.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0203.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0204.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0205.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0206.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0207.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0208.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0209.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0210.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0211.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0212.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0213.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0214.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0215.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0216.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0217.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0218.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0219.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0220.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0221.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0222.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0223.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0224.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0225.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0226.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0227.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0228.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0229.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0230.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0231.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0232.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0233.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0234.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0235.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0236.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0237.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0238.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0239.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0240.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0241.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0242.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0243.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0244.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0245.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0246.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0247.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0248.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0249.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0250.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0251.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0252.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0253.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0254.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0255.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0256.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0257.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0258.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0259.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0260.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0261.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0262.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0263.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0264.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0265.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0266.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0267.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0268.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0269.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0270.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0271.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0272.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0273.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0274.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0275.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0276.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0277.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0278.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0279.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0280.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0281.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0282.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0283.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0284.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0285.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0286.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0287.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0288.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0289.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0290.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0291.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0292.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0293.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0294.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0295.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0296.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0297.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0298.md
+Source changed /docs/example/template/codemerge/0200-0299/solution_0299.md
+WARN  Columns shortcode seprator '<--->' is deprecated, use markdown list instead.
+ERROR Rebuild failed: logged 8 error(s)
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 4999 ms
+
+Change detected, rebuilding site (#28).
+2025-10-08 07:01:00.409 +0000
+Source changed /docs/example/template/codemerge/0200-0299/codemerge.py
+ERROR Rebuild failed: logged 9 error(s)
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 1457 ms
+
+Change detected, rebuilding site (#29).
+2025-10-08 07:01:12.364 +0000
+Source changed /docs/example/template/codemerge/0200-0299/codemerge.py
+ERROR Rebuild failed: logged 10 error(s)
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 171 ms
+
+Change detected, rebuilding site (#30).
+2025-10-08 07:01:30.880 +0000
+Source changed /docs/example/template/codemerge/0200-0299/pre_solution_0001.md
+Source changed /docs/example/template/codemerge/0200-0299/pre_solution_0002.md
+Source changed /docs/example/template/codemerge/0200-0299/pre_solution_0003.md
+Source changed /docs/example/template/codemerge/0200-0299/pre_solution_0004.md
+Source changed /docs/example/template/codemerge/0200-0299/pre_solution_0005.md
+Source changed /docs/example/template/codemerge/0200-0299/pre_solution_0006.md
+Source changed /docs/example/template/codemerge/0200-0299/pre_solution_0007.md
+Source changed /docs/example/template/codemerge/0200-0299/pre_solution_0008.md
+Source changed /docs/example/template/codemerge/0200-0299/pre_solution_0009.md
+Source changed /docs/example/template/codemerge/0200-0299/pre_solution_0010.md
+ERROR Rebuild failed: logged 11 error(s)
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 2169 ms
+
+Change detected, rebuilding site (#31).
+2025-10-08 07:03:29.856 +0000
+Source changed /docs/example/template/codemerge.md
+ERROR Rebuild failed: process: "/data/data/com.termux/files/home/Yuoek/Yu/hugoBlog/hugo-docs-pro/content/zh/docs/example/template/codemerge.md:135:6": closing tag for shortcode 'details' does not match start tag
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 32 ms
+
+Change detected, rebuilding site (#32).
+2025-10-08 07:06:14.365 +0000
+Source changed /docs/example/template/codemerge.md
+ERROR Rebuild failed: logged 13 error(s)
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 322 ms
+
+Change detected, rebuilding site (#33).
+2025-10-08 07:06:17.855 +0000
+Source changed /docs/example/template/codemerge.md
+ERROR Rebuild failed: logged 14 error(s)
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 548 ms
+
+Change detected, rebuilding site (#34).
+2025-10-08 07:06:31.359 +0000
+Source changed /docs/example/template/codemerge.md
+ERROR Rebuild failed: logged 15 error(s)
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 597 ms
+
+Change detected, rebuilding site (#35).
+2025-10-08 07:06:41.367 +0000
+Source changed /docs/example/template/codemerge.md
+ERROR Rebuild failed: logged 16 error(s)
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 409 ms
+
+Change detected, rebuilding site (#36).
+2025-10-08 07:06:58.865 +0000
+Source changed /docs/example/template/codemerge.md
+ERROR Rebuild failed: logged 17 error(s)
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 384 ms
+
+Change detected, rebuilding site (#37).
+2025-10-08 07:07:28.859 +0000
+Source changed /docs/example/template/codemerge.md
+ERROR Rebuild failed: logged 18 error(s)
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 249 ms
+
+Change detected, rebuilding site (#38).
+2025-10-08 07:08:33.856 +0000
+Source changed /docs/example/template/codemerge.md
+ERROR Rebuild failed: logged 19 error(s)
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 354 ms
+
+Change detected, rebuilding site (#39).
+2025-10-08 07:08:51.854 +0000
+Source changed /docs/example/template/codemerge.md
+ERROR Rebuild failed: logged 20 error(s)
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 182 ms
+
+Change detected, rebuilding site (#40).
+2025-10-08 07:09:07.355 +0000
+Source changed /docs/example/template/codemerge.md
+ERROR Rebuild failed: logged 21 error(s)
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 297 ms
+
+Change detected, rebuilding site (#41).
+2025-10-08 07:09:17.355 +0000
+Source changed /docs/example/template/codemerge.md
+ERROR Rebuild failed: logged 22 error(s)
+Web Server is available at http://localhost:8082/ (bind address 127.0.0.1)
+Total in 253 ms
