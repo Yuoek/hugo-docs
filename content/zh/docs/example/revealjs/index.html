@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Java 实验五演示</title>
+<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+<meta name="author" content="Hakim El Hattab">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/revealjs/dist/reset.css">
+<link rel="stylesheet" href="/revealjs/dist/reveal.css">
+<link rel="stylesheet" href="/revealjs/dist/theme/black.css" id="theme">
+<!-- Theme used for syntax highlighting of code -->
+<link rel="stylesheet" href="/revealjs/plugin/highlight/monokai.css">
+<style>
+</style>
+</head>
+<body>
+<div class="reveal">
+<!-- Any section element inside of this container is displayed as a slide -->
+<div class="slides">
+
+<section>
+<h1> JAVA  实验五演示 </h2>
+<h2> 小组成员 </h2>
+<p> 杨通梅、杨浪、杨健 </p>
+</section>
+<section>
+<h1>实验目的：<h1>
+<br />
+<h2>掌握线程的概念，学会用两种方法进行多线程的设计。</h2>
+</section>
+<section>
+<h1>实验内容：</h1>
+<br />
+<h3>1. 用继承Thread类的方法进行多线程设计;</h3>
+<h3>2. 用Runnable接口的方法进行多线程设计。</h3>
+</section>
+<section>
+<h1> 方法一 </h1>
+<h3> 用继承Thread类的方法进行多线程设计</h3>
+<table>
+  <tr><th></th></tr>
+  <tr><td>①<p class="fragment">第一个线程FacThread的功能为：用于输出1到10的阶乘。每输出一次，暂时休眠若干毫秒。</p></td></tr>
+  <tr><td>②<p class="fragment">第二个线程PrimeThread的功能为：判断100至200年之间的每个数是否是质数，如果该数是质数，则输出该数。每判断一次，暂时休眠若干毫秒。</p></td></tr>
+  <tr><td>③<p class="fragment">测试这两个线程。</p></td><tr>
+</table>
+</section>
+
+<section>
+<h1> 方法二 </h1>
+<h3> 用Runnable接口的方法进行多线程设计</h3>
+<table>
+  <tr><th></th></tr>
+  <tr><td>①<p class="fragment">第一个线程LeapThread的功能为：判断2000至3000年之间的每个数是否是闰年，每判断一次，暂时休眠若干毫秒。</p></td></tr>
+  <tr><td>②<p class="fragment">第二个线程Thread2的功能为：判断100至200年之间的每个数是否能够被3整除，能则输出该数。每判断一次，暂时休眠若干毫秒。</p></td></tr>
+  <tr><td>③<p class="fragment">测试这两个线程。</p></td><tr>
+</table>
+</section>
+<section>
+<section> 
+<h1> 实验导图 </h1>
+<img src="https://images.yuoek.icu/file/1760578278970_Screenshot_2025_1016_092834.png" width="" />
+</section>
+<section>
+<h1> 单线程的概念 </h2> 
+<table>
+  <tr><th></th></tr>
+  <tr><td><p class="fragment"><a href="">单线程</a>程序在任一时刻只能执行一个任务。整个程序从启动到结束始终只有一个执行流，这种模式简单、易于理解，但当程序中有多个耗时任务时，会造成程序响应变慢、界面卡顿等问题。单线程适用于任务较少或计算量较低的场景，优点是无需考虑线程同步等问题，缺点是无法充分利用多核CPU资源，性能扩展性较差。</p></td><tr>
+</table>
+</section>
+<section>
+<h1> 多线程的概念 </h2> 
+<table>
+  <tr><th></th></tr>
+  <tr><td><p class="fragment"><a href="">多线程</a>是指在一个进程内同时存在多个执行流，每个线程可以独立执行任务，从而实现并发操作。多线程编程能够提高程序的响应速度和利用率，尤其在I/O密集型、网络编程、GUI程序等场景下表现明显。但与此同时，多线程也带来了线程间资源共享、同步与竞争等问题，需要开发者谨慎设计，避免死锁、数据不一致等问题。</p></td><tr>
+</table>
+</section>
+<section>
+<h1> 线程同步与通信 </h2> 
+<table>
+  <tr><th></th></tr>
+  <tr><td><p class="fragment"><a href="">多线程</a>编程虽然能提高程序效率，但线程之间的并发访问往往会引发共享资源的竞争问题。为确保数据一致性，需要使用线程同步技术，如synchronized关键字、锁机制、信号量等。同步的核心思想是保证同一时刻只有一个线程访问共享资源，从而避免数据混乱。
+</p></td><tr>
+<tr><td><p class="fragment">同时，多线程程序中常常需要线程之间的通信，如通过wait()、notify()和notifyAll()等方法实现线程间协调工作。合理运用这些机制可以使多线程程序既高效又安全。</p></td><tr>
+</table>
+</section>
+<section>
+<h1> 常见多线程问题 </h1> 
+<table>
+<tr><th></th><th></th></tr>
+<tr><td><a href="">竞争条件:</a></td><td><p class="fragment">多个线程并发修改共享数据，导致数据状态不确定。</p></td><tr>
+<tr><td><a href="">死锁:</a></td><td><p class="fragment">两个或多个线程因争夺资源而相互等待，导致程序无法继续执行。</p></td><tr>
+<tr><td><a href="">饥饿与活锁:</a></td><td><p class="fragment">部分线程长时间无法获得CPU资源或不断重复执行无效操作。</p></td><tr>
+<tr><td><a href="">内存可见性问题:</a></td><td><p class="fragment">多个线程之间对共享变量的更改可能不可见，需要使用内存屏障或同步机制解决。</p></td><tr>
+</table>
+</section>
+</section>
+<section>
+<h1>闰年判断代码回顾</h1>
+<table>
+<tr><th></th><th></th></tr>
+<tr><td><a href="">闰:</a></td><td><p class="fragment">闰”字本身有“余数”“额外”的意思，闰年就是额外增加了一天的年份，以调整历法与地球实际公转周期的偏差</p></td><tr>
+<tr><td><a href="">出处:</a></td><td><p class="fragment">《尚书∙尧典》中记载，以“期三百有六旬有六日，以闰月定四时，成岁”这是我国最早关于古代原始阴阳历的记载。</p></td><tr>
+<tr><td><a href="">公历置闰:</a></td><td><p class="fragment">公元年数能被4整除的年为闰年，其余年为平年。但对整世纪年（如1600，1700……）只有世纪数也能被400整除的才是闰年，其余的虽然年数都能被4整除，但仍为平年，比如2000年是闰年，而1900年不是。</p></td><tr>
+</table>
+</section>
+
+
+<section>
+<section data-auto-animate>
+<h2 data-id="code-title">判断闰年 </h2>
+<pre data-id="code-animation"><code class="language-java" data-trim data-line-numbers>
+    // 判断当前年为闰年的方法
+    private boolean isLeapYear(int year) {
+        return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+    }
+</code></pre>
+</section>
+<section data-auto-animate>
+<h2 data-id="code-title">添加 for 循环</h2>
+<pre data-id="code-animation"><code class="language-java" data-trim data-line-numbers="|6-12|1-16" ><script type="text/template">
+    // 判断当前年为闰年的方法
+    private boolean isLeapYear(int year) {
+        return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+    }
+    // 判断 2000 - 3000 年的闰年
+    public void run() {
+        for (int year = 2000; year <= 3000; year++) {
+            if (isLeapYear(year)) {
+                System.out.println("闰年: " + year);
+            }
+        }
+    }
+    
+</script></code></pre>
+</section>
+</section>
+
+  
+<section>
+<h1>质数判断代码回顾</h1>
+</section>
+<section>
+<section data-auto-animate>
+<h2 data-id="code-title">判断质数 </h2>
+<pre data-id="code-animation"><code class="language-java" data-trim data-line-numbers>
+    // 判断当前数是否是质数的方法
+    public boolean isPrime(int num) {
+        if (num <= 1) return false;
+        if (num == 2) return true;
+        if (num % 2 == 0) return false;
+        
+        for (int i = 3; i <= Math.sqrt(num); i += 2) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+</code></pre>
+</section>
+<section data-auto-animate>
+<h2 data-id="code-title">添加 for 循环</h2>
+<pre data-id="code-animation"><code class="language-java" data-trim data-line-numbers="|15-22|1-22" ><script type="text/template">
+    // 判断当前数是否是质数的方法
+    public boolean isPrime(int num) {
+        if (num <= 1) return false;
+        if (num == 2) return true;
+        if (num % 2 == 0) return false;
+        
+        for (int i = 3; i <= Math.sqrt(num); i += 2) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    // 判断100 - 200 质数的方法, 调用isPrime()
+    public void run() {
+        for (int num = 100; num <= 200; num++) {
+            if (isPrime(num)) {
+                System.out.println("质数: " + num);
+            }
+        }
+    }
+    
+</script></code></pre>
+</section>
+</section>
+<section>
+<h1>方法一代码演示</h1>
+<table>
+  <tr><th></th></tr>
+  <tr><td>继承Thread类</td></tr>
+  <tr><td><p class="fragment">通过继承java.lang.Thread类，重写run()方法来定义线程执行的任务。使用时需要创建子类对象，然后调用start()方法启动线程。此方式较为简单，但Java只支持单继承，扩展性受到一定限制</p></td></tr>
+</table>
+</section>
+<section>
+<section data-auto-animate>
+<h2 data-id="code-title">继承 Thread 类</h2>
+<pre data-id="code-animation"><code class="language-java " data-trim data-line-numbers>
+// 第一个线程：判断闰年
+class LeapThread extends Thread {
+    @Override
+    public void run() {
+    }
+}
+
+// 第二个线程：判断质数
+class PrimeThread extends Thread {
+    @Override
+    public void run() {
+   }
+    
+}
+
+// 主类测试
+public class MultiThreadDemo {
+    public static void main(String[] args) {
+    }
+}
+</code></pre>
+</section>
+
+<section data-auto-animate>
+<h3 data-id="code-title">完整示例:THread方法 exp5_thread.java </h3>
+<pre data-id="code-animation"><code class="language-java " data-trim data-line-numbers="|1-22|9-14|24-39|32-37|41-54|56-77|59-61|63-65|67-73|75|1-77" ><script type="text/template">
+        
+// 第一个线程：判断闰年
+class LeapThread extends Thread {
+    @Override
+    public void run() {
+        for (int year = 2000; year <= 3000; year++) {
+            if (isLeapYear(year)) {
+                System.out.println("闰年: " + year);
+            }
+            try {
+                // 休眠100毫秒
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    
+    // 判断闰年的方法
+    private boolean isLeapYear(int year) {
+        return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+    }
+}
+
+// 第二个线程：判断质数
+class PrimeThread extends Thread {
+    @Override
+    public void run() {
+        for (int num = 100; num <= 200; num++) {
+            if (isPrime(num)) {
+                System.out.println("质数: " + num);
+            }
+            try {
+                // 休眠150毫秒
+                Thread.sleep(150);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    
+    // 判断质数的方法
+    private boolean isPrime(int num) {
+        if (num <= 1) return false;
+        if (num == 2) return true;
+        if (num % 2 == 0) return false;
+        
+        for (int i = 3; i <= Math.sqrt(num); i += 2) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+
+// 主类测试
+public class MultiThreadDemo {
+    public static void main(String[] args) {
+        // 创建线程实例
+        LeapThread leapThread = new LeapThread();
+        PrimeThread primeThread = new PrimeThread();
+        
+        // 启动线程
+        leapThread.start();
+        primeThread.start();
+        
+        // 等待两个线程执行完毕
+        try {
+            leapThread.join();
+            primeThread.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        
+        System.out.println("所有线程执行完毕！");
+    }
+}
+</script></code></pre>
+</section>
+</section>
+<section>
+<h3> 代码运行效果 </h3>
+  <img src="https://images.yuoek.icu/file/1760593532952_IMG_20251016_134450.jpg" width="" />
+</section>
+
+<section>  
+<h1>方法二代码演示</h1>
+<table>
+  <tr><th></th></tr>
+  <tr><td>实现 Runnable 接口</td></tr>
+  <tr><td><p class="fragment">实现java.lang.Runnable接口，并重写run()方法。通过Thread类的构造器传入Runnable对象来创建线程。这种方式具有更好的解耦性和灵活性，同时支持多个线程共享同一任务数据，方便进行数据同步。
+</p></td></tr>
+</table>
+</section>
+<section>
+<section data-auto-animate>
+<h2 data-id="code-title">实现 Runnable 接口</h2>
+<pre data-id="code-animation"><code class="language-java " data-trim data-line-numbers>
+class LeapThread implements Runnable {
+    @Override
+    public void run() {
+    }
+}
+
+class Thread2 implements Runnable {
+    @Override
+    public void run() {
+    }
+}
+
+public class MultiThreadDemo {
+    public static void main(String[] args) {
+    }
+}
+</code></pre>
+</section>
+
+<section data-auto-animate>
+<h3 data-id="code-title">完整示例:Runnable 方法 exp5_runnable.java </h3>
+<pre data-id="code-animation"><code class="language-java " data-trim data-line-numbers="|1-18|20-37|39-53|41-43|45-47|49-51|1-53" ><script type="text/template">
+class LeapThread implements Runnable {
+    @Override
+    public void run() {
+        for (int year = 2000; year <= 3000; year++) {
+            // 判断闰年条件：能被4整除但不能被100整除，或者能被400整除
+            if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+                System.out.println(year + " 是闰年");
+            }
+            
+            try {
+                // 休眠100毫秒
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
+
+class Thread2 implements Runnable {
+    @Override
+    public void run() {
+        for (int num = 100; num <= 200; num++) {
+            // 判断是否能被3整除
+            if (num % 3 == 0) {
+                System.out.println("能被3整除的数：" + num);
+            }
+            
+            try {
+                // 休眠150毫秒
+                Thread.sleep(150);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
+
+public class MultiThreadDemo {
+    public static void main(String[] args) {
+        // 创建两个Runnable对象
+        Runnable leapThread = new LeapThread();
+        Runnable thread2 = new Thread2();
+        
+        // 创建线程对象
+        Thread t1 = new Thread(leapThread);
+        Thread t2 = new Thread(thread2);
+        
+        // 启动线程
+        t1.start();
+        t2.start();
+    }
+}
+</script></code></pre>
+</section>
+</section>
+<section>
+<h3> 代码运行效果 </h3>
+<img src="https://images.yuoek.icu/file/1760594241895_IMG_20251016_135619.jpg" width="" />
+</section>
+<section>
+<h1> 实验总结 </h1>
+<h2>实验内容回顾</h2>
+<p>本次实验主要完成了两种多线程编程方法的学习和实践：</p>
+
+<table>
+<tr><th></th><th></th></tr>
+<tr><td><a href="">继承Thread类:</a></td><td><p class="fragment">创建了LeapThread和PrimeThread两个线程类，分别用于判断闰年和质数</p></td><tr>
+<tr><td><a href="">实现Runnable接口:</a></td><td><p class="fragment">创建了LeapThread和Thread2两个任务类，分别用于判断闰年和能被3整除的数</p></td><tr>
+</table>
+</section>
+<section>
+<h1>技术要点掌握</h1>
+<table>
+<tr><th></th><th></th></tr>
+<tr><td><a href="">线程创建:</a></td><td><p class="fragment">掌握了两种创建线程的方式及其区别</p></td><tr>
+<tr><td><a href="">线程控制:</a></td><td><p class="fragment">学会了使用start()启动线程、sleep()控制执行间隔、join()等待线程结束</p></td><tr>
+<tr><td><a href="">线程同步:</a></td><td><p class="fragment">理解了多线程编程中可能出现的并发问题</p></td><tr>
+<tr><td><a href="">异常处理:</a></td><td><p class="fragment">掌握了InterruptedException的处理方法</p></td><tr>
+</table>
+</section>
+<section>
+<h1>实验心得</h1>
+<table>
+<tr><th></th><th></th></tr>
+<tr><td><a href="">继承Thread类:</a></td><td><p class="fragment">简单直接，但受限于Java的单继承特性,实现Runnable接口：更灵活，支持多实现，便于资源共享</p></td><tr>
+<tr><td><a href="">多线程优势体会</a></td><td><p class="fragment">通过实验直观感受到多线程能够提高程序执行效率,理解了线程并发执行的特点和优势</p></td><tr>
+<tr><td><a href="">实际问题解决能力</a></td><td><p class="fragment">学会了如何设计合理的线程休眠时间,掌握了线程间协调的基本方法</p></td><tr>
+</table>
+</section>
+
+<section>
+<h1>实践感悟</h1>
+<table>
+<tr><th></th><th></th></tr>
+<tr><td><a href=""></a></td><td><p class="fragment">多线程编程虽然提高了程序效率，但也带来了复杂性，需要更加谨慎地设计</p></td><tr>
+<tr><td><a href=""></a></td><td><p class="fragment">线程安全是重要的考虑因素，在实际开发中需要特别注意</p></td><tr>
+<tr><td><a href=""></a></td><td><p class="fragment">通过亲手编写和调试代码，对多线程概念有了更深刻的理解</p></td><tr>
+</table>
+</section>
+
+<section>
+<h1>改进方向</h1>
+<table>
+<tr><th></th><th></th></tr>
+<tr><td><a href=""></a></td><td><p class="fragment">可以进一步学习线程池的使用</p></td><tr>
+<tr><td><a href=""></a></td><td><p class="fragment">需要深入了解线程同步和锁机制</p></td><tr>
+<tr><td><a href=""></a></td><td><p class="fragment">探索更复杂的多线程应用场景</p></td><tr>
+</table>
+</section>
+</section>
+<section>
+<h1>谢谢观看</h1>
+<h1>Thanks For Watching</h1>
+</section>
+
+</div>
+</div>
+<script src="/revealjs/dist/reveal.js"></script>
+<script src="/revealjs/plugin/zoom/zoom.js"></script>
+<script src="/revealjs/plugin/notes/notes.js"></script>
+<script src="/revealjs/plugin/search/search.js"></script>
+<script src="/revealjs/plugin/markdown/markdown.js"></script>
+<script src="/revealjs/plugin/highlight/highlight.js"></script>
+<script src="/revealjs/plugin/math/math.js"></script>
+<script>
+// Also available as an ES module, see:
+// https://revealjs.com/initialization/
+Reveal.initialize({
+controls: true,
+progress: true,
+center: true,
+hash: true,
+// Learn about plugins: https:/revealjs.com/plugins/
+plugins: [ RevealMath.KaTeX, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+});
+Reveal.on('fragmentshown', (event) => {
+  // event.fragment = the fragment DOM element
+});
+Reveal.on('fragmenthidden', (event) => {
+  // event.fragment = the fragment DOM element
+});
+</script>
+
+</body>
+</html> 
+
