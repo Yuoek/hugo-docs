@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>reveal.js – The HTML Presentation Framework</title>
+<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+<meta name="author" content="Hakim El Hattab">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href=".././html/revealjs/dist/reset.css">
+<link rel="stylesheet" href=".././html/revealjs/dist/reveal.css">
+<link rel="stylesheet" href=".././html/revealjs/dist/theme/black.css" id="theme">
+<!-- Theme used for syntax highlighting of code -->
+<link rel="stylesheet" href=".././html/revealjs/plugin/highlight/monokai.css">
+<style>
+</style>
+</head>
+<body>
+<div class="reveal">
+<!-- Any section element inside of this container is displayed as a slide -->
+<div class="slides">
+<section>
+<h2 class="r-fit-text">Yuoek </h2>
+<img src="../../images/pic/250717_17h03m15s_screenshot.png" width="600px " />
+
+</section>
+
+
+<section>
+<section data-auto-animate>
+<h2 data-id="code-title">Create Circle </h2>
+<pre data-id="code-animation"><code class="language-python " data-trim data-line-numbers>
+from manim import * 
+class create_circlr(Scene):
+  def construct(self):
+    circle = Circle()
+    self.add(circle) 
+</code></pre>
+</section>
+
+<section data-auto-animate>
+<h2 data-id="code-title">Create Square </h2>
+<pre data-id="code-animation"><code class="language-python " data-trim data-line-numbers="|5|20|" ><script type="text/template">
+from manim import * 
+class create_circlr(Scene):
+  def construct(self):
+    circle = Circle()
+self.add(circle) 
+
+class create_square(Scene):
+  def construct(self):
+    square = Square()
+    self.add(square) 
+</script></code></pre>
+</section>
+</section>
+
+<section>
+<section>
+<h2 class="r-fit-text">To Find You </h2>
+<p class="fragment custom blur">Dear Yuoek: </p>
+
+</section>
+</section>
+
+<section data-background-image="../../images/pic/250717_17h03m15s_screenshot.png " data-background-size="100%"><h2>Yuoek</h2></section>
+<section data-background-image="../../images/pic/250717_17h03m15s_screenshot.png " data-background-size="100px" data-background-repeat="repeat"><h2>Yuoek</h2></section>
+<section data-background-video="../../images/video/2025-08-06 10-27-40.mkv" data-background-vidwo-size="cover" data-background-video-loop data-background-video-muted><h2>Arch Desktop </h2></section>
+
+
+
+
+</div>
+</div>
+<script src=".././html/revealjs/dist/reveal.js"></script>
+<script src=".././html/revealjs/plugin/zoom/zoom.js"></script>
+<script src=".././html/revealjs/plugin/notes/notes.js"></script>
+<script src=".././html/revealjs/plugin/search/search.js"></script>
+<script src=".././html/revealjs/plugin/markdown/markdown.js"></script>
+<script src=".././html/revealjs/plugin/highlight/highlight.js"></script>
+<script src=".././html/revealjs/plugin/math/math.js"></script>
+<script>
+// Also available as an ES module, see:
+// https://revealjs.com/initialization/
+Reveal.initialize({
+controls: true,
+progress: true,
+center: true,
+hash: true,
+// Learn about plugins: https:/revealjs.com/plugins/
+plugins: [ RevealMath.KaTeX, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+});
+Reveal.on('fragmentshown', (event) => {
+  // event.fragment = the fragment DOM element
+});
+Reveal.on('fragmenthidden', (event) => {
+  // event.fragment = the fragment DOM element
+});
+</script>
+
+</body>
+</html> 
+

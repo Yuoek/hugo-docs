@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>reveal.js – The HTML Presentation Framework</title>
+<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+<meta name="author" content="Hakim El Hattab">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href=".././html/revealjs/dist/reset.css">
+<link rel="stylesheet" href=".././html/revealjs/dist/reveal.css">
+<link rel="stylesheet" href=".././html/revealjs/dist/theme/black.css" id="theme">
+<!-- Theme used for syntax highlighting of code -->
+<link rel="stylesheet" href=".././html/revealjs/plugin/highlight/monokai.css">
+<style>
+</style>
+</head>
+<body>
+<div class="reveal">
+<!-- Any section element inside of this container is displayed as a slide -->
+<div class="slides">
+
+<section>
+<h2>Dear Yuoek:</h2>
+<p>Dear Yuoek, I am very miss you.</p>
+<p>I don't know how to find you.</p>
+<p>Wher are you? I ask myself everyday.</p>
+<p>I want to tell you that I love cinema because of you.</p>
+<p>And my dream is to be a director who makes many films.</p>
+<p>I'm going to tell everybody some stories about ourselves.</p>
+<h2>Yuoek</h2>
+<p>Dear Yuoek, I am very miss you.</p>
+<p>I don't know how to find you.</p>
+<p>Wher are you? I ask myself everyday.</p>
+<p>I want to tell you that I love cinema because of you.</p>
+<p>And my dream is to be a director who makes many films.</p>
+<p>I'm going to tell everybody some stories about ourselves. I believe I will become who I want to be.</p>
+</section>
+
+<section>
+<section data-auto-animate>
+<h2 data-id="code-title">Dear Yuoek</h2>
+<pre data-id="code-animation"><code class="hljs javascript" data-trim data-line-numbers>
+#include "ToDo.h"
+
+ToDo::ToDo(){
+
+}
+
+ToDo::~ToDo(){
+
+}
+
+size_t ToDo::size() const{
+  return this_tasks.size();
+}
+</code></pre>
+</section>
+
+<section data-auto-animate>
+<h2 data-id="code-title">I Know I Love You</h2>
+<pre data-id="code-animation"><code class="hljs javascript" data-trim data-line-numbers="|16|25|" ><script type="text/template">
+#include "ToDo.h"
+
+ToDo::ToDo(){
+
+}
+
+ToDo::~ToDo(){
+
+}
+
+size_t ToDo::size() const{
+  return this_tasks.size();
+}
+
+void ToDo::addTask(const std::string& task){
+  this_tasks.push_back(task);
+}
+
+std::string ToDo::getTask(size_t index) const{
+  if(index < this_tasks.size()){
+    return this_tasks[index];
+  }
+  else{
+    return "";
+  }
+}
+</script></code></pre>
+</section>
+</section> 
+
+<section>
+  <h2>The Lorenz Equations</h2>
+  \[\begin{aligned} \dot{x} &amp; = \sigma(y-x) \\ \dot{y} &amp; = \rho x - y -
+  xz \\ \dot{z} &amp; = -\beta z + xy \end{aligned} \]
+</section>
+
+<section data-markdown>$$ J(\theta_0,\theta_1) = \sum_{i=0} $$</section>
+
+<section data-markdown>
+<textarea data-template>
+## Slide 1
+A paragraph with some text and a [link](https://hakim.se).
+---
+## Slide 2
+---
+## Slide 3
+</textarea>
+</section>
+
+
+<section>
+<p class="fragment">Fade in</p>
+<p class="fragment fade-out">Fade out</p>
+<p class="fragment highlight-red">Highlight red</p>
+<p class="fragment fade-in-then-out">Fade in, then out</p>
+<p class="fragment fade-up">Slide up while fading in</p>
+</section>
+
+
+<section>
+<section>
+<h2 class="r-fit-text">FIT TEXT</h2>
+<h2 class="r-fit-text">CAN BE USED FOR MULTIPLE HEADLINES</h2>
+<p class="fragment custom blur">Yuoek</p>
+</section>
+<section>
+<p class="fragment custom blur">One</p>
+<p class="fragment custom blur">Two</p>
+<p class="fragment custom blur">Yuoek</p>
+</section>
+</section>
+<section>
+<div class="r-stack">
+<img
+class="fragment fade-out"
+data-fragment-index="0"
+src="https://picsum.photos/450/300"
+width="450"
+height="300"
+/>
+<img
+class="fragment current-visible"
+data-fragment-index="0"
+src="https://picsum.photos/300/450"
+width="300"
+height="450"
+/>
+<img
+class="fragment"
+src="https://picsum.photos/400/400"
+width="400"
+height="400"
+/>
+</div>
+</section>
+
+<section>Slide 1</section>
+<section>Slide 2</section>
+<section data-visibility="uncounted">Slide 3</section>
+
+<section>
+<a href="#/grand-finale">Go to the last slide</a>
+</section>
+<section>
+<h2>Slide 2</h2>
+</section>
+<section id="grand-finale">
+<h2>The end</h2>
+<a href="#/0">Back to the first</a>
+</section>
+
+<section data-background-color="aquamarine">
+<h2>🍦</h2>
+</section>
+<section data-background-color="rgb(70, 70, 255)">
+<h2>🍰</h2>
+</section>
+
+<section data-background-gradient="linear-gradient(to bottom, #283b95, #17b2c3)">
+<h2>🐟</h2>
+</section>
+<section data-background-gradient="radial-gradient(#283b95, #17b2c3)">
+<h2>🐳</h2>
+</section>
+
+<section data-background-image="http://example.com/image.png">
+<h2>Image</h2>
+</section>
+<section data-background-image="http://example.com/image.png"
+data-background-size="100px" data-background-repeat="repeat">
+<h2>This background image will be sized to 100px and repeated</h2>
+</section>
+
+<section data-background-video="https://static.slid.es/site/homepage/v1/homepage-video-editor.mp4"
+data-background-video-loop data-background-video-muted>
+<h2>Video</h2>
+</section>
+
+
+</div>
+</div>
+<script src=".././html/revealjs/dist/reveal.js"></script>
+<script src=".././html/revealjs/plugin/zoom/zoom.js"></script>
+<script src=".././html/revealjs/plugin/notes/notes.js"></script>
+<script src=".././html/revealjs/plugin/search/search.js"></script>
+<script src=".././html/revealjs/plugin/markdown/markdown.js"></script>
+<script src=".././html/revealjs/plugin/highlight/highlight.js"></script>
+<script src=".././html/revealjs/plugin/math/math.js"></script>
+<script>
+// Also available as an ES module, see:
+// https://revealjs.com/initialization/
+Reveal.initialize({
+controls: true,
+progress: true,
+center: true,
+hash: true,
+// Learn about plugins: https:/revealjs.com/plugins/
+plugins: [ RevealMath.KaTeX, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+});
+Reveal.on('fragmentshown', (event) => {
+  // event.fragment = the fragment DOM element
+});
+Reveal.on('fragmenthidden', (event) => {
+  // event.fragment = the fragment DOM element
+});
+</script>
+
+</body>
+</html> 
