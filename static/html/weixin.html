@@ -1,12 +1,118 @@
 <!DOCTYPE html>
 <html lang="zh-Hans">
 <head>
-   <meta charset="UTF-8">
-   <title>添加微信好友</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>添加微信好友</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+        .qr-code {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 20px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 10px;
+            background: white;
+        }
+        .qr-code img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .wechat-btn {
+            display: inline-block;
+            background-color: #07C160;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+        }
+        .wechat-btn:hover {
+            background-color: #06AE56;
+        }
+        .tip {
+            font-size: 14px;
+            color: #999;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-   <h1>添加我们的微信好友</h1>
-   <p>请扫描下面的二维码：</p>
-   <img src="/weixin.png" alt="微信二维码">
+    <div class="container">
+        <h1>添加微信好友</h1>
+        <p>请扫描下方二维码，或点击按钮直接跳转微信添加好友</p>
+        
+        <div class="qr-code">
+            <img src="/weixin.png" alt="微信二维码" onerror="this.style.display='none'">
+        </div>
+        
+        <a href="weixin://findfriend/verifycontact/Yuoek2557" class="wechat-btn">
+            在微信中打开
+        </a>
+        
+        <div class="tip">
+            <p>如果无法自动跳转，请手动打开微信扫描上方二维码</p>
+            <p>或保存二维码图片后在微信中识别</p>
+        </div>
+    </div>
+
+    <script>
+        // 检测是否在微信内打开
+        function isWechat() {
+            return /MicroMessenger/i.test(navigator.userAgent);
+        }
+        
+        // 页面加载时检测
+        document.addEventListener('DOMContentLoaded', function() {
+            if (isWechat()) {
+                // 如果在微信内打开，显示提示
+                const tip = document.querySelector('.tip');
+                tip.innerHTML = '<p style="color:#e64340;">检测到您在微信内打开</p>' +
+                               '<p>请点击右上角"..."选择"在浏览器打开"</p>' +
+                               '<p>或保存二维码后在微信扫一扫中识别</p>';
+            }
+            
+            // 为跳转按钮添加点击事件
+            const wechatBtn = document.querySelector('.wechat-btn');
+            wechatBtn.addEventListener('click', function(e) {
+                // 添加跳转延迟，让用户看到点击效果
+                setTimeout(function() {
+                    // 如果跳转失败，显示提示
+                    setTimeout(function() {
+                        if (!document.hidden) {
+                            alert('跳转失败，请手动打开微信扫描二维码');
+                        }
+                    }, 1000);
+                }, 100);
+            });
+        });
+    </script>
 </body>
 </html>
