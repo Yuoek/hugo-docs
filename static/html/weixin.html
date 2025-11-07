@@ -5,62 +5,196 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>添加微信好友</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             max-width: 600px;
             margin: 0 auto;
             padding: 20px;
             text-align: center;
-            background-color: #f5f5f5;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
+        
         .container {
             background: white;
-            border-radius: 12px;
+            border-radius: 16px;
             padding: 30px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             margin-top: 20px;
+            position: relative;
+            overflow: hidden;
         }
+        
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #07C160, #1AAD19);
+        }
+        
         h1 {
             color: #333;
             margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: 600;
         }
+        
         p {
             color: #666;
             line-height: 1.6;
             margin-bottom: 25px;
         }
-        .qr-code {
-            width: 200px;
-            height: 200px;
-            margin: 0 auto 20px;
-            border: 1px solid #eee;
-            border-radius: 8px;
-            padding: 10px;
+        
+        .qr-container {
+            position: relative;
+            width: 220px;
+            height: 220px;
+            margin: 0 auto 25px;
+            border-radius: 12px;
+            padding: 15px;
             background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border: 1px solid #eaeaea;
         }
+        
+        .qr-code {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f9f9f9;
+        }
+        
         .qr-code img {
             width: 100%;
             height: 100%;
             object-fit: contain;
         }
+        
+        .qr-placeholder {
+            color: #999;
+            font-size: 14px;
+            padding: 20px;
+        }
+        
         .wechat-btn {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             background-color: #07C160;
             color: white;
-            padding: 12px 30px;
-            border-radius: 6px;
+            padding: 14px 32px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 500;
-            margin-top: 15px;
-            transition: background-color 0.3s;
+            margin-top: 10px;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+            box-shadow: 0 4px 12px rgba(7, 193, 96, 0.3);
         }
+        
         .wechat-btn:hover {
             background-color: #06AE56;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(7, 193, 96, 0.4);
         }
+        
+        .wechat-btn:active {
+            transform: translateY(0);
+        }
+        
+        .wechat-btn i {
+            margin-right: 8px;
+            font-size: 18px;
+        }
+        
         .tip {
             font-size: 14px;
             color: #999;
-            margin-top: 20px;
+            margin-top: 25px;
+            text-align: left;
+        }
+        
+        .qq-tip {
+            background-color: #fffbe6;
+            border: 1px solid #ffe58f;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            color: #666;
+        }
+        
+        .wechat-tip {
+            background-color: #f0f9ff;
+            border: 1px solid #91d5ff;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            color: #666;
+        }
+        
+        .success-message {
+            background-color: #f6ffed;
+            border: 1px solid #b7eb8f;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            color: #52c41a;
+            display: none;
+        }
+        
+        .step-list {
+            text-align: left;
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+        
+        .step-list li {
+            margin-bottom: 10px;
+            color: #666;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #aaa;
+        }
+        
+        .loading {
+            display: none;
+            margin: 15px 0;
+        }
+        
+        .loading-spinner {
+            width: 24px;
+            height: 24px;
+            border: 3px solid rgba(7, 193, 96, 0.2);
+            border-radius: 50%;
+            border-top-color: #07C160;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
     </style>
 </head>
@@ -69,48 +203,145 @@
         <h1>添加微信好友</h1>
         <p>请扫描下方二维码，或点击按钮直接跳转微信添加好友</p>
         
-        <div class="qr-code">
-            <img src="/weixin.png" alt="微信二维码" onerror="this.style.display='none'">
+        <div class="qr-container">
+            <div class="qr-code">
+                <img src="/weixin.png" alt="微信二维码" onerror="this.style.display='none'">
+                <div class="qr-placeholder" id="qrPlaceholder">微信二维码加载中...</div>
+            </div>
         </div>
         
-        <a href="weixin://findfriend/verifycontact/Yuoek2557" class="wechat-btn">
-            在微信中打开
-        </a>
+        <button class="wechat-btn" id="wechatBtn">
+            <i>📱</i> 跳转到微信添加好友
+        </button>
+        
+        <div class="loading" id="loading">
+            <div class="loading-spinner"></div>
+            <p>正在跳转...</p>
+        </div>
+        
+        <div class="success-message" id="successMessage">
+            <p><strong>跳转成功！</strong></p>
+            <p>请在微信中完成好友添加</p>
+        </div>
         
         <div class="tip">
-            <p>如果无法自动跳转，请手动打开微信扫描上方二维码</p>
-            <p>或保存二维码图片后在微信中识别</p>
+            <div class="wechat-tip" id="wechatTip" style="display: none;">
+                <p><strong>检测到您在微信内打开</strong></p>
+                <p>请点击右上角"..."选择"在浏览器打开"</p>
+                <p>或保存二维码后在微信扫一扫中识别</p>
+            </div>
+            
+            <div class="qq-tip" id="qqTip" style="display: none;">
+                <p><strong>检测到您在QQ中打开</strong></p>
+                <p>QQ无法直接跳转到微信，请：</p>
+                <ol class="step-list">
+                    <li>点击右上角"..."选择"在浏览器打开"</li>
+                    <li>或保存二维码图片后在微信中识别</li>
+                </ol>
+            </div>
+            
+            <p><strong>如果无法自动跳转，请按以下步骤操作：</strong></p>
+            <ol class="step-list">
+                <li>手动打开微信</li>
+                <li>点击右上角"+"号</li>
+                <li>选择"扫一扫"</li>
+                <li>扫描上方二维码添加好友</li>
+            </ol>
         </div>
+    </div>
+    
+    <div class="footer">
+        <p>如有问题，请联系客服 | 本服务由微信提供技术支持</p>
     </div>
 
     <script>
-        // 检测是否在微信内打开
-        function isWechat() {
-            return /MicroMessenger/i.test(navigator.userAgent);
+        // 检测浏览器环境
+        function detectBrowser() {
+            const ua = navigator.userAgent;
+            return {
+                isWechat: /MicroMessenger/i.test(ua),
+                isQQ: /QQ/i.test(ua) && !/MicroMessenger/i.test(ua),
+                isMobile: /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(ua)
+            };
         }
         
         // 页面加载时检测
         document.addEventListener('DOMContentLoaded', function() {
-            if (isWechat()) {
-                // 如果在微信内打开，显示提示
-                const tip = document.querySelector('.tip');
-                tip.innerHTML = '<p style="color:#e64340;">检测到您在微信内打开</p>' +
-                               '<p>请点击右上角"..."选择"在浏览器打开"</p>' +
-                               '<p>或保存二维码后在微信扫一扫中识别</p>';
+            const browser = detectBrowser();
+            const wechatTip = document.getElementById('wechatTip');
+            const qqTip = document.getElementById('qqTip');
+            const wechatBtn = document.getElementById('wechatBtn');
+            const loading = document.getElementById('loading');
+            const successMessage = document.getElementById('successMessage');
+            const qrPlaceholder = document.getElementById('qrPlaceholder');
+            
+            // 检查二维码是否加载成功
+            const qrImg = document.querySelector('.qr-code img');
+            if (qrImg && qrImg.complete && qrImg.naturalHeight !== 0) {
+                qrPlaceholder.style.display = 'none';
+            } else {
+                qrPlaceholder.textContent = '二维码加载失败，请尝试手动添加';
+            }
+            
+            if (browser.isWechat) {
+                // 如果在微信内打开
+                wechatTip.style.display = 'block';
+                wechatBtn.disabled = true;
+                wechatBtn.style.backgroundColor = '#ccc';
+                wechatBtn.style.boxShadow = 'none';
+                wechatBtn.textContent = '当前环境无法跳转';
+            } else if (browser.isQQ) {
+                // 如果在QQ内打开
+                qqTip.style.display = 'block';
             }
             
             // 为跳转按钮添加点击事件
-            const wechatBtn = document.querySelector('.wechat-btn');
             wechatBtn.addEventListener('click', function(e) {
+                if (browser.isWechat || browser.isQQ) {
+                    e.preventDefault();
+                    alert('检测到您在' + (browser.isWechat ? '微信' : 'QQ') + '中打开，无法直接跳转到微信\n\n请点击右上角"..."选择"在浏览器打开"，然后在浏览器中点击此按钮');
+                    return;
+                }
+                
+                // 显示加载状态
+                loading.style.display = 'block';
+                wechatBtn.style.display = 'none';
+                
+                // 尝试跳转到微信
+                const wechatUrl = 'weixin://';
+                
                 // 添加跳转延迟，让用户看到点击效果
                 setTimeout(function() {
+                    window.location.href = wechatUrl;
+                    
                     // 如果跳转失败，显示提示
                     setTimeout(function() {
                         if (!document.hidden) {
+                            loading.style.display = 'none';
+                            wechatBtn.style.display = 'inline-flex';
                             alert('跳转失败，请手动打开微信扫描二维码');
+                        } else {
+                            // 如果页面隐藏了，说明跳转成功
+                            successMessage.style.display = 'block';
+                        }
+                    }, 1500);
+                }, 500);
+            });
+            
+            // 监听页面可见性变化，判断是否成功跳转
+            document.addEventListener('visibilitychange', function() {
+                if (document.hidden) {
+                    // 页面隐藏，可能跳转成功
+                    setTimeout(function() {
+                        if (!document.hidden) {
+                            // 页面又可见了，说明跳转失败
+                            loading.style.display = 'none';
+                            wechatBtn.style.display = 'inline-flex';
+                        } else {
+                            successMessage.style.display = 'block';
                         }
                     }, 1000);
-                }, 100);
+                }
             });
         });
     </script>
